@@ -1,0 +1,25 @@
+name = "flipbook_labs/expect"
+version = "0.1.0"
+
+[target]
+environment = "roblox"
+
+[wally_indices]
+default = "https://github.com/UpliftGames/wally-index"
+
+[dependencies]
+luau-polyfill = { wally = "wally#jsdotlua/luau-polyfill", version = "^1.2.7" }
+promise = { wally = "wally#jsdotlua/promise", version = "^3.5.2" }
+regexp = { wally = "wally#jsdotlua/luau-regexp", version = "^0.2.1" }
+jest-get-type = { workspace = "flipbook_labs/jest_get_type", version = "^" }
+jest-message-util = { workspace = "flipbook_labs/jest_message_util", version = "^" }
+jest-util = { workspace = "flipbook_labs/jest_util", version = "^" }
+jest-matcher-utils = { workspace = "flipbook_labs/jest_matcher_utils", version = "^" }
+jest-snapshot = { workspace = "flipbook_labs/jest_snapshot", version = "^" }
+roblox-shared = { workspace = "flipbook_labs/roblox_shared", version = "^" }
+
+[dev_dependencies]
+jest-globals = { workspace = "flipbook_labs/jest_globals", version = "^" }
+jest-mock = { workspace = "flipbook_labs/jest_mock", version = "^" }
+test-utils = { workspace = "flipbook_labs/test_utils", version = "^" }
+chalk-lua = { wally = "wally#jsdotlua/chalk", version = "^0.2.1" }

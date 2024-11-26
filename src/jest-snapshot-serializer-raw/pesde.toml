@@ -1,0 +1,11 @@
+name = "flipbook_labs/jest_snapshot_serializer_raw"
+version = "0.1.0"
+
+[target]
+environment = "roblox"
+
+[wally_indices]
+default = "https://github.com/UpliftGames/wally-index"
+
+[dependencies]
+luau-polyfill = { wally = "wally#jsdotlua/luau-polyfill", version = "^1.2.7" }

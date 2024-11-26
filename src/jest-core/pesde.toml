@@ -1,0 +1,32 @@
+name = "flipbook_labs/jest_core"
+version = "0.1.0"
+
+[target]
+environment = "roblox"
+
+[wally_indices]
+default = "https://github.com/UpliftGames/wally-index"
+
+[dependencies]
+luau-polyfill = { wally = "wally#jsdotlua/luau-polyfill", version = "^1.2.7" }
+promise = { wally = "wally#jsdotlua/promise", version = "^3.5.2" }
+chalk = { wally = "wally#jsdotlua/chalk", version = "^0.2.1" }
+regexp = { wally = "wally#jsdotlua/luau-regexp", version = "^0.2.1" }
+jest-config = { workspace = "flipbook_labs/jest_config", verison = "^" }
+jest-console = { workspace = "flipbook_labs/jest_console", verison = "^" }
+jest-test-result = { workspace = "flipbook_labs/jest_test_result", verison = "^" }
+jest-types = { workspace = "flipbook_labs/jest_types", verison = "^" }
+jest-runtime = { workspace = "flipbook_labs/jest_runtime", verison = "^" }
+jest-runner = { workspace = "flipbook_labs/jest_runner", verison = "^" }
+jest-reporters = { workspace = "flipbook_labs/jest_reporters", verison = "^" }
+jest-util = { workspace = "flipbook_labs/jest_util", verison = "^" }
+jest-message-util = { workspace = "flipbook_labs/jest_message_util", verison = "^" }
+jest-snapshot = { workspace = "flipbook_labs/jest_snapshot", verison = "^" }
+pretty-format = { workspace = "flipbook_labs/pretty_format", verison = "^" }
+roblox-shared = { workspace = "flipbook_labs/roblox_shared", verison = "^" }
+emittery = { workspace = "flipbook_labs/emittery", verison = "^" }
+
+[dev_dependencies]
+jest-globals = { workspace = "flipbook_labs/jest_globals", version = "^" }
+jest-snapshot-serializer-raw = { workspace = "flipbook_labs/jest_snapshot_serializer_raw", version = "^" }
+test-utils = { workspace = "flipbook_labs/test_utils", version = "^" }

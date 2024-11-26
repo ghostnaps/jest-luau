@@ -1,0 +1,17 @@
+name = "flipbook_labs/roblox_shared"
+version = "0.1.0"
+
+[target]
+environment = "roblox"
+
+[wally_indices]
+default = "https://github.com/UpliftGames/wally-index"
+
+[dependencies]
+luau-polyfill = { wally = "wally#jsdotlua/luau-polyfill", version = "^1.2.7" }
+jest-get-type = { workspace = "flipbook_labs/jest_get_type", version = "^" }
+jest-mock = { workspace = "flipbook_labs/jest_mock", version = "^" }
+
+[dev_dependencies]
+jest-config = { workspace = "flipbook_labs/jest_config", version = "^" }
+jest-globals = { workspace = "flipbook_labs/jest_globals", version = "^" }

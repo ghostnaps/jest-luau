@@ -1,3 +1,8 @@
+# Pesde files
+.pesde
+roblox_packages
+pesde.lock
+
 # Rotriever files
 rotriever.lock
 Packages/*

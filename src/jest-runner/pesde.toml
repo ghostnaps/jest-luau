@@ -1,0 +1,27 @@
+name = "flipbook_labs/jest_runner"
+version = "0.1.0"
+
+[target]
+environment = "roblox"
+
+[wally_indices]
+default = "https://github.com/UpliftGames/wally-index"
+
+[dependencies]
+luau-polyfill = { wally = "wally#jsdotlua/luau-polyfill", version = "^1.2.7" }
+promise = { wally = "wally#jsdotlua/promise", version = "^3.5.2" }
+chalk = { wally = "wally#jsdotlua/chalk", version = "^0.2.1" }
+jest-console = { workspace = "flipbook_labs/jest_console", version = "^" }
+jest-environment = { workspace = "flipbook_labs/jest_environment", version = "^" }
+jest-message-util = { workspace = "flipbook_labs/jest_message_util", version = "^" }
+jest-test-result = { workspace = "flipbook_labs/jest_test_result", version = "^" }
+jest-types = { workspace = "flipbook_labs/jest_types", version = "^" }
+jest-util = { workspace = "flipbook_labs/jest_util", version = "^" }
+emittery = { workspace = "flipbook_labs/emittery", version = "^" }
+jest-circus = { workspace = "flipbook_labs/jest_circus", version = "^" }
+jest-runtime = { workspace = "flipbook_labs/jest_runtime", version = "^" }
+throat = { workspace = "flipbook_labs/throat", version = "^" }
+roblox-shared = { workspace = "flipbook_labs/roblox_shared", version = "^" }
+
+[dev_dependencies]
+jest-globals = { workspace = "flipbook_labs/jest_globals", version = "^" }
