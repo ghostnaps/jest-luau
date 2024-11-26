@@ -1,7 +1,6 @@
 # Pesde files
 roblox_packages
 pesde.lock
-!/pesde.lock
 
 # Rojo
 sourcemap*.json
