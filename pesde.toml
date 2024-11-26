@@ -9,6 +9,7 @@ authors = [
 repository = "https://github.com/ghostnaps/jest-luau"
 license = "MIT"
 workspace_members = ["src/*"]
+pesde_version = "0.5.0-rc.12"
 
 [target]
 environment = "roblox"
