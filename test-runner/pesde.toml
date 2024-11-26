@@ -1,4 +1,4 @@
-name = "ghostnaps/jest_example"
+name = "ghostnaps/jest_example_test_runner"
 version = "0.1.0"
 authors = ["Marin Minnerly <me@vocksel.com>"]
 repository = "https://github.com/ghostnaps/jest-luau"
@@ -19,5 +19,5 @@ sourcemap_generator = ".pesde/sourcemap_generator.luau"
 default = "https://github.com/daimond113/pesde-index"
 
 [dev_dependencies]
-jest = { repo = "ghostnaps/jest-luau", rev = "cd578f5", path = "src/jest" }
-jest-globals = { repo = "ghostnaps/jest-luau", rev = "cd578f5", path = "src/jest-globals" }
+jest = { workspace = "ghostnaps/jest", version = "^" }
+jest-globals = { workspace = "ghostnaps/jest_globals", version = "^" }

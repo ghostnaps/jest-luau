@@ -1,6 +1,6 @@
-name = "ghostnaps/jest"
+name = "ghostnaps/jest_workspace"
 version = "3.8.0"
-description = 'A Luau testing framework based on Jest. See JestGlobals for the entry point.'
+description = "A Luau testing framework based on Jest. See JestGlobals for the entry point."
 authors = [
     "Marin Minnerly <me@vocksel.com>",
     "Raymond Ng <rng@roblox.com>",
@@ -8,24 +8,15 @@ authors = [
 ]
 repository = "https://github.com/ghostnaps/jest-luau"
 license = "MIT"
-workspace_members = ["src/*"]
+workspace_members = ["src/*", "test-runner"]
 pesde_version = "0.5.0-rc.12"
+private = true
 
 [target]
-environment = "roblox"
+environment = "lune"
 
 [indices]
 default = "https://github.com/daimond113/pesde-index"
 
 [wally_indices]
 default = "https://github.com/UpliftGames/wally-index"
-
-[dependencies]
-chalk-lua = { wally = "wally#jsdotlua/chalk", version = "^0.2.1" }
-luau-polyfill = { wally = "wally#jsdotlua/luau-polyfill", version = "^1.2.7" }
-reg-exp = { wally = "wally#jsdotlua/luau-regexp", version = "^0.2.1" }
-promise = { wally = "wally#jsdotlua/promise", version = "^3.5.2" }
-react = { wally = "wally#jsdotlua/react", version = "^17.2.0" }
-react-is = { wally = "wally#jsdotlua/react-is", version = "^17.2.0" }
-react-test-renderer = { wally = "wally#jsdotlua/react-test-renderer", version = "^17.2.0" }
-picomatch = { wally = "wally#jsdotlua/picomatch", version = "^0.4.0" }
