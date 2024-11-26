@@ -1,4 +1,4 @@
-name = "flipbook_labs/jest_config"
+name = "ghostnaps/jest_config"
 version = "0.1.0"
 
 [target]
@@ -11,14 +11,14 @@ default = "https://github.com/UpliftGames/wally-index"
 luau-polyfill = { wally = "wally#jsdotlua/luau-polyfill", version = "^1.2.7" }
 promise = { wally = "wally#jsdotlua/promise", version = "^3.5.2" }
 chalk = { wally = "wally#jsdotlua/chalk", version = "^0.2.1" }
-jest-environment-luau = { workspace = "flipbook_labs/jest_environment_luau", version = "^" }
-jest-get-type = { workspace = "flipbook_labs/jest_get_type", version = "^" }
-jest-types = { workspace = "flipbook_labs/jest_types", version = "^" }
-jest-util = { workspace = "flipbook_labs/jest_util", version = "^" }
-jest-validate = { workspace = "flipbook_labs/jest_validate", version = "^" }
-roblox-shared = { workspace = "flipbook_labs/roblox_shared", version = "^" }
+jest-environment-luau = { workspace = "ghostnaps/jest_environment_luau", version = "^" }
+jest-get-type = { workspace = "ghostnaps/jest_get_type", version = "^" }
+jest-types = { workspace = "ghostnaps/jest_types", version = "^" }
+jest-util = { workspace = "ghostnaps/jest_util", version = "^" }
+jest-validate = { workspace = "ghostnaps/jest_validate", version = "^" }
+roblox-shared = { workspace = "ghostnaps/roblox_shared", version = "^" }
 
 [dev_dependencies]
-jest-globals = { workspace = "flipbook_labs/jest_globals", version = "^" }
-jest-snapshot-serializer-raw = { workspace = "flipbook_labs/jest_snapshot_serializer_raw", version = "^" }
-pretty-format = { workspace = "flipbook_labs/pretty_format", version = "^" }
+jest-globals = { workspace = "ghostnaps/jest_globals", version = "^" }
+jest-snapshot-serializer-raw = { workspace = "ghostnaps/jest_snapshot_serializer_raw", version = "^" }
+pretty-format = { workspace = "ghostnaps/pretty_format", version = "^" }

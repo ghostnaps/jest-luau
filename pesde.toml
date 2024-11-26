@@ -1,4 +1,4 @@
-name = "flipbook_labs/jest"
+name = "ghostnaps/jest"
 version = "3.8.0"
 description = 'A Luau testing framework based on Jest. See JestGlobals for the entry point.'
 authors = [
@@ -6,7 +6,7 @@ authors = [
     "Raymond Ng <rng@roblox.com>",
     "Daniel Fox <dfox@roblox.com>",
 ]
-repository = "https://github.com/flipbook-labs/jest-luau"
+repository = "https://github.com/ghostnaps/jest-luau"
 license = "MIT"
 workspace_members = ["src/*"]
 

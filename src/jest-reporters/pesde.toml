@@ -1,4 +1,4 @@
-name = "flipbook_labs/jest_reporters"
+name = "ghostnaps/jest_reporters"
 version = "0.1.0"
 
 [target]
@@ -10,18 +10,18 @@ default = "https://github.com/UpliftGames/wally-index"
 [dependencies]
 chalk = { wally = "wally#jsdotlua/chalk", version = "^0.2.1" }
 luau-polyfill = { wally = "wally#jsdotlua/luau-polyfill", version = "^1.2.7" }
-jest-console = { workspace = "flipbook_labs/jest_console", version = "^" }
-jest-message-util = { workspace = "flipbook_labs/jest_message_util", version = "^" }
-jest-mock = { workspace = "flipbook_labs/jest_mock", version = "^" }
-jest-test-result = { workspace = "flipbook_labs/jest_test_result", version = "^" }
-jest-types = { workspace = "flipbook_labs/jest_types", version = "^" }
-jest-util = { workspace = "flipbook_labs/jest_util", version = "^" }
-path = { workspace = "flipbook_labs/path", version = "^" }
-roblox-shared = { workspace = "flipbook_labs/roblox_shared", version = "^" }
-test-utils = { workspace = "flipbook_labs/test_utils", version = "^" }
+jest-console = { workspace = "ghostnaps/jest_console", version = "^" }
+jest-message-util = { workspace = "ghostnaps/jest_message_util", version = "^" }
+jest-mock = { workspace = "ghostnaps/jest_mock", version = "^" }
+jest-test-result = { workspace = "ghostnaps/jest_test_result", version = "^" }
+jest-types = { workspace = "ghostnaps/jest_types", version = "^" }
+jest-util = { workspace = "ghostnaps/jest_util", version = "^" }
+path = { workspace = "ghostnaps/path", version = "^" }
+roblox-shared = { workspace = "ghostnaps/roblox_shared", version = "^" }
+test-utils = { workspace = "ghostnaps/test_utils", version = "^" }
 
 [dev_dependencies]
-jest-config = { workspace = "flipbook_labs/jest_config", version = "^" }
-jest-globals = { workspace = "flipbook_labs/jest_globals", version = "^" }
-jest-snapshot-serializer-raw = { workspace = "flipbook_labs/jest_snapshot_serializer_raw", version = "^" }
-pretty-format = { workspace = "flipbook_labs/pretty_format", version = "^" }
+jest-config = { workspace = "ghostnaps/jest_config", version = "^" }
+jest-globals = { workspace = "ghostnaps/jest_globals", version = "^" }
+jest-snapshot-serializer-raw = { workspace = "ghostnaps/jest_snapshot_serializer_raw", version = "^" }
+pretty-format = { workspace = "ghostnaps/pretty_format", version = "^" }

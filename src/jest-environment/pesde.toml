@@ -1,4 +1,4 @@
-name = "flipbook_labs/jest_environment"
+name = "ghostnaps/jest_environment"
 version = "0.1.0"
 
 [target]
@@ -9,7 +9,7 @@ default = "https://github.com/UpliftGames/wally-index"
 
 [dependencies]
 luau-polyfill = { wally = "wally#jsdotlua/luau-polyfill", version = "^1.2.7" }
-jest-fake-timers = { workspace = "flipbook_labs/jest_fake_timers", version = "^" }
-jest-mock = { workspace = "flipbook_labs/jest_mock", version = "^" }
-jest-mock-genv = { workspace = "flipbook_labs/jest_mock_genv", version = "^" }
-jest-types = { workspace = "flipbook_labs/jest_types", version = "^" }
+jest-fake-timers = { workspace = "ghostnaps/jest_fake_timers", version = "^" }
+jest-mock = { workspace = "ghostnaps/jest_mock", version = "^" }
+jest-mock-genv = { workspace = "ghostnaps/jest_mock_genv", version = "^" }
+jest-types = { workspace = "ghostnaps/jest_types", version = "^" }

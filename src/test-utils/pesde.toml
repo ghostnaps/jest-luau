@@ -1,4 +1,4 @@
-name = "flipbook_labs/test_utils"
+name = "ghostnaps/test_utils"
 version = "0.1.0"
 
 [target]
@@ -10,6 +10,6 @@ default = "https://github.com/UpliftGames/wally-index"
 [dependencies]
 chalk = { wally = "wally#jsdotlua/chalk", version = "^0.2.1" }
 luau-polyfill = { wally = "wally#jsdotlua/luau-polyfill", version = "^1.2.7" }
-jest-environment-luau = { workspace = "flipbook_labs/jest_environment_luau", version = "^" }
-jest-types = { workspace = "flipbook_labs/jest_types", version = "^" }
-pretty-format = { workspace = "flipbook_labs/pretty_format", version = "^" }
+jest-environment-luau = { workspace = "ghostnaps/jest_environment_luau", version = "^" }
+jest-types = { workspace = "ghostnaps/jest_types", version = "^" }
+pretty-format = { workspace = "ghostnaps/pretty_format", version = "^" }

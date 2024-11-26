@@ -1,4 +1,4 @@
-name = "flipbook_labs/jest_jasmine2"
+name = "ghostnaps/jest_jasmine2"
 version = "0.1.0"
 
 [target]
@@ -12,6 +12,6 @@ luau-polyfill = { wally = "wally#jsdotlua/luau-polyfill", version = "^1.2.7" }
 
 [dev_dependencies]
 promise = { wally = "wally#jsdotlua/promise", version = "^3.5.2" }
-expect = { workspace = "flipbook_labs/expect", version = "^" }
-jest-globals = { workspace = "flipbook_labs/jest_globals", version = "^" }
-roblox-shared = { workspace = "flipbook_labs/roblox_shared", version = "^" }
+expect = { workspace = "ghostnaps/expect", version = "^" }
+jest-globals = { workspace = "ghostnaps/jest_globals", version = "^" }
+roblox-shared = { workspace = "ghostnaps/roblox_shared", version = "^" }

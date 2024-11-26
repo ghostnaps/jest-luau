@@ -1,4 +1,4 @@
-name = "flipbook_labs/jest_snapshot_serializer_raw"
+name = "ghostnaps/jest_snapshot_serializer_raw"
 version = "0.1.0"
 
 [target]

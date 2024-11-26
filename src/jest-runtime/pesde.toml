@@ -1,4 +1,4 @@
-name = "flipbook_labs/jest_runtime"
+name = "ghostnaps/jest_runtime"
 version = "0.1.0"
 
 [target]
@@ -10,14 +10,14 @@ default = "https://github.com/UpliftGames/wally-index"
 [dependencies]
 luau-polyfill = { wally = "wally#jsdotlua/luau-polyfill", version = "^1.2.7" }
 promise = { wally = "wally#jsdotlua/promise", version = "^3.5.2" }
-expect = { workspace = "flipbook_labs/expect", version = "^" }
-jest-fake-timers = { workspace = "flipbook_labs/jest_fake_timers", version = "^" }
-jest-mock = { workspace = "flipbook_labs/jest_mock", version = "^" }
-jest-mock-genv = { workspace = "flipbook_labs/jest_mock_genv", version = "^" }
-jest-snapshot = { workspace = "flipbook_labs/jest_snapshot", version = "^" }
-jest-types = { workspace = "flipbook_labs/jest_types", version = "^" }
+expect = { workspace = "ghostnaps/expect", version = "^" }
+jest-fake-timers = { workspace = "ghostnaps/jest_fake_timers", version = "^" }
+jest-mock = { workspace = "ghostnaps/jest_mock", version = "^" }
+jest-mock-genv = { workspace = "ghostnaps/jest_mock_genv", version = "^" }
+jest-snapshot = { workspace = "ghostnaps/jest_snapshot", version = "^" }
+jest-types = { workspace = "ghostnaps/jest_types", version = "^" }
 
 [dev_dependencies]
-jest-config = { workspace = "flipbook_labs/jest_config", version = "^" }
-jest-environment-luau = { workspace = "flipbook_labs/jest_environment_luau", version = "^" }
-jest-globals = { workspace = "flipbook_labs/jest_globals", version = "^" }
+jest-config = { workspace = "ghostnaps/jest_config", version = "^" }
+jest-environment-luau = { workspace = "ghostnaps/jest_environment_luau", version = "^" }
+jest-globals = { workspace = "ghostnaps/jest_globals", version = "^" }
