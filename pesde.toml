@@ -14,10 +14,6 @@ pesde_version = "0.5.0-rc.12"
 [target]
 environment = "roblox"
 
-[scripts]
-roblox_sync_config_generator = ".pesde/roblox_sync_config_generator.luau"
-sourcemap_generator = ".pesde/sourcemap_generator.luau"
-
 [indices]
 default = "https://github.com/daimond113/pesde-index"
 
@@ -25,9 +21,9 @@ default = "https://github.com/daimond113/pesde-index"
 default = "https://github.com/UpliftGames/wally-index"
 
 [dependencies]
-chalk = { wally = "wally#jsdotlua/chalk", version = "^0.2.1" }
+chalk-lua = { wally = "wally#jsdotlua/chalk", version = "^0.2.1" }
 luau-polyfill = { wally = "wally#jsdotlua/luau-polyfill", version = "^1.2.7" }
-luau-regexp = { wally = "wally#jsdotlua/luau-regexp", version = "^0.2.1" }
+reg-exp = { wally = "wally#jsdotlua/luau-regexp", version = "^0.2.1" }
 promise = { wally = "wally#jsdotlua/promise", version = "^3.5.2" }
 react = { wally = "wally#jsdotlua/react", version = "^17.2.0" }
 react-is = { wally = "wally#jsdotlua/react-is", version = "^17.2.0" }

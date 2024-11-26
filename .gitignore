@@ -1,7 +1,7 @@
 # Pesde files
-.pesde
 roblox_packages
 pesde.lock
+!/pesde.lock
 
 # Rotriever files
 rotriever.lock
@@ -38,7 +38,6 @@ roblox.toml
 # Editor files
 .vscode/launch.json
 .idea
-.vscode
 
 jest_runner_tmp
 lcov.info
