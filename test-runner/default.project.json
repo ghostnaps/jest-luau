@@ -1,6 +1,5 @@
 {
   "name": "TestRunner",
-  "emitLegacyScripts": false,
   "tree": {
     "$className": "Folder",
     "src": {
