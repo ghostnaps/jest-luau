@@ -9,16 +9,16 @@
 -- ROBLOX deviation: omitting fs and types file import and defining in line instead
 
 local CurrentModule = script.Parent
-local Packages = CurrentModule.Parent
+local Packages = CurrentModule.Parent.roblox_packages
 
-local LuauPolyfill = require(Packages.LuauPolyfill)
+local LuauPolyfill = require(Packages["luau-polyfill"])
 local Array = LuauPolyfill.Array
 local Error = LuauPolyfill.Error
 type Error = LuauPolyfill.Error
 local Object = LuauPolyfill.Object
 local Set = LuauPolyfill.Set
 
-local JestTypes = require(Packages.JestTypes)
+local JestTypes = require(Packages["jest-types"])
 -- ROBLOX deviation: custom type
 type ConfigPath = {
 	getInstance: () -> ModuleScript?,
@@ -27,12 +27,12 @@ type ConfigPath = {
 -- ROBLOX deviation END
 type ConfigSnapshotUpdateState = JestTypes.Config_SnapshotUpdateState
 
--- local JestMessageUtil = require(Packages.JestMessageUtil)
+-- local JestMessageUtil = require(Packages["jest-message-util"])
 -- local getStackTraceLines = JestMessageUtil.getStackTraceLines
 -- local getTopFrame = JestMessageUtil.getTopFrame
 
 -- ROBLOX TODO: fix PrettyFormat types imports
--- local PrettyFormat = require(Packages.PrettyFormat)
+-- local PrettyFormat = require(Packages["pretty-format"])
 local PrettyFormat = require(CurrentModule.PrettyFormat)
 type PrettyFormatOptions = PrettyFormat.OptionsReceived
 

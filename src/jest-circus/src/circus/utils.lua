@@ -7,8 +7,8 @@
  ]]
 
 local CurrentModule = script.Parent
-local Packages = CurrentModule.Parent.Parent
-local LuauPolyfill = require(Packages.LuauPolyfill)
+local Packages = CurrentModule.Parent.Parent.roblox_packages
+local LuauPolyfill = require(Packages["luau-polyfill"])
 local Array = LuauPolyfill.Array
 local Boolean = LuauPolyfill.Boolean
 local Error = LuauPolyfill.Error
@@ -16,7 +16,7 @@ type Array<T> = LuauPolyfill.Array<T>
 type Error = LuauPolyfill.Error
 type Promise<T> = LuauPolyfill.Promise<T>
 
-local Promise = require(Packages.Promise)
+local Promise = require(Packages["promise"])
 
 -- ROBLOX deviation START: predefine variables
 local makeTestResults
@@ -27,7 +27,7 @@ local invariant
 -- ROBLOX deviation END
 
 -- ROBLOX deviation START: add additional imports
-local RegExp = require(Packages.RegExp)
+local RegExp = require(Packages["regexp"])
 -- ROBLOX deviation END
 
 -- ROBLOX deviation START: add function to extract bare string message from stacktrace line
@@ -58,7 +58,7 @@ local exports = {}
 -- local co = require(Packages.co).default
 -- ROBLOX deviation END
 -- ROBLOX deviation: use dedent implementation from graphql-lua
-local dedent = require(Packages.RobloxShared).dedent
+local dedent = require(Packages["roblox-shared"]).dedent
 -- ROBLOX deviation: generator functions are not supported in Lua
 -- local isGeneratorFn = require(Packages["is-generator-fn"]).default
 --[[
@@ -68,10 +68,10 @@ local dedent = require(Packages.RobloxShared).dedent
 	import slash = require('slash');
 	import StackUtils = require('stack-utils');
 ]]
-local testResultModule = require(Packages.JestTestResult)
+local testResultModule = require(Packages["jest-test-result"])
 type AssertionResult = testResultModule.AssertionResult
 type Status = testResultModule.Status
-local typesModule = require(Packages.JestTypes)
+local typesModule = require(Packages["jest-types"])
 type Circus_BlockName = typesModule.Circus_BlockName
 type Circus_DescribeBlock = typesModule.Circus_DescribeBlock
 type Circus_BlockMode = typesModule.Circus_BlockMode
@@ -90,11 +90,11 @@ type Circus_RunResult = typesModule.Circus_RunResult
 type Global_PromiseReturningTestFn = typesModule.Global_PromiseReturningTestFn
 type Global_TestReturnValue = typesModule.Global_TestReturnValue
 type Global_GeneratorReturningTestFn = typesModule.Global_GeneratorReturningTestFn
-local jestUtilModule = require(Packages.JestUtil)
+local jestUtilModule = require(Packages["jest-util"])
 local ErrorWithStack = jestUtilModule.ErrorWithStack
 local convertDescriptorToString = jestUtilModule.convertDescriptorToString
 local formatTime = jestUtilModule.formatTime
-local prettyFormat = require(Packages.PrettyFormat).format
+local prettyFormat = require(Packages["pretty-format"]).format
 -- ROBLOX deviation: move to `state_.lua` to avoid cyclic dependency
 local stateModule = require(script.Parent.state_)
 local ROOT_DESCRIBE_BLOCK_NAME = stateModule.ROOT_DESCRIBE_BLOCK_NAME

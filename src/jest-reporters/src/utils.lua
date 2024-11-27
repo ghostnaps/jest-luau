@@ -7,9 +7,9 @@
  ]]
 
 local CurrentModule = script.Parent
-local Packages = CurrentModule.Parent
+local Packages = CurrentModule.Parent.roblox_packages
 
-local LuauPolyfill = require(Packages.LuauPolyfill)
+local LuauPolyfill = require(Packages["luau-polyfill"])
 local Array = LuauPolyfill.Array
 local Boolean = LuauPolyfill.Boolean
 local String = LuauPolyfill.String
@@ -18,7 +18,7 @@ type Array<T> = LuauPolyfill.Array<T>
 local exports = {}
 
 local path = require(Packages.Path).path
-local chalk = require(Packages.ChalkLua)
+local chalk = require(Packages["chalk-lua"])
 
 -- ROBLOX deviation START: not supporting windows path separator
 -- local slash = require(Packages.slash)
@@ -27,16 +27,16 @@ local slash = function(path_: string): string
 end
 -- ROBLOX deviation END
 
-local testResultModule = require(Packages.JestTestResult)
+local testResultModule = require(Packages["jest-test-result"])
 type AggregatedResult = testResultModule.AggregatedResult
 type TestCaseResult = testResultModule.TestCaseResult
 
-local jestTypesModule = require(Packages.JestTypes)
+local jestTypesModule = require(Packages["jest-types"])
 type Config_ProjectConfig = jestTypesModule.Config_ProjectConfig
 type Config_GlobalConfig = jestTypesModule.Config_GlobalConfig
 type Config_Path = jestTypesModule.Config_Path
 
-local jestUtilModule = require(Packages.JestUtil)
+local jestUtilModule = require(Packages["jest-util"])
 local formatTime = jestUtilModule.formatTime
 local pluralize = jestUtilModule.pluralize
 

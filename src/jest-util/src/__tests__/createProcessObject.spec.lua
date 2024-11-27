@@ -8,15 +8,15 @@
  ]]
 
 local CurrentModule = script.Parent.Parent
-local Packages = CurrentModule.Parent
+local Packages = CurrentModule.Parent.roblox_packages
 
-local JestGlobals = require(Packages.Dev.JestGlobals)
+local JestGlobals = require(Packages["jest-globals"])
 local it = JestGlobals.it --(JestGlobals.it :: any) :: Function
 --[[
 		ROBLOX deviation:
 		skipped whole file as it seems unnecessary in Lua environment
 	]]
--- local LuauPolyfill = require(Packages.LuauPolyfill)
+-- local LuauPolyfill = require(Packages["luau-polyfill"])
 -- local Array = LuauPolyfill.Array
 -- -- local EventEmitter = require(Packages.events).EventEmitter
 -- local createProcessObject

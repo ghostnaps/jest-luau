@@ -6,28 +6,28 @@
  * LICENSE file in the root directory of this source tree.
  ]]
 
-local Packages = script.Parent.Parent
-local LuauPolyfill = require(Packages.LuauPolyfill)
+local Packages = script.Parent.Parent.roblox_packages
+local LuauPolyfill = require(Packages["luau-polyfill"])
 local Array = LuauPolyfill.Array
 local Boolean = LuauPolyfill.Boolean
 local Error = LuauPolyfill.Error
 local console = LuauPolyfill.console
 type Array<T> = LuauPolyfill.Array<T>
 type Promise<T> = LuauPolyfill.Promise<T>
-local Promise = require(Packages.Promise)
+local Promise = require(Packages["promise"])
 
 local exports = {}
 
-local chalk = require(Packages.ChalkLua)
+local chalk = require(Packages["chalk-lua"])
 -- ROBLOX deviation START: not needed
 -- local exit = require(Packages.exit)
 -- local rimraf = require(Packages.rimraf)
--- local CustomConsole = require(Packages.JestConsole).CustomConsole
+-- local CustomConsole = require(Packages["jest-console"]).CustomConsole
 -- ROBLOX deviation END
-local test_resultModule = require(Packages.JestTestResult)
+local test_resultModule = require(Packages["jest-test-result"])
 type AggregatedResult = test_resultModule.AggregatedResult
 type TestContext = test_resultModule.TestContext
-local jestTypesModule = require(Packages.JestTypes)
+local jestTypesModule = require(Packages["jest-types"])
 type Config_Argv = jestTypesModule.Config_Argv
 type Config_GlobalConfig = jestTypesModule.Config_GlobalConfig
 type Config_ProjectConfig = jestTypesModule.Config_ProjectConfig
@@ -35,14 +35,14 @@ type Config_ProjectConfig = jestTypesModule.Config_ProjectConfig
 -- local jest_changed_filesModule = require(Packages["jest-changed-files"])
 -- type ChangedFilesPromise = jest_changed_filesModule.ChangedFilesPromise
 type ChangedFilesPromise = Promise<any>
-local readConfigs = require(Packages.JestConfig).readConfigs
+local readConfigs = require(Packages["jest-config"]).readConfigs
 -- local jest_haste_mapModule = require(Packages["jest-haste-map"])
 -- type HasteMap = jest_haste_mapModule.default
 type HasteMap = any
 -- ROBLOX deviation END
-local Runtime = require(Packages.JestRuntime)
+local Runtime = require(Packages["jest-runtime"])
 type Context = Runtime.Context
-local jest_utilModule = require(Packages.JestUtil)
+local jest_utilModule = require(Packages["jest-util"])
 -- ROBLOX deviation START: not needed
 -- local createDirectory = jest_utilModule.createDirectory
 -- ROBLOX deviation END
@@ -69,7 +69,7 @@ local preRunMessagePrint = preRunMessage.print
 type OnCompleteCallback = (results: AggregatedResult) -> ...nil
 
 -- ROBLOX deviation START: added missing variables to limit nr deviations
-local RobloxShared = require(Packages.RobloxShared)
+local RobloxShared = require(Packages["roblox-shared"])
 local nodeUtils = RobloxShared.nodeUtils
 local process = nodeUtils.process
 local exit = nodeUtils.exit

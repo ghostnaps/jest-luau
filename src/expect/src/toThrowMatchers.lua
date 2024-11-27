@@ -8,20 +8,20 @@
 --  */
 
 local CurrentModule = script.Parent
-local Packages = CurrentModule.Parent
+local Packages = CurrentModule.Parent.roblox_packages
 
-local getType = require(Packages.JestGetType).getType
+local getType = require(Packages["jest-get-type"]).getType
 
-local LuauPolyfill = require(Packages.LuauPolyfill)
+local LuauPolyfill = require(Packages["luau-polyfill"])
 local instanceof = LuauPolyfill.instanceof
 local Error = LuauPolyfill.Error
 type Function = (...any) -> any?
-local RegExp = require(Packages.RegExp)
+local RegExp = require(Packages["regexp"])
 type RegExp = RegExp.RegExp
 type Object = LuauPolyfill.Object
 type Error = LuauPolyfill.Error
 
-local JestMatcherUtils = require(Packages.JestMatcherUtils)
+local JestMatcherUtils = require(Packages["jest-matcher-utils"])
 local EXPECTED_COLOR = JestMatcherUtils.EXPECTED_COLOR
 local RECEIVED_COLOR = JestMatcherUtils.RECEIVED_COLOR
 local matcherErrorMessage = JestMatcherUtils.matcherErrorMessage
@@ -33,7 +33,7 @@ local printWithType = JestMatcherUtils.printWithType
 local stringify = JestMatcherUtils.stringify
 type MatcherHintOptions = JestMatcherUtils.MatcherHintOptions
 
-local JestMessageUtil = require(Packages.JestMessageUtil)
+local JestMessageUtil = require(Packages["jest-message-util"])
 local formatStackTrace = JestMessageUtil.formatStackTrace
 
 local Print = require(CurrentModule.print)

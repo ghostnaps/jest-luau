@@ -6,13 +6,13 @@
  * LICENSE file in the root directory of this source tree.
  *
  ]]
-local Packages = script.Parent.Parent
-local LuauPolyfill = require(Packages.LuauPolyfill)
+local Packages = script.Parent.Parent.roblox_packages
+local LuauPolyfill = require(Packages["luau-polyfill"])
 local Boolean = LuauPolyfill.Boolean
 local Error = LuauPolyfill.Error
 local Object = LuauPolyfill.Object
 local exports = {}
-local jest_matcher_utilsModule = require(Packages.JestMatcherUtils)
+local jest_matcher_utilsModule = require(Packages["jest-matcher-utils"])
 local EXPECTED_COLOR = jest_matcher_utilsModule.EXPECTED_COLOR
 local RECEIVED_COLOR = jest_matcher_utilsModule.RECEIVED_COLOR
 local matcherHint = jest_matcher_utilsModule.matcherHint

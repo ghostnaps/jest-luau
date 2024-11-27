@@ -8,10 +8,10 @@
 
 local CurrentModule = script.Parent
 local SrcModule = CurrentModule.Parent
-local Packages = SrcModule.Parent.Parent
+local Packages = SrcModule.Parent.Parent.roblox_packages
 local runTest = require(script.Parent.Parent.__mocks__.testUtils).runTest
 
-local JestGlobals = require(Packages.Dev.JestGlobals)
+local JestGlobals = require(Packages["jest-globals"])
 local expect = JestGlobals.expect
 local test = JestGlobals.test
 

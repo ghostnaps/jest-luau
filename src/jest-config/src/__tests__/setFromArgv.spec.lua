@@ -7,10 +7,10 @@
  *
  ]]
 
-local Packages = script.Parent.Parent.Parent
-local typesModule = require(Packages.JestTypes)
+local Packages = script.Parent.Parent.Parent.roblox_packages
+local typesModule = require(Packages["jest-types"])
 
-local JestGlobals = require(Packages.Dev.JestGlobals)
+local JestGlobals = require(Packages["jest-globals"])
 local expect = JestGlobals.expect
 local it = JestGlobals.it
 

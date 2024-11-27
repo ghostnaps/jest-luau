@@ -9,11 +9,11 @@
 local exports = {}
 
 local CurrentModule = script.Parent
-local Packages = CurrentModule.Parent
+local Packages = CurrentModule.Parent.roblox_packages
 
 local Console = require(CurrentModule.Console).default
 
-local LuauPolyfill = require(Packages.LuauPolyfill)
+local LuauPolyfill = require(Packages["luau-polyfill"])
 local Boolean = LuauPolyfill.Boolean
 local inspect = LuauPolyfill.util.inspect
 type Error = LuauPolyfill.Error
@@ -23,15 +23,15 @@ local helpersModule = require(CurrentModule.helpers)
 local format = helpersModule.format
 local formatWithOptions = helpersModule.formatWithOptions
 
-local RobloxShared = require(Packages.RobloxShared)
+local RobloxShared = require(Packages["roblox-shared"])
 type Writeable = RobloxShared.Writeable
 type NodeJS_WriteStream = RobloxShared.NodeJS_WriteStream
 
 -- ROBLOX deviation END
 
-local chalk = require(Packages.ChalkLua)
+local chalk = require(Packages["chalk-lua"])
 
-local JestUtil = require(Packages.JestUtil)
+local JestUtil = require(Packages["jest-util"])
 local clearLine = JestUtil.clearLine
 local formatTime = JestUtil.formatTime
 

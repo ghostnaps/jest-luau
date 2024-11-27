@@ -6,9 +6,9 @@
  * LICENSE file in the root directory of this source tree.
  *
  ]]
-local Packages = script.Parent.Parent.Parent
+local Packages = script.Parent.Parent.Parent.roblox_packages
 
-local LuauPolyfill = require(Packages.LuauPolyfill)
+local LuauPolyfill = require(Packages["luau-polyfill"])
 local Array = LuauPolyfill.Array
 local Object = LuauPolyfill.Object
 type Array<T> = LuauPolyfill.Array<T>
@@ -18,7 +18,7 @@ local exports = {}
 -- ROBLOX deviation: predefine variables
 local convertRowToTable, convertTableToTemplates
 
-local typesModule = require(Packages.JestTypes)
+local typesModule = require(Packages["jest-types"])
 type Global_Row = typesModule.Global_Row
 type Global_Table = typesModule.Global_Table
 

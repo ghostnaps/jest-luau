@@ -16,9 +16,9 @@
 ]]
 
 local CurrentModule = script
-local Packages = CurrentModule.Parent
+local Packages = CurrentModule.Parent.roblox_packages
 
-local LuauPolyfill = require(Packages.LuauPolyfill)
+local LuauPolyfill = require(Packages["luau-polyfill"])
 type Object = LuauPolyfill.Object
 
 local exports = {}

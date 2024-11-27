@@ -15,21 +15,21 @@
 -- ROBLOX NOTE: no upstream
 
 local CurrentModule = script.Parent.Parent
-local Packages = CurrentModule.Parent
+local Packages = CurrentModule.Parent.roblox_packages
 
-local JestGlobals = require(Packages.Dev.JestGlobals)
+local JestGlobals = require(Packages["jest-globals"])
 local it = JestGlobals.it
 local describe = JestGlobals.describe
 local beforeAll = JestGlobals.beforeAll
 local expect = JestGlobals.expect
 
-local LuauPolyfill = require(Packages.LuauPolyfill)
+local LuauPolyfill = require(Packages["luau-polyfill"])
 local Error = LuauPolyfill.Error
 local extends = LuauPolyfill.extends
 
 local AssertionError = LuauPolyfill.AssertionError
 
-local alignedAnsiStyleSerializer = require(Packages.Dev.TestUtils).alignedAnsiStyleSerializer
+local alignedAnsiStyleSerializer = require(Packages["test-utils"]).alignedAnsiStyleSerializer
 
 local jestExpect = require(CurrentModule)
 
@@ -128,7 +128,7 @@ describe("Lua toThrowMatcher tests", function()
 		end).toThrow(CustomError("error msg"))
 	end)
 
-	local jest = require(Packages.Dev.JestGlobals).jest
+	local jest = require(Packages["jest-globals"]).jest
 	it("accepts RegExp-shaped objects", function()
 		local execMock, execFn = jest.fn()
 		local testMock, testFn = jest.fn(function(_, _)

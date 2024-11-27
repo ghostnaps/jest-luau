@@ -7,7 +7,7 @@
  ]]
 
 local rootWorkspace = script.Parent.Parent
-local LuauPolyfill = require(rootWorkspace.LuauPolyfill)
+local LuauPolyfill = require(rootWorkspace.roblox_packages["luau-polyfill"])
 type Array<T> = LuauPolyfill.Array<T>
 
 export type Milliseconds = number

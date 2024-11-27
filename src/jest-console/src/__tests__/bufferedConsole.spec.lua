@@ -7,18 +7,18 @@
 ]]
 
 local CurrentModule = script.Parent
-local Packages = CurrentModule.Parent.Parent
+local Packages = CurrentModule.Parent.Parent.roblox_packages
 
-local LuauPolyfill = require(Packages.LuauPolyfill)
+local LuauPolyfill = require(Packages["luau-polyfill"])
 local Array = LuauPolyfill.Array
 
-local JestGlobals = require(Packages.Dev.JestGlobals)
+local JestGlobals = require(Packages["jest-globals"])
 local expect = JestGlobals.expect
 local describe = JestGlobals.describe
 local it = JestGlobals.it
 local beforeEach = JestGlobals.beforeEach
 
-local chalk = require(Packages.ChalkLua)
+local chalk = require(Packages["chalk-lua"])
 local BufferedConsoleModule = require(CurrentModule.Parent.BufferedConsole)
 local BufferedConsole = BufferedConsoleModule.default
 type BufferedConsole = BufferedConsoleModule.BufferedConsole

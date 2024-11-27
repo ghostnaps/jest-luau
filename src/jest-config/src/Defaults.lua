@@ -6,7 +6,7 @@
  * LICENSE file in the root directory of this source tree.
  ]]
 
-local Packages = script.Parent.Parent
+local Packages = script.Parent.Parent.roblox_packages
 local exports = {}
 
 -- ROBLOX deviation START: hardcode values
@@ -14,7 +14,7 @@ local exports = {}
 -- local isCI = require(Packages["ci-info"]).isCI
 local isCI = false
 -- ROBLOX deviation END
-local typesModule = require(Packages.JestTypes)
+local typesModule = require(Packages["jest-types"])
 type Config_DefaultOptions = typesModule.Config_DefaultOptions
 -- ROBLOX deviation START: not needed
 -- local replacePathSepForRegex = require(Packages["jest-regex-util"]).replacePathSepForRegex
@@ -93,7 +93,7 @@ local defaultOptions: Config_DefaultOptions = {
 	skipFilter = false,
 	slowTestThreshold = 5,
 	snapshotSerializers = {},
-	testEnvironment = Packages.JestEnvironmentLuau,
+	testEnvironment = Packages["jest-environment-luau"],
 	testEnvironmentOptions = {},
 	testFailureExitCode = 1,
 	testLocationInResults = false,

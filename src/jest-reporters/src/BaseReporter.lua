@@ -7,21 +7,21 @@
  ]]
 
 local CurrentModule = script.Parent
-local Packages = CurrentModule.Parent
+local Packages = CurrentModule.Parent.roblox_packages
 
-local LuauPolyfill = require(Packages.LuauPolyfill)
+local LuauPolyfill = require(Packages["luau-polyfill"])
 local Object = LuauPolyfill.Object
 type Set<T> = LuauPolyfill.Set<T>
 type Error = LuauPolyfill.Error
 
 local exports = {}
 
-local testResultModule = require(Packages.JestTestResult)
+local testResultModule = require(Packages["jest-test-result"])
 type AggregatedResult = testResultModule.AggregatedResult
 type TestCaseResult = testResultModule.TestCaseResult
 type TestResult = testResultModule.TestResult
 
-local preRunMessageRemove = require(Packages.JestUtil).remove
+local preRunMessageRemove = require(Packages["jest-util"]).remove
 
 local typesModule = require(CurrentModule.types)
 type Context = typesModule.Context
@@ -30,7 +30,7 @@ type ReporterOnStartOptions = typesModule.ReporterOnStartOptions
 type Test = typesModule.Test
 type NodeProcessMock = typesModule.NodeProcessMock
 
-local RobloxShared = require(Packages.RobloxShared)
+local RobloxShared = require(Packages["roblox-shared"])
 local Writeable = RobloxShared.Writeable
 type Writeable = RobloxShared.Writeable
 

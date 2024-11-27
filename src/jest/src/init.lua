@@ -6,10 +6,10 @@
  * LICENSE file in the root directory of this source tree.
  ]]
 
-local Packages = script.Parent
+local Packages = script.Parent.roblox_packages
 
 local exports = {}
-local coreModule = require(Packages.JestCore)
+local coreModule = require(Packages["jest-core"])
 exports.SearchSource = coreModule.SearchSource
 exports.TestWatcher = coreModule.TestWatcher
 exports.createTestScheduler = coreModule.createTestScheduler

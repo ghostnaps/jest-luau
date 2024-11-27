@@ -8,8 +8,8 @@
  ]]
 
 local CurrentModule = script.Parent
-local Packages = CurrentModule.Parent
-local LuauPolyfill = require(Packages.LuauPolyfill)
+local Packages = CurrentModule.Parent.roblox_packages
+local LuauPolyfill = require(Packages["luau-polyfill"])
 local Array = LuauPolyfill.Array
 local Boolean = LuauPolyfill.Boolean
 local Map = LuauPolyfill.Map
@@ -18,8 +18,8 @@ type Map<K, V> = LuauPolyfill.Map<K, V>
 
 local exports = {}
 
-local picomatch = require(Packages.Picomatch)
-local typesModule = require(Packages.JestTypes)
+local picomatch = require(Packages["picomatch"])
+local typesModule = require(Packages["jest-types"])
 type Config_Path = typesModule.Config_Path
 type Config_Glob = typesModule.Config_Glob
 -- local replacePathSepForGlob = require(script.Parent.replacePathSepForGlob).default

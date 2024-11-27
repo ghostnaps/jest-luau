@@ -8,15 +8,15 @@
  ]]
 
 local CurrentModule = script.Parent
-local Packages = CurrentModule.Parent.Parent
-local LuauPolyfill = require(Packages.LuauPolyfill)
+local Packages = CurrentModule.Parent.Parent.roblox_packages
+local LuauPolyfill = require(Packages["luau-polyfill"])
 local Boolean = LuauPolyfill.Boolean
 type Promise<T> = LuauPolyfill.Promise<T>
 
-local Promise = require(Packages.Promise)
+local Promise = require(Packages["promise"])
 
 local exports = {}
-local typesModule = require(Packages.JestTypes)
+local typesModule = require(Packages["jest-types"])
 type Circus_RunResult = typesModule.Circus_RunResult
 type Circus_DescribeBlock = typesModule.Circus_DescribeBlock
 type Circus_TestEntry = typesModule.Circus_TestEntry

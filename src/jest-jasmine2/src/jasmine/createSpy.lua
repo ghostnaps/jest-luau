@@ -28,9 +28,9 @@
 -- */
 
 local CurrentModule = script.Parent
-local Packages = CurrentModule.Parent.Parent
+local Packages = CurrentModule.Parent.Parent.roblox_packages
 
-local LuauPolyfill = require(Packages.LuauPolyfill)
+local LuauPolyfill = require(Packages["luau-polyfill"])
 local Array = LuauPolyfill.Array
 
 --[[

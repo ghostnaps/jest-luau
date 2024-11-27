@@ -15,16 +15,16 @@
 -- ROBLOX NOTE: no upstream
 
 local CurrentModule = script.Parent.Parent
-local Packages = CurrentModule.Parent
+local Packages = CurrentModule.Parent.roblox_packages
 
-local JestGlobals = require(Packages.Dev.JestGlobals)
+local JestGlobals = require(Packages["jest-globals"])
 local describe = JestGlobals.describe
 local it = JestGlobals.it
 local beforeEach = JestGlobals.beforeEach
 
 local Print = require(CurrentModule.print)
 
-local JestMatcherUtils = require(Packages.JestMatcherUtils)
+local JestMatcherUtils = require(Packages["jest-matcher-utils"])
 local EXPECTED_COLOR = JestMatcherUtils.EXPECTED_COLOR
 
 local expect = require(CurrentModule)

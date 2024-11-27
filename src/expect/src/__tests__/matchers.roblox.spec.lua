@@ -14,9 +14,9 @@
 ]]
 
 local CurrentModule = script.Parent.Parent
-local Packages = CurrentModule.Parent
+local Packages = CurrentModule.Parent.roblox_packages
 
-local JestGlobals = require(Packages.Dev.JestGlobals)
+local JestGlobals = require(Packages["jest-globals"])
 local describe = JestGlobals.describe
 local it = JestGlobals.it
 local beforeAll = JestGlobals.beforeAll
@@ -24,14 +24,14 @@ local expect = JestGlobals.expect
 
 local jestExpect = require(CurrentModule)
 
-local chalk = require(Packages.Dev.ChalkLua)
-local alignedAnsiStyleSerializer = require(Packages.Dev.TestUtils).alignedAnsiStyleSerializer
+local chalk = require(Packages["chalk-lua"])
+local alignedAnsiStyleSerializer = require(Packages["test-utils"]).alignedAnsiStyleSerializer
 
-local LuauPolyfill = require(Packages.LuauPolyfill)
+local LuauPolyfill = require(Packages["luau-polyfill"])
 local Error = LuauPolyfill.Error
 local Set = LuauPolyfill.Set
 
-local RegExp = require(Packages.RegExp)
+local RegExp = require(Packages["regexp"])
 
 local CustomClass = {}
 CustomClass.__index = CustomClass

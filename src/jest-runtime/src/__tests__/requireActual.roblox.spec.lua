@@ -1,15 +1,15 @@
 local CurrentModule = script.Parent.Parent
-local Packages = CurrentModule.Parent
-local Promise = require(Packages.Promise)
+local Packages = CurrentModule.Parent.roblox_packages
+local Promise = require(Packages["promise"])
 
-local JestGlobals = require(Packages.Dev.JestGlobals)
+local JestGlobals = require(Packages["jest-globals"])
 local describe = JestGlobals.describe
 local expect = JestGlobals.expect
 local it = JestGlobals.it
 local beforeEach = JestGlobals.beforeEach
 local mockMeScript = script.Parent.mock_me
 
-local JestConfig = require(Packages.Dev.JestConfig)
+local JestConfig = require(Packages["jest-config"])
 
 local rootJsPath = script.Parent.test_root.root
 local __filename = mockMeScript

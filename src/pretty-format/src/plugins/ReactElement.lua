@@ -7,14 +7,14 @@
  ]]
 
 local CurrentModule = script.Parent.Parent
-local Packages = CurrentModule.Parent
-local LuauPolyfill = require(Packages.LuauPolyfill)
+local Packages = CurrentModule.Parent.roblox_packages
+local LuauPolyfill = require(Packages["luau-polyfill"])
 local Array = LuauPolyfill.Array
 local Boolean = LuauPolyfill.Boolean
 local Object = LuauPolyfill.Object
 type Array<T> = LuauPolyfill.Array<T>
 local exports = {}
-local ReactIs = require(Packages.ReactIs)
+local ReactIs = require(Packages["react-is"])
 local typesModule = require(script.Parent.Parent.Types)
 type Config = typesModule.Config
 type NewPlugin = typesModule.NewPlugin

@@ -6,8 +6,8 @@
  * LICENSE file in the root directory of this source tree.
  ]]
 
-local Packages = script.Parent.Parent
-local LuauPolyfill = require(Packages.LuauPolyfill)
+local Packages = script.Parent.Parent.roblox_packages
+local LuauPolyfill = require(Packages["luau-polyfill"])
 type Array<T> = LuauPolyfill.Array<T>
 local exports = {}
 -- local createHash = require(Packages.crypto).createHash

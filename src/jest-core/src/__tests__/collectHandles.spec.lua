@@ -7,18 +7,18 @@
  *
  ]]
 
-local Packages = script.Parent.Parent.Parent
+local Packages = script.Parent.Parent.Parent.roblox_packages
 
-local JestGlobals = require(Packages.Dev.JestGlobals)
+local JestGlobals = require(Packages["jest-globals"])
 local describe = JestGlobals.describe
 local expect = JestGlobals.expect
 local it = JestGlobals.it
 -- ROBLOX deviation START: collectHandles not ported yet
--- local LuauPolyfill = require(Packages.LuauPolyfill)
+-- local LuauPolyfill = require(Packages["luau-polyfill"])
 -- local Array = LuauPolyfill.Array
 -- local clearInterval = LuauPolyfill.clearInterval
 -- local setInterval = LuauPolyfill.setInterval
--- local Promise = require(Packages.Promise)
+-- local Promise = require(Packages["promise"])
 -- local dns = require(Packages.dns).promises
 -- local http = require(Packages.http).default
 -- local PerformanceObserver = require(Packages.perf_hooks).PerformanceObserver

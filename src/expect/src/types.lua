@@ -8,11 +8,11 @@
 --  */
 
 local CurrentModule = script.Parent
-local Packages = CurrentModule.Parent
+local Packages = CurrentModule.Parent.roblox_packages
 
-local RegExp = require(Packages.RegExp)
+local RegExp = require(Packages["regexp"])
 type RegExp = RegExp.RegExp
-local LuauPolyfill = require(Packages.LuauPolyfill)
+local LuauPolyfill = require(Packages["luau-polyfill"])
 type Error = LuauPolyfill.Error
 type Array<T> = LuauPolyfill.Array<T>
 type Record<K, T> = { [K]: T }
@@ -21,7 +21,7 @@ type Promise<T> = LuauPolyfill.Promise<T>
 type PromiseLike<T> = LuauPolyfill.PromiseLike<T>
 type Function = (...any) -> any
 type Object = LuauPolyfill.Object
-local JestMatcherUtils = require(Packages.JestMatcherUtils)
+local JestMatcherUtils = require(Packages["jest-matcher-utils"])
 
 export type SyncExpectationResult = {
 	pass: boolean,

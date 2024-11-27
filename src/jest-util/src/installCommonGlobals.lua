@@ -10,20 +10,20 @@
 -- ROBLOX deviation: returning a function to be able to re-execute the module in tests
 return function()
 	local CurrentModule = script.Parent
-	local Packages = CurrentModule.Parent
-	local LuauPolyfill = require(Packages.LuauPolyfill)
+	local Packages = CurrentModule.Parent.roblox_packages
+	local LuauPolyfill = require(Packages["luau-polyfill"])
 	local Array = LuauPolyfill.Array
 	local Object = LuauPolyfill.Object
 	local String = LuauPolyfill.String
 	local Symbol = LuauPolyfill.Symbol
 
-	local Promise = require(Packages.Promise)
+	local Promise = require(Packages["promise"])
 
 	local exports = {}
 
 	-- ROBLOX deviation: fs not necessary
 	-- local fs = require(Packages["graceful-fs"])
-	local typesModule = require(Packages.JestTypes)
+	local typesModule = require(Packages["jest-types"])
 	type Config_ConfigGlobals = typesModule.Config_ConfigGlobals
 	local createProcessObject = require(script.Parent.createProcessObject).default
 	local deepCyclicCopy = require(script.Parent.deepCyclicCopy).default

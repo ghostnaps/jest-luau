@@ -7,19 +7,19 @@
 --  */
 
 local CurrentModule = script.Parent.Parent
-local Packages = CurrentModule.Parent
+local Packages = CurrentModule.Parent.roblox_packages
 
-local LuauPolyfill = require(Packages.LuauPolyfill)
+local LuauPolyfill = require(Packages["luau-polyfill"])
 local Error = LuauPolyfill.Error
 local Object = LuauPolyfill.Object
 local Symbol = LuauPolyfill.Symbol
 
 -- ROBLOX deviation: omitting imports for styles
-local ansiRegex = require(Packages.PrettyFormat).plugins.ConvertAnsi.ansiRegex
-local chalk = (require(Packages.ChalkLua) :: any) :: Chalk
-local format = require(Packages.PrettyFormat).default
+local ansiRegex = require(Packages["pretty-format"]).plugins.ConvertAnsi.ansiRegex
+local chalk = (require(Packages["chalk-lua"]) :: any) :: Chalk
+local format = require(Packages["pretty-format"]).default
 
-local JestGlobals = require(Packages.Dev.JestGlobals)
+local JestGlobals = require(Packages["jest-globals"])
 local expect = JestGlobals.expect
 local describe = JestGlobals.describe
 local it = JestGlobals.it

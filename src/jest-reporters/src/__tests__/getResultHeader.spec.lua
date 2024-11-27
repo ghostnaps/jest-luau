@@ -7,14 +7,14 @@
  ]]
 
 local CurrentModule = script.Parent.Parent
-local Packages = CurrentModule.Parent
+local Packages = CurrentModule.Parent.roblox_packages
 
-local JestGlobals = require(Packages.Dev.JestGlobals)
+local JestGlobals = require(Packages["jest-globals"])
 local expect = JestGlobals.expect
 local it = JestGlobals.it
 
-local makeGlobalConfig = require(Packages.TestUtils).makeGlobalConfig
-local testResultModule = require(Packages.JestTestResult)
+local makeGlobalConfig = require(Packages["test-utils"]).makeGlobalConfig
+local testResultModule = require(Packages["jest-test-result"])
 type TestResult = testResultModule.TestResult
 
 local getResultHeader = require(CurrentModule.getResultHeader).default

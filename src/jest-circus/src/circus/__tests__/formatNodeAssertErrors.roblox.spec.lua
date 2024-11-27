@@ -16,18 +16,18 @@
 
 local CurrentModule = script.Parent
 local SrcModule = CurrentModule.Parent
-local Packages = SrcModule.Parent.Parent
+local Packages = SrcModule.Parent.Parent.roblox_packages
 
-local typesModule = require(Packages.JestTypes)
+local typesModule = require(Packages["jest-types"])
 type Circus_TestEntry = typesModule.Circus_TestEntry
 
-local LuauPolyfill = require(Packages.LuauPolyfill)
+local LuauPolyfill = require(Packages["luau-polyfill"])
 local AssertionError = LuauPolyfill.AssertionError
 
-local RobloxShared = require(Packages.RobloxShared)
+local RobloxShared = require(Packages["roblox-shared"])
 local pruneDeps = RobloxShared.pruneDeps
 
-local JestGlobals = require(Packages.Dev.JestGlobals)
+local JestGlobals = require(Packages["jest-globals"])
 local expect = JestGlobals.expect
 local describe = JestGlobals.describe
 local it = JestGlobals.it

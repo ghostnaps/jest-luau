@@ -7,9 +7,9 @@
 --  */
 
 local CurrentModule = script.Parent.Parent
-local Packages = CurrentModule.Parent
+local Packages = CurrentModule.Parent.roblox_packages
 
-local LuauPolyfill = require(Packages.LuauPolyfill)
+local LuauPolyfill = require(Packages["luau-polyfill"])
 local Symbol = LuauPolyfill.Symbol
 
 local PrettyFormat = require(CurrentModule)
@@ -18,7 +18,7 @@ local plugins = PrettyFormat.plugins
 
 local AsymmetricMatcher = plugins.AsymmetricMatcher
 
-local JestGlobals = require(Packages.Dev.JestGlobals)
+local JestGlobals = require(Packages["jest-globals"])
 local expect = JestGlobals.expect
 local test = JestGlobals.test
 local describe = JestGlobals.describe

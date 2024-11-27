@@ -7,24 +7,24 @@
 --  */
 
 local CurrentModule = script
-local Packages = CurrentModule.Parent
+local Packages = CurrentModule.Parent.roblox_packages
 
-local LuauPolyfill = require(Packages.LuauPolyfill)
+local LuauPolyfill = require(Packages["luau-polyfill"])
 local Object = LuauPolyfill.Object
 local String = LuauPolyfill.String
 local Symbol = LuauPolyfill.Symbol
 
 type Record<T, V> = { [T]: V }
 
-local PrettyFormat = require(Packages.PrettyFormat)
+local PrettyFormat = require(Packages["pretty-format"])
 local prettyFormat = PrettyFormat.format
 local PrettyFormat_ = require(CurrentModule.PrettyFormat)
 -- ROBLOX TODO: fix PrettyFormat types imports
 type PrettyFormatOptions = PrettyFormat_.PrettyFormatOptions
 
-local chalk = require(Packages.ChalkLua)
+local chalk = require(Packages["chalk-lua"])
 
-local getType = require(Packages.JestGetType).getType
+local getType = require(Packages["jest-get-type"]).getType
 
 local cleanupSemanticModule = require(CurrentModule.CleanupSemantic)
 local DIFF_DELETE = cleanupSemanticModule.DIFF_DELETE

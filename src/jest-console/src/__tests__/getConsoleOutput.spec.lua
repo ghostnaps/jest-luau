@@ -7,15 +7,15 @@
 ]]
 
 local CurrentModule = script.Parent
-local Packages = CurrentModule.Parent.Parent
+local Packages = CurrentModule.Parent.Parent.roblox_packages
 
-local JestGlobals = require(Packages.Dev.JestGlobals)
+local JestGlobals = require(Packages["jest-globals"])
 local expect = JestGlobals.expect
 local describe = JestGlobals.describe
 local it = JestGlobals.it
 local beforeEach = JestGlobals.beforeEach
 
-local jestTypesModule = require(Packages.JestTypes)
+local jestTypesModule = require(Packages["jest-types"])
 type GlobalConfig = jestTypesModule.Config_GlobalConfig
 
 local getConsoleOutput = require(CurrentModule.Parent.getConsoleOutput).default
@@ -72,17 +72,17 @@ end)
 -- ROBLOX deviation END
 
 -- ROBLOX todo: Uncomment these tests when module mocking is supported
--- local each = require(Packages.JestEach).default({
+-- local each = require(Packages["jest-each"]).default({
 -- 	it = it,
 -- 	itFOCUS = itFOCUS,
 -- })
--- local makeGlobalConfig = require(Packages.JestUtil).makeGlobalConfig
--- local formatStackTrace = require(Packages.JestMessageUtils).formatStackTrace
+-- local makeGlobalConfig = require(Packages["jest-util"]).makeGlobalConfig
+-- local formatStackTrace = require(Packages["jest-message-util"]s).formatStackTrace
 -- local BufferedConsole = require(CurrentModule.Parent.BufferedConsole)
 -- local getConsoleOutput = require(CurrentModule.Parent.getConsoleOutput)
 
--- local ModuleMocker = require(Packages.JestMock).ModuleMocker
--- local expect = require(Packages.Dev.JestGlobals).expect
+-- local ModuleMocker = require(Packages["jest-mock"]).ModuleMocker
+-- local expect = require(Packages["jest-globals"]).expect
 
 -- local typesModule = require(CurrentModule.Parent.types)
 -- type LogType = typesModule.LogType

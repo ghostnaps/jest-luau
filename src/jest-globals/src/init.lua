@@ -7,8 +7,8 @@
 --  */
 
 -- ROBLOX deviation START: add export for additional Expect types
-local Packages = script.Parent
-local ExpectModule = require(Packages.Expect)
+local Packages = script.Parent.roblox_packages
+local ExpectModule = require(Packages["expect"])
 export type MatcherState = ExpectModule.MatcherState
 export type ExpectExtended<E, State = MatcherState> = ExpectModule.ExpectExtended<E, State>
 -- ROBLOX deviation END

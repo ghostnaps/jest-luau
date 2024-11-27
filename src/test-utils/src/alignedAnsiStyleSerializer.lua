@@ -7,11 +7,11 @@
 --  */
 
 local CurrentModule = script.Parent
-local Packages = CurrentModule.Parent
+local Packages = CurrentModule.Parent.roblox_packages
 
-local ansiRegex = require(Packages.PrettyFormat).plugins.ConvertAnsi.ansiRegex
+local ansiRegex = require(Packages["pretty-format"]).plugins.ConvertAnsi.ansiRegex
 -- ROBLOX deviation: imported chalk instead of ansi-styles
-local chalk = require(Packages.ChalkLua)
+local chalk = require(Packages["chalk-lua"])
 -- ROBLOX deviation: omitting prettyFormat import
 
 local function serialize(val: string): string

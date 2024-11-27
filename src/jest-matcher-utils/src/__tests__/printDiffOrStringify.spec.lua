@@ -7,23 +7,23 @@
 --  */
 
 local CurrentModule = script.Parent.Parent
-local Packages = CurrentModule.Parent
+local Packages = CurrentModule.Parent.roblox_packages
 
-local Symbol = require(Packages.LuauPolyfill).Symbol
+local Symbol = require(Packages["luau-polyfill"]).Symbol
 
 local printDiffOrStringify = require(CurrentModule).printDiffOrStringify
 -- ROBLOX deviation: omitted INVERTED_COLOR import because it doesn't have an
 -- actual implementation yet
 
-local JestGlobals = require(Packages.Dev.JestGlobals)
+local JestGlobals = require(Packages["jest-globals"])
 local expect = JestGlobals.expect
 local describe = JestGlobals.describe
 local it = JestGlobals.it
 local beforeAll = JestGlobals.beforeAll
 
-local alignedAnsiStyleSerializer = require(Packages.Dev.TestUtils).alignedAnsiStyleSerializer
+local alignedAnsiStyleSerializer = require(Packages["test-utils"]).alignedAnsiStyleSerializer
 
-local LuauPolyfill = require(Packages.LuauPolyfill)
+local LuauPolyfill = require(Packages["luau-polyfill"])
 type Array<T> = LuauPolyfill.Array<T>
 type Map<X, Y> = { [X]: Y }
 

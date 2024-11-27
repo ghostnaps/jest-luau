@@ -8,15 +8,15 @@
  ]]
 
 local CurrentModule = script.Parent
-local Packages = CurrentModule.Parent
+local Packages = CurrentModule.Parent.roblox_packages
 local exports = {}
 
-local LuauPolyfill = require(Packages.LuauPolyfill)
+local LuauPolyfill = require(Packages["luau-polyfill"])
 local Error = LuauPolyfill.Error
 
 -- ROBLOX deviation: using FileSystemService instead of fs
 local getFileSystemService = require(CurrentModule.getFileSystemService)
-local typesModule = require(Packages.JestTypes)
+local typesModule = require(Packages["jest-types"])
 type Config_Path = typesModule.Config_Path
 
 local function createDirectory(path: Config_Path): ()

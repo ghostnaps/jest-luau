@@ -8,16 +8,16 @@
 -- */
 
 local CurrentModule = script.Parent
-local Packages = CurrentModule.Parent
+local Packages = CurrentModule.Parent.roblox_packages
 
-local LuauPolyfill = require(Packages.LuauPolyfill)
+local LuauPolyfill = require(Packages["luau-polyfill"])
 local Array = LuauPolyfill.Array
 local Error = LuauPolyfill.Error
 local instanceof = LuauPolyfill.instanceof
 local Object = LuauPolyfill.Object
-local RegExp = require(Packages.RegExp)
+local RegExp = require(Packages["regexp"])
 
-local RobloxShared = require(Packages.RobloxShared)
+local RobloxShared = require(Packages["roblox-shared"])
 
 -- ROBLOX deviation: omitted isPrimitive import
 local jasmineUtils = require(CurrentModule.jasmineUtils)

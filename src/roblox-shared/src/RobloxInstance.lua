@@ -14,13 +14,13 @@
 	* limitations under the License.
 ]]
 local CurrentModule = script.Parent
-local Packages = CurrentModule.Parent
+local Packages = CurrentModule.Parent.roblox_packages
 
 local RobloxApi = require(CurrentModule.RobloxApiDump)
 
-local getType = require(Packages.JestGetType).getType
+local getType = require(Packages["jest-get-type"]).getType
 
-local LuauPolyfill = require(Packages.LuauPolyfill)
+local LuauPolyfill = require(Packages["luau-polyfill"])
 local Array = LuauPolyfill.Array
 local Object = LuauPolyfill.Object
 

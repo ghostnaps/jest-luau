@@ -7,16 +7,16 @@
  ]]
 
 local CurrentModule = script.Parent
-local Packages = CurrentModule.Parent.Parent
+local Packages = CurrentModule.Parent.Parent.roblox_packages
 
-local JestGlobals = require(Packages.Dev.JestGlobals)
+local JestGlobals = require(Packages["jest-globals"])
 local expect = JestGlobals.expect
 local describe = JestGlobals.describe
 local it = JestGlobals.it
 local beforeEach = JestGlobals.beforeEach
-local Writeable = require(Packages.RobloxShared).Writeable
+local Writeable = require(Packages["roblox-shared"]).Writeable
 
-local chalk = require(Packages.ChalkLua)
+local chalk = require(Packages["chalk-lua"])
 local CustomConsoleModule = require(CurrentModule.Parent.CustomConsole)
 local CustomConsole = CustomConsoleModule.default
 type CustomConsole = CustomConsoleModule.CustomConsole

@@ -7,9 +7,9 @@
 --  */
 
 local CurrentModule = script.Parent
-local Packages = CurrentModule.Parent
+local Packages = CurrentModule.Parent.roblox_packages
 
-local LuauPolyfill = require(Packages.LuauPolyfill)
+local LuauPolyfill = require(Packages["luau-polyfill"])
 local Array = LuauPolyfill.Array
 local Error = LuauPolyfill.Error
 local instanceof = LuauPolyfill.instanceof
@@ -17,11 +17,11 @@ local String = LuauPolyfill.String
 
 type Array<T> = LuauPolyfill.Array<T>
 
-local chalk = (require(Packages.ChalkLua) :: any) :: Chalk
+local chalk = (require(Packages["chalk-lua"]) :: any) :: Chalk
 
-local getObjectSubset = require(Packages.RobloxShared).expect.getObjectSubset
+local getObjectSubset = require(Packages["roblox-shared"]).expect.getObjectSubset
 
-local JestDiff = require(Packages.JestDiff)
+local JestDiff = require(Packages["jest-diff"])
 local DIFF_DELETE = JestDiff.DIFF_DELETE
 local DIFF_EQUAL = JestDiff.DIFF_EQUAL
 local DIFF_INSERT = JestDiff.DIFF_INSERT
@@ -32,11 +32,11 @@ local diffLinesUnified2 = JestDiff.diffLinesUnified2
 local diffStringsRaw = JestDiff.diffStringsRaw
 local diffStringsUnified = JestDiff.diffStringsUnified
 
-local JestGetType = require(Packages.JestGetType)
+local JestGetType = require(Packages["jest-get-type"])
 local getType = JestGetType.getType
 local isPrimitive = JestGetType.isPrimitive
 
-local JestMatcherUtils = require(Packages.JestMatcherUtils)
+local JestMatcherUtils = require(Packages["jest-matcher-utils"])
 local BOLD_WEIGHT = JestMatcherUtils.BOLD_WEIGHT
 local EXPECTED_COLOR = JestMatcherUtils.EXPECTED_COLOR
 local INVERTED_COLOR = JestMatcherUtils.INVERTED_COLOR
@@ -45,7 +45,7 @@ local RECEIVED_COLOR = JestMatcherUtils.RECEIVED_COLOR
 local getLabelPrinter = JestMatcherUtils.getLabelPrinter
 local matcherHint = JestMatcherUtils.matcherHint
 
-local prettyFormat = require(Packages.PrettyFormat).format
+local prettyFormat = require(Packages["pretty-format"]).format
 
 local colors = require(CurrentModule.colors)
 local aBackground2 = colors.aBackground2

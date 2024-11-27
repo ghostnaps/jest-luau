@@ -8,16 +8,16 @@
 
 local CurrentModule = script.Parent
 local SrcModule = CurrentModule.Parent
-local Packages = SrcModule.Parent.Parent
-local LuauPolyfill = require(Packages.LuauPolyfill)
+local Packages = SrcModule.Parent.Parent.roblox_packages
+local LuauPolyfill = require(Packages["luau-polyfill"])
 local Symbol = LuauPolyfill.Symbol
 
-local JestGlobals = require(Packages.Dev.JestGlobals)
+local JestGlobals = require(Packages["jest-globals"])
 local expect = JestGlobals.expect
 local describe = JestGlobals.describe
 local it = JestGlobals.it
 
-local JestTypesModule = require(Packages.JestTypes)
+local JestTypesModule = require(Packages["jest-types"])
 type Circus_HookType = JestTypesModule.Circus_HookType
 local circus = require(script.Parent.Parent).default
 

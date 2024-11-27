@@ -6,11 +6,11 @@
  * LICENSE file in the root directory of this source tree.
  ]]
 
-local Packages = script.Parent.Parent
+local Packages = script.Parent.Parent.roblox_packages
 
 local exports = {}
 
-local chalk = require(Packages.ChalkLua)
+local chalk = require(Packages["chalk-lua"])
 
 local function getNoTestFoundPassWithNoTests(): string
 	return chalk.bold("No tests found, exiting with code 0")

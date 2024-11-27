@@ -1,7 +1,7 @@
 -- moved from jest-snapshot/utils.lua
 
-local Packages = script.Parent.Parent
-local LuauPolyfill = require(Packages.LuauPolyfill)
+local Packages = script.Parent.Parent.roblox_packages
+local LuauPolyfill = require(Packages["luau-polyfill"])
 local Error = LuauPolyfill.Error
 
 local getParent = require(script.Parent.getParent)

@@ -20,8 +20,8 @@
 	OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 	THE SOFTWARE.
 ]]
-local Packages = script.Parent.Parent.Parent
-local LuauPolyfill = require(Packages.LuauPolyfill)
+local Packages = script.Parent.Parent.Parent.roblox_packages
+local LuauPolyfill = require(Packages["luau-polyfill"])
 local Array = LuauPolyfill.Array
 local Boolean = LuauPolyfill.Boolean
 local Error = LuauPolyfill.Error
@@ -29,10 +29,10 @@ local Object = LuauPolyfill.Object
 local console = LuauPolyfill.console
 local instanceof = LuauPolyfill.instanceof
 local setTimeout = LuauPolyfill.setTimeout
-local Promise = require(Packages.Promise)
+local Promise = require(Packages["promise"])
 type Promise<T> = LuauPolyfill.Promise<T>
 
-local JestGlobals = require(Packages.Dev.JestGlobals)
+local JestGlobals = require(Packages["jest-globals"])
 local expect = JestGlobals.expect
 local describe = JestGlobals.describe
 local it = JestGlobals.it

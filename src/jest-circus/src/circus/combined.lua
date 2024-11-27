@@ -12,8 +12,8 @@
 local exports = {}
 
 local CurrentModule = script.Parent
-local Packages = CurrentModule.Parent.Parent
-local typesModule = require(Packages.JestTypes)
+local Packages = CurrentModule.Parent.Parent.roblox_packages
+local typesModule = require(Packages["jest-types"])
 type Circus_EventHandler = typesModule.Circus_EventHandler
 
 -- ROBLOX deviation START: predefine common variables
@@ -25,12 +25,12 @@ local restoreGlobalErrorHandlers
 
 -- ROBLOX FILE START: eventHandler.ts
 do
-	local LuauPolyfill = require(Packages.LuauPolyfill)
+	local LuauPolyfill = require(Packages["luau-polyfill"])
 	local Array = LuauPolyfill.Array
 	local Boolean = LuauPolyfill.Boolean
 	local Error = LuauPolyfill.Error
 
-	local RegExp = require(Packages.RegExp)
+	local RegExp = require(Packages["regexp"])
 
 	type Circus_EventHandler = typesModule.Circus_EventHandler
 	type Circus_Event = typesModule.Circus_Event
@@ -304,7 +304,7 @@ end
 
 -- ROBLOX FILE START: globalErrorHandlers.ts
 do
-	local LuauPolyfill = require(Packages.LuauPolyfill)
+	local LuauPolyfill = require(Packages["luau-polyfill"])
 	local Array = LuauPolyfill.Array
 
 	-- ROBLOX FIXME START: added types and objects that do not exist in Luau
@@ -359,11 +359,11 @@ end
 
 -- ROBLOX FILE START: state.ts
 do
-	local LuauPolyfill = require(Packages.LuauPolyfill)
+	local LuauPolyfill = require(Packages["luau-polyfill"])
 	type Array<T> = LuauPolyfill.Array<T>
 	type Promise<T> = LuauPolyfill.Promise<T>
 
-	local Promise = require(Packages.Promise)
+	local Promise = require(Packages["promise"])
 
 	type Circus_EventHandler = typesModule.Circus_EventHandler
 	type Circus_State = typesModule.Circus_State

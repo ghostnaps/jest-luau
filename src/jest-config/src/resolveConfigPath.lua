@@ -6,8 +6,8 @@
  * LICENSE file in the root directory of this source tree.
  ]]
 
-local Packages = script.Parent.Parent
-local LuauPolyfill = require(Packages.LuauPolyfill)
+local Packages = script.Parent.Parent.roblox_packages
+local LuauPolyfill = require(Packages["luau-polyfill"])
 local Array = LuauPolyfill.Array
 local Error = LuauPolyfill.Error
 local String = LuauPolyfill.String
@@ -19,12 +19,12 @@ local exports = {}
 -- ROBLOX deviation START: not needed
 -- local path = require(Packages.path)
 -- ROBLOX deviation END
-local chalk = require(Packages.ChalkLua)
+local chalk = require(Packages["chalk-lua"])
 -- ROBLOX deviation START: not needed
 -- local fs = require(Packages["graceful-fs"])
 -- local slash = require(Packages.slash)
 -- ROBLOX deviation END
-local typesModule = require(Packages.JestTypes)
+local typesModule = require(Packages["jest-types"])
 type Config_Path = typesModule.Config_Path
 local constantsModule = require(script.Parent.constants)
 local JEST_CONFIG_BASE_NAME = constantsModule.JEST_CONFIG_BASE_NAME

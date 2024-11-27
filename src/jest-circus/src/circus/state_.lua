@@ -8,9 +8,9 @@
 
 -- ROBLOX deviation: moved implementation from `state.lua` to avoid cyclic dependencies
 local CurrentModule = script.Parent
-local Packages = CurrentModule.Parent.Parent
+local Packages = CurrentModule.Parent.Parent.roblox_packages
 
-local typesModule = require(Packages.JestTypes)
+local typesModule = require(Packages["jest-types"])
 type Circus_State = typesModule.Circus_State
 
 local STATE_SYM = require(script.Parent.types).STATE_SYM

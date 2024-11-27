@@ -1,17 +1,17 @@
 -- ROBLOX upstream: no upstream
 local CurrentModule = script.Parent
 local SrcModule = CurrentModule.Parent
-local Packages = SrcModule.Parent.Parent
+local Packages = SrcModule.Parent.Parent.roblox_packages
 
-local JestGlobals = require(Packages.Dev.JestGlobals)
+local JestGlobals = require(Packages["jest-globals"])
 local expect = JestGlobals.expect
 local describe = JestGlobals.describe
 local it = JestGlobals.it
 
-local RegExp = require(Packages.RegExp)
+local RegExp = require(Packages["regexp"])
 local eventHandler = require(CurrentModule.Parent.eventHandler).default
 
-local typesModule = require(Packages.JestTypes)
+local typesModule = require(Packages["jest-types"])
 type Circus_Event = typesModule.Circus_Event
 type Circus_State = typesModule.Circus_State
 

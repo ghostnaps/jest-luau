@@ -5,8 +5,8 @@
  * This source code is licensed under the MIT license found in the
  * LICENSE file in the root directory of this source tree.
  ]]
-local Packages = script.Parent
-local LuauPolyfill = require(Packages.LuauPolyfill)
+local Packages = script.Parent.roblox_packages
+local LuauPolyfill = require(Packages["luau-polyfill"])
 type Array<T> = LuauPolyfill.Array<T>
 type Object = LuauPolyfill.Object
 type Promise<T> = LuauPolyfill.Promise<T>
@@ -22,14 +22,14 @@ type void = nil
 type Context = Object
 -- ROBLOX deviation END
 
-local FakeTimersModule = require(Packages.JestFakeTimers)
+local FakeTimersModule = require(Packages["jest-fake-timers"])
 -- ROBLOX deviation START: no Legacy/Modern timers
 -- type LegacyFakeTimers<TimerRef> = FakeTimersModule.LegacyFakeTimers<TimerRef>
 -- type ModernFakeTimers = FakeTimersModule.ModernFakeTimers
 type FakeTimers = FakeTimersModule.FakeTimers
 -- ROBLOX deviation END
 
-local typesModule = require(Packages.JestTypes)
+local typesModule = require(Packages["jest-types"])
 -- ROBLOX deviation START: Import types with namespace
 type Circus_EventHandler = typesModule.Circus_EventHandler
 type Config_Path = typesModule.Config_Path
@@ -37,7 +37,7 @@ type Config_ProjectConfig = typesModule.Config_ProjectConfig
 type Global_Global = typesModule.Global_Global
 -- ROBLOX deviation END
 
-local jestMockModule = require(Packages.JestMock)
+local jestMockModule = require(Packages["jest-mock"])
 -- ROBLOX deviation START: can't export globals from jest mock
 type JestFuncFn = jestMockModule.JestFuncFn
 type JestFuncMocked = jestMockModule.JestFuncMocked
@@ -47,7 +47,7 @@ type JestFuncSpyOn = jestMockModule.JestFuncSpyOn
 type ModuleMocker = jestMockModule.ModuleMocker
 
 -- ROBLOX deviation: mocking globals
-local jestMockGenvModule = require(Packages.JestMockGenv)
+local jestMockGenvModule = require(Packages["jest-mock-genv"])
 
 export type EnvironmentContext = {
 	console: Console,

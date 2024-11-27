@@ -15,9 +15,9 @@
 --!strict
 -- ROBLOX NOTE: no upstream
 local CurrentPackage = script.Parent.Parent
-local Packages = CurrentPackage.Parent
+local Packages = CurrentPackage.Parent.roblox_packages
 
-local JestGlobals = require(Packages.Dev.JestGlobals)
+local JestGlobals = require(Packages["jest-globals"])
 local expect = JestGlobals.expect
 local describe = JestGlobals.describe
 local test = JestGlobals.test

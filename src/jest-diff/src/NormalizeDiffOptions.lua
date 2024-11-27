@@ -7,13 +7,13 @@
 --  */
 
 local CurrentModule = script.Parent
-local Packages = CurrentModule.Parent
+local Packages = CurrentModule.Parent.roblox_packages
 
-local LuauPolyfill = require(Packages.LuauPolyfill)
+local LuauPolyfill = require(Packages["luau-polyfill"])
 local Number = LuauPolyfill.Number
 local Object = LuauPolyfill.Object
 
-local chalk = require(Packages.ChalkLua)
+local chalk = require(Packages["chalk-lua"])
 -- ROBLOX TODO: fix PrettyFormat types imports
 type CompareKeys = ((a: string, b: string) -> number) | nil
 

@@ -1,12 +1,12 @@
 -- ROBLOX NOTE: no upstream
 local CurrentModule = script.Parent.Parent
-local Packages = CurrentModule.Parent
+local Packages = CurrentModule.Parent.roblox_packages
 
-local LuauPolyfill = require(Packages.LuauPolyfill)
+local LuauPolyfill = require(Packages["luau-polyfill"])
 local setTimeout = LuauPolyfill.setTimeout
 local setInterval = LuauPolyfill.setInterval
 
-local JestGlobals = require(Packages.Dev.JestGlobals)
+local JestGlobals = require(Packages["jest-globals"])
 local expect = JestGlobals.expect
 local beforeEach = JestGlobals.beforeEach
 local afterEach = JestGlobals.afterEach

@@ -24,11 +24,11 @@
 local exports = {}
 
 local CurrentModule = script.Parent
-local Packages = CurrentModule.Parent
+local Packages = CurrentModule.Parent.roblox_packages
 
 local format = require(CurrentModule.helpers).format
 
-local RobloxShared = require(Packages.RobloxShared)
+local RobloxShared = require(Packages["roblox-shared"])
 type Writeable = RobloxShared.Writeable
 
 export type Console = {

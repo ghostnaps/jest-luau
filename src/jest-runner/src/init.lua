@@ -7,8 +7,8 @@
  * LICENSE file in the root directory of this source tree.
  ]]
 
-local Packages = script.Parent
-local LuauPolyfill = require(Packages.LuauPolyfill)
+local Packages = script.Parent.roblox_packages
+local LuauPolyfill = require(Packages["luau-polyfill"])
 local Array = LuauPolyfill.Array
 local Boolean = LuauPolyfill.Boolean
 local Error = LuauPolyfill.Error
@@ -19,37 +19,37 @@ type Error = LuauPolyfill.Error
 type Map<T, U> = LuauPolyfill.Map<T, U>
 type Promise<T> = LuauPolyfill.Promise<T>
 
-local Promise = require(Packages.Promise)
+local Promise = require(Packages["promise"])
 
 -- ROBLOX deviation START: additional function to construct file path from ModuleScript
-local getDataModelService = require(Packages.RobloxShared).getDataModelService
+local getDataModelService = require(Packages["roblox-shared"]).getDataModelService
 local CoreScriptSyncService = getDataModelService("CoreScriptSyncService")
 -- ROBLOX deviation END
 
 local exports = {}
 
 -- ROBLOX deviation: chalk used only in parallel tests
--- local chalk = require(Packages.ChalkLua)
-local emitteryModule = require(Packages.Emittery)
+-- local chalk = require(Packages["chalk-lua"])
+local emitteryModule = require(Packages["emittery"])
 local Emittery = emitteryModule.default
 type Emittery = emitteryModule.Emittery
 type Emittery_UnsubscribeFn = emitteryModule.Emittery_UnsubscribeFn
 
 -- ROBLOX deviation: exit used only in parallel tests
 -- local exit = require(Packages.exit)
-local throatModule = require(Packages.Throat)
+local throatModule = require(Packages["throat"])
 local throat = throatModule.default
 type ThroatLateBound<TResult, TArgs> = throatModule.ThroatLateBound<TResult, TArgs>
-local test_resultModule = require(Packages.JestTestResult)
+local test_resultModule = require(Packages["jest-test-result"])
 type SerializableError = test_resultModule.SerializableError
 type Context = test_resultModule.Context
 export type Test = test_resultModule.Test
 export type TestEvents = test_resultModule.TestEvents
 export type TestFileEvent = test_resultModule.TestFileEvent
 type TestResult = test_resultModule.TestResult
-local jestTypesModule = require(Packages.JestTypes)
+local jestTypesModule = require(Packages["jest-types"])
 type Config_GlobalConfig = jestTypesModule.Config_GlobalConfig
-local deepCyclicCopy = require(Packages.JestUtil).deepCyclicCopy
+local deepCyclicCopy = require(Packages["jest-util"]).deepCyclicCopy
 -- ROBLOX deviation START: Worker not used yet
 -- local jest_workerModule = require(Packages.JestWorker)
 -- local PromiseWithCustomMessage = jest_workerModule.PromiseWithCustomMessage

@@ -7,9 +7,9 @@
  ]]
 
 local CurrentModule = script.Parent
-local Packages = CurrentModule.Parent
+local Packages = CurrentModule.Parent.roblox_packages
 
-local LuauPolyfill = require(Packages.LuauPolyfill)
+local LuauPolyfill = require(Packages["luau-polyfill"])
 local Array = LuauPolyfill.Array
 local Boolean = LuauPolyfill.Boolean
 local Set = LuauPolyfill.Set
@@ -20,26 +20,26 @@ type Set<T> = LuauPolyfill.Set<T>
 
 local exports = {}
 
-local chalk = require(Packages.ChalkLua)
+local chalk = require(Packages["chalk-lua"])
 
-local getConsoleOutput = require(Packages.JestConsole).getConsoleOutput
+local getConsoleOutput = require(Packages["jest-console"]).getConsoleOutput
 
-local testResultModule = require(Packages.JestTestResult)
+local testResultModule = require(Packages["jest-test-result"])
 type AggregatedResult = testResultModule.AggregatedResult
 type TestCaseResult = testResultModule.TestCaseResult
 type TestResult = testResultModule.TestResult
 
-local jestTypesModule = require(Packages.JestTypes)
+local jestTypesModule = require(Packages["jest-types"])
 type Config_GlobalConfig = jestTypesModule.Config_GlobalConfig
 type Config_ProjectConfig = jestTypesModule.Config_ProjectConfig
 type Config_Path = jestTypesModule.Config_Path
 
-local jestMessageUtilModule = require(Packages.JestMessageUtil)
+local jestMessageUtilModule = require(Packages["jest-message-util"])
 local formatStackTrace = jestMessageUtilModule.formatStackTrace
 local indentAllLines = jestMessageUtilModule.indentAllLines
 local separateMessageFromStack = jestMessageUtilModule.separateMessageFromStack
 
-local jestUtilModule = require(Packages.JestUtil)
+local jestUtilModule = require(Packages["jest-util"])
 local clearLine = jestUtilModule.clearLine
 
 local BaseReporter = require(CurrentModule.BaseReporter).default
@@ -54,7 +54,7 @@ type ReporterOnStartOptions = typesModule.ReporterOnStartOptions
 type Test = typesModule.Test
 type NodeProcessMock = typesModule.NodeProcessMock
 
-local RobloxShared = require(Packages.RobloxShared)
+local RobloxShared = require(Packages["roblox-shared"])
 local Writeable = RobloxShared.Writeable
 type Writeable = RobloxShared.Writeable
 

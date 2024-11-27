@@ -15,15 +15,15 @@
 -- ROBLOX NOTE: no upstream
 
 local CurrentModule = script.Parent.Parent
-local Packages = CurrentModule.Parent
+local Packages = CurrentModule.Parent.roblox_packages
 
 local PrettyFormat = require(CurrentModule)
 local prettyFormat = PrettyFormat.default
 local RobloxInstance = PrettyFormat.plugins.RobloxInstance
 
-local InstanceSubset = require(Packages.RobloxShared).RobloxInstance.InstanceSubset
+local InstanceSubset = require(Packages["roblox-shared"]).RobloxInstance.InstanceSubset
 
-local JestGlobals = require(Packages.Dev.JestGlobals)
+local JestGlobals = require(Packages["jest-globals"])
 local beforeEach = JestGlobals.beforeEach
 local afterEach = JestGlobals.afterEach
 local expect = JestGlobals.expect

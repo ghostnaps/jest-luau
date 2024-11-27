@@ -7,8 +7,8 @@
  * LICENSE file in the root directory of this source tree.
  ]]
 
-local Packages = script.Parent.Parent
-local typesModule = require(Packages.JestTypes)
+local Packages = script.Parent.Parent.roblox_packages
+local typesModule = require(Packages["jest-types"])
 type Config_ProjectConfig = typesModule.Config_ProjectConfig
 
 export type Context = {

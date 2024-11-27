@@ -6,15 +6,15 @@
  * LICENSE file in the root directory of this source tree.
  ]]
 
-local Packages = script.Parent.Parent
-local LuauPolyfill = require(Packages.LuauPolyfill)
+local Packages = script.Parent.Parent.roblox_packages
+local LuauPolyfill = require(Packages["luau-polyfill"])
 local Array = LuauPolyfill.Array
 local Boolean = LuauPolyfill.Boolean
 local Object = LuauPolyfill.Object
 local console = LuauPolyfill.console
 type Array<T> = LuauPolyfill.Array<T>
 type Promise<T> = LuauPolyfill.Promise<T>
-local Promise = require(Packages.Promise)
+local Promise = require(Packages["promise"])
 
 local exports = {}
 
@@ -23,7 +23,7 @@ local showTestPathPatternError
 -- ROBLOX deviation END
 
 -- ROBLOX deviation START: added missing variables to limit nr deviations
-local RobloxShared = require(Packages.RobloxShared)
+local RobloxShared = require(Packages["roblox-shared"])
 local nodeUtils = RobloxShared.nodeUtils
 local process = nodeUtils.process
 local getRelativePath = RobloxShared.getRelativePath
@@ -33,14 +33,14 @@ local getRelativePath = RobloxShared.getRelativePath
 -- local createHash = require(Packages.crypto).createHash
 -- local path = require(Packages.path)
 -- ROBLOX deviation END
-local chalk = require(Packages.ChalkLua)
+local chalk = require(Packages["chalk-lua"])
 -- ROBLOX deviation START: not needed
 -- local merge = require(Packages.deepmerge)
 -- local glob = require(Packages.glob).sync
 -- local statSync = require(Packages["graceful-fs"]).statSync
 -- local micromatch = require(Packages.micromatch)
 -- ROBLOX deviation END
-local typesModule = require(Packages.JestTypes)
+local typesModule = require(Packages["jest-types"])
 type Config_Argv = typesModule.Config_Argv
 type Config_DisplayName = typesModule.Config_DisplayName
 type Config_Glob = typesModule.Config_Glob
@@ -63,7 +63,7 @@ end
 -- local resolveTestEnvironment = jest_resolveModule.resolveTestEnvironment
 -- local resolveWatchPlugin = jest_resolveModule.resolveWatchPlugin
 -- ROBLOX deviation END
-local jest_utilModule = require(Packages.JestUtil)
+local jest_utilModule = require(Packages["jest-util"])
 local clearLine = jest_utilModule.clearLine
 -- ROBLOX deviation START: not used
 
@@ -74,7 +74,7 @@ end
 -- local requireOrImportModule = jest_utilModule.requireOrImportModule
 -- local tryRealpath = jest_utilModule.tryRealpath
 -- ROBLOX deviation END
-local jestValidateModule = require(Packages.JestValidate)
+local jestValidateModule = require(Packages["jest-validate"])
 local ValidationError = jestValidateModule.ValidationError
 -- ROBLOX deviation START: not used
 -- local validate = jest_validateModule.validate

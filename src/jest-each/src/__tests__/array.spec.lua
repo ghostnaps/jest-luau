@@ -7,8 +7,8 @@
  *
  ]]
 
-local Packages = script.Parent.Parent.Parent
-local LuauPolyfill = require(Packages.LuauPolyfill)
+local Packages = script.Parent.Parent.Parent.roblox_packages
+local LuauPolyfill = require(Packages["luau-polyfill"])
 local Array = LuauPolyfill.Array
 local Number = LuauPolyfill.Number
 local NaN = Number.NaN
@@ -20,13 +20,13 @@ local NIL = require(script.Parent.Parent.nilPlaceholder)
 
 local HttpService = game:GetService("HttpService")
 
-local JestGlobals = require(Packages.Dev.JestGlobals)
+local JestGlobals = require(Packages["jest-globals"])
 local jest = JestGlobals.jest
 local expect = JestGlobals.expect
 local describe = JestGlobals.describe
 local it = JestGlobals.it
 
-local pretty = require(Packages.PrettyFormat).default
+local pretty = require(Packages["pretty-format"]).default
 local each = require(script.Parent.Parent).default()
 
 local function noop() end

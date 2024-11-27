@@ -7,30 +7,30 @@
 --  */
 
 local CurrentModule = script
-local Packages = CurrentModule.Parent
+local Packages = CurrentModule.Parent.roblox_packages
 
-local LuauPolyfill = require(Packages.LuauPolyfill)
+local LuauPolyfill = require(Packages["luau-polyfill"])
 local Array = LuauPolyfill.Array
 local Boolean = LuauPolyfill.Boolean
 local Error = LuauPolyfill.Error
 local String = LuauPolyfill.String
 type Array<T> = LuauPolyfill.Array<T>
 type Error = LuauPolyfill.Error
-local RegExp = require(Packages.RegExp)
+local RegExp = require(Packages["regexp"])
 
 local exports = {}
 
-local chalk = require(Packages.ChalkLua)
-local jestTypesModule = require(Packages.JestTypes)
+local chalk = require(Packages["chalk-lua"])
+local jestTypesModule = require(Packages["jest-types"])
 type Config_Path = jestTypesModule.Config_Path
 type TestResult_SerializableError = jestTypesModule.TestResult_SerializableError
 type TestResult_AssertionResult = jestTypesModule.TestResult_AssertionResult
-local prettyFormat = require(Packages.PrettyFormat).format
+local prettyFormat = require(Packages["pretty-format"]).format
 
 type Path = Config_Path
 
 -- ROBLOX deviation START: additional dependencies
-local RobloxShared = require(Packages.RobloxShared)
+local RobloxShared = require(Packages["roblox-shared"])
 local normalizePromiseError = RobloxShared.normalizePromiseError
 local cleanLoadStringStack = RobloxShared.cleanLoadStringStack
 -- ROBLOX deviation END

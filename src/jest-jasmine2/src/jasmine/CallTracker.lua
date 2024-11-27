@@ -28,8 +28,8 @@
 -- */
 
 local CurrentModule = script.Parent
-local Packages = CurrentModule.Parent.Parent
-local LuauPolyfill = require(Packages.LuauPolyfill)
+local Packages = CurrentModule.Parent.Parent.roblox_packages
+local LuauPolyfill = require(Packages["luau-polyfill"])
 type Array<T> = LuauPolyfill.Array<T>
 
 export type Context = {

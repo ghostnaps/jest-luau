@@ -6,8 +6,8 @@
 
 	Copyright (c) Sindre Sorhus <sindresorhus@gmail.com> (https://sindresorhus.com)
 ]]
-local Packages = script.Parent
-local LuauPolyfill = require(Packages.LuauPolyfill)
+local Packages = script.Parent.roblox_packages
+local LuauPolyfill = require(Packages["luau-polyfill"])
 local Array = LuauPolyfill.Array
 local Boolean = LuauPolyfill.Boolean
 local Error = LuauPolyfill.Error

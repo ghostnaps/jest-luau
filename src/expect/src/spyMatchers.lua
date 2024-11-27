@@ -8,19 +8,19 @@
 -- */
 
 local CurrentModule = script.Parent
-local Packages = CurrentModule.Parent
+local Packages = CurrentModule.Parent.roblox_packages
 
-local LuauPolyfill = require(Packages.LuauPolyfill)
+local LuauPolyfill = require(Packages["luau-polyfill"])
 local Array = LuauPolyfill.Array
 local Error = LuauPolyfill.Error
 local Number = LuauPolyfill.Number
 local String = LuauPolyfill.String
 local Symbol = LuauPolyfill.Symbol
 
-local getType = require(Packages.JestGetType).getType
-local isPrimitive = require(Packages.JestGetType).isPrimitive
+local getType = require(Packages["jest-get-type"]).getType
+local isPrimitive = require(Packages["jest-get-type"]).isPrimitive
 
-local JestMatcherUtils = require(Packages.JestMatcherUtils)
+local JestMatcherUtils = require(Packages["jest-matcher-utils"])
 local DIM_COLOR = JestMatcherUtils.DIM_COLOR
 local EXPECTED_COLOR = JestMatcherUtils.EXPECTED_COLOR
 local RECEIVED_COLOR = JestMatcherUtils.RECEIVED_COLOR

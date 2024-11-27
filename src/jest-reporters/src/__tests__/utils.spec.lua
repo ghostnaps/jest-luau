@@ -7,16 +7,16 @@
  ]]
 
 local CurrentModule = script.Parent.Parent
-local Packages = CurrentModule.Parent
+local Packages = CurrentModule.Parent.roblox_packages
 
-local JestGlobals = require(Packages.Dev.JestGlobals)
+local JestGlobals = require(Packages["jest-globals"])
 local expect = JestGlobals.expect
 local describe = JestGlobals.describe
 local it = JestGlobals.it
 
 local path = require(Packages.Path).path
 -- ROBLOX deviation START: not needed
--- local chalk = require(Packages.ChalkLua)
+-- local chalk = require(Packages["chalk-lua"])
 -- ROBLOX deviation END
 -- ROBLOX deviation START: use inline implementation of stripAnsi
 local stripAnsi = function(text: string)
@@ -24,7 +24,7 @@ local stripAnsi = function(text: string)
 end
 -- local stripAnsi = require(Packages["strip-ansi"])
 -- ROBLOX deviation END
-local makeProjectConfig = require(Packages.TestUtils).makeProjectConfig
+local makeProjectConfig = require(Packages["test-utils"]).makeProjectConfig
 local utilsModule = require(CurrentModule.utils)
 local printDisplayName = utilsModule.printDisplayName
 local trimAndFormatPath = utilsModule.trimAndFormatPath

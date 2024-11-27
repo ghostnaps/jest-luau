@@ -8,12 +8,12 @@
 --  */
 
 local CurrentModule = script.Parent
-local Packages = CurrentModule.Parent
+local Packages = CurrentModule.Parent.roblox_packages
 
-local LuauPolyfill = require(Packages.LuauPolyfill)
+local LuauPolyfill = require(Packages["luau-polyfill"])
 local Number = LuauPolyfill.Number
 
-local JestMatcherUtils = require(Packages.JestMatcherUtils)
+local JestMatcherUtils = require(Packages["jest-matcher-utils"])
 local EXPECTED_COLOR = JestMatcherUtils.EXPECTED_COLOR
 local INVERTED_COLOR = JestMatcherUtils.INVERTED_COLOR
 local RECEIVED_COLOR = JestMatcherUtils.RECEIVED_COLOR

@@ -7,13 +7,13 @@
  ]]
 
 local rootWorkspace = script.Parent.Parent
-local LuauPolyfill = require(rootWorkspace.LuauPolyfill)
+local LuauPolyfill = require(rootWorkspace.roblox_packages["luau-polyfill"])
 type Array<T> = LuauPolyfill.Array<T>
 type Error = LuauPolyfill.Error
 type Object = LuauPolyfill.Object
 type Promise<T> = LuauPolyfill.Promise<T>
 
-local RegExp = require(rootWorkspace.RegExp)
+local RegExp = require(rootWorkspace.roblox_packages["regexp"])
 type RegExp = RegExp.RegExp
 
 -- ROBLOX FIXME: can't express void when defined outside of a function type

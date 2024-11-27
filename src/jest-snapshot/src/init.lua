@@ -9,25 +9,25 @@
 -- ROBLOX deviation: omitting imports for file system interaction
 
 local CurrentModule = script
-local Packages = CurrentModule.Parent
+local Packages = CurrentModule.Parent.roblox_packages
 
-local LuauPolyfill = require(Packages.LuauPolyfill)
+local LuauPolyfill = require(Packages["luau-polyfill"])
 local Error = LuauPolyfill.Error
 local instanceof = LuauPolyfill.instanceof
 local AssertionError = LuauPolyfill.AssertionError
 
 -- ROBLOX deviation START: additional dependencies
-local RobloxShared = require(Packages.RobloxShared)
+local RobloxShared = require(Packages["roblox-shared"])
 local cleanLoadStringStack = RobloxShared.cleanLoadStringStack
 -- ROBLOX deviation END
 
-local getType = require(Packages.JestGetType).getType
+local getType = require(Packages["jest-get-type"]).getType
 
 -- ROBLOX TODO: ADO-1633 fix Jest Types imports
--- local Config = require(Packages.JestTypes).Config
+-- local Config = require(Packages["jest-types"]).Config
 type ConfigPath = string
 
-local JestMatcherUtils = require(Packages.JestMatcherUtils)
+local JestMatcherUtils = require(Packages["jest-matcher-utils"])
 local BOLD_WEIGHT = JestMatcherUtils.BOLD_WEIGHT
 local EXPECTED_COLOR = JestMatcherUtils.EXPECTED_COLOR
 -- local MatcherHintOptions = JestMatcherUtils.MatcherHintOptions

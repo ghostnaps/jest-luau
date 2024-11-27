@@ -6,15 +6,15 @@
  * LICENSE file in the root directory of this source tree.
  ]]
 
-local Packages = script.Parent.Parent
-local LuauPolyfill = require(Packages.LuauPolyfill)
+local Packages = script.Parent.Parent.roblox_packages
+local LuauPolyfill = require(Packages["luau-polyfill"])
 type Array<T> = LuauPolyfill.Array<T>
 type Promise<T> = LuauPolyfill.Promise<T>
 
 local exports = {}
 
 -- ROBLOX deviation START: skipped unnecessary imports
-local typesModule = require(Packages.JestTypes)
+local typesModule = require(Packages["jest-types"])
 type Config_GlobalConfig = typesModule.Config_GlobalConfig
 type Config_ProjectConfig = typesModule.Config_ProjectConfig
 type ChangedFilesPromise = Promise<nil>

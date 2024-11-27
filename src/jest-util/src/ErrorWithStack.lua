@@ -8,8 +8,8 @@
  ]]
 
 local CurrentModule = script.Parent
-local Packages = CurrentModule.Parent
-local LuauPolyfill = require(Packages.LuauPolyfill)
+local Packages = CurrentModule.Parent.roblox_packages
+local LuauPolyfill = require(Packages["luau-polyfill"])
 local Boolean = LuauPolyfill.Boolean
 local Error = LuauPolyfill.Error
 type Error = LuauPolyfill.Error

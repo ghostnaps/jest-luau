@@ -9,18 +9,18 @@
 --  */
 
 local CurrentModule = script
-local Packages = CurrentModule.Parent
+local Packages = CurrentModule.Parent.roblox_packages
 
-local LuauPolyfill = require(Packages.LuauPolyfill)
+local LuauPolyfill = require(Packages["luau-polyfill"])
 local Boolean = LuauPolyfill.Boolean
 local Error = LuauPolyfill.Error
 local Object = LuauPolyfill.Object
-local Promise = require(Packages.Promise)
+local Promise = require(Packages["promise"])
 type Array<T> = LuauPolyfill.Array<T>
 type Error = LuauPolyfill.Error
 type Promise<T> = LuauPolyfill.Promise<T>
 
-local matcherUtils = require(Packages.JestMatcherUtils)
+local matcherUtils = require(Packages["jest-matcher-utils"])
 
 local AsymmetricMatchers = require(CurrentModule.asymmetricMatchers)
 local any = AsymmetricMatchers.any
@@ -414,7 +414,7 @@ setMatchers(spyMatchers, true, Expect)
 setMatchers(toThrowMatchers, true, Expect)
 
 -- ROBLOX deviation START: defining addSnapshotSerializer override here
-local plugins = require(Packages.JestSnapshot).plugins
+local plugins = require(Packages["jest-snapshot"]).plugins
 Expect.addSnapshotSerializer = plugins.addSerializer
 -- ROBLOX deviation END
 Expect.assertions = assertions
@@ -427,7 +427,7 @@ Expect.extractExpectedAssertionsErrors = extractExpectedAssertionsErrors
 -- appropriate locations
 -- ROBLOX deviation START: for now we extend the snapshot matchers in the Expect file instead
 -- of jest-jasmine2/jestExpect
-local JestSnapshot = require(Packages.JestSnapshot)
+local JestSnapshot = require(Packages["jest-snapshot"])
 local toMatchSnapshot = JestSnapshot.toMatchSnapshot
 local toThrowErrorMatchingSnapshot = JestSnapshot.toThrowErrorMatchingSnapshot
 setMatchers({

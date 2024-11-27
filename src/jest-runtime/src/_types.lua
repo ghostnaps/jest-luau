@@ -7,12 +7,12 @@
 -- ROBLOX NOTE: Not paired with upstream. Just using for the "Jest Object" type
 
 local CurrentModule = script.Parent
-local Packages = CurrentModule.Parent
+local Packages = CurrentModule.Parent.roblox_packages
 
-local JestFakeTimers = require(Packages.JestFakeTimers)
+local JestFakeTimers = require(Packages["jest-fake-timers"])
 type FakeTimers = JestFakeTimers.FakeTimers
 
-local moduleMockerModule = require(Packages.JestMock)
+local moduleMockerModule = require(Packages["jest-mock"])
 type ModuleMocker = moduleMockerModule.ModuleMocker
 
 export type MockFactory = () -> ...unknown

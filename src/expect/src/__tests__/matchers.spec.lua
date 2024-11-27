@@ -8,25 +8,25 @@
 --  */
 
 local CurrentModule = script.Parent.Parent
-local Packages = CurrentModule.Parent
+local Packages = CurrentModule.Parent.roblox_packages
 
-local JestGlobals = require(Packages.Dev.JestGlobals)
+local JestGlobals = require(Packages["jest-globals"])
 local describe = JestGlobals.describe
 local it = JestGlobals.it
 local beforeAll = JestGlobals.beforeAll
 local expect = JestGlobals.expect
 
-local LuauPolyfill = require(Packages.LuauPolyfill)
+local LuauPolyfill = require(Packages["luau-polyfill"])
 local extends = LuauPolyfill.extends
 local Number = LuauPolyfill.Number
 local Object = LuauPolyfill.Object
 local Set = LuauPolyfill.Set
 local Symbol = LuauPolyfill.Symbol
 
-local RegExp = require(Packages.RegExp)
+local RegExp = require(Packages["regexp"])
 
-local alignedAnsiStyleSerializer = require(Packages.Dev.TestUtils).alignedAnsiStyleSerializer
-local stringify = require(Packages.JestMatcherUtils).stringify
+local alignedAnsiStyleSerializer = require(Packages["test-utils"]).alignedAnsiStyleSerializer
+local stringify = require(Packages["jest-matcher-utils"]).stringify
 
 -- ROBLOX deviation: omitted Immutable, chalk imports
 

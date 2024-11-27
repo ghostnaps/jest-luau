@@ -9,9 +9,9 @@
 type void = nil
 
 local CurrentModule = script.Parent
-local Packages = CurrentModule.Parent
+local Packages = CurrentModule.Parent.roblox_packages
 
-local LuauPolyfill = require(Packages.LuauPolyfill)
+local LuauPolyfill = require(Packages["luau-polyfill"])
 type Array<T> = LuauPolyfill.Array<T>
 type Error = LuauPolyfill.Error
 type Promise<T> = LuauPolyfill.Promise<T>
@@ -19,13 +19,13 @@ type Set<T> = LuauPolyfill.Set<T>
 
 local exports = {}
 
-local testResultModule = require(Packages.JestTestResult)
+local testResultModule = require(Packages["jest-test-result"])
 type AggregatedResult = testResultModule.AggregatedResult
 type SerializableError = testResultModule.SerializableError
 type TestCaseResult = testResultModule.TestCaseResult
 type TestResult = testResultModule.TestResult
 
-local jestTypesModule = require(Packages.JestTypes)
+local jestTypesModule = require(Packages["jest-types"])
 type Config_Path = jestTypesModule.Config_Path
 type Config_ProjectConfig = jestTypesModule.Config_ProjectConfig
 type Config_GlobalConfig = jestTypesModule.Config_GlobalConfig
@@ -44,7 +44,7 @@ type worker = any
 -- ROBLOX deviation END
 
 -- ROBLOX deviation START: type for mock process param used added to Reporters
-local RobloxShared = require(Packages.RobloxShared)
+local RobloxShared = require(Packages["roblox-shared"])
 type Writeable = RobloxShared.Writeable
 export type NodeProcessMock = {
 	env: {

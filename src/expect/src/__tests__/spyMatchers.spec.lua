@@ -8,23 +8,23 @@
 -- */
 
 local CurrentModule = script.Parent.Parent
-local Packages = CurrentModule.Parent
+local Packages = CurrentModule.Parent.roblox_packages
 
-local JestGlobals = require(Packages.Dev.JestGlobals)
+local JestGlobals = require(Packages["jest-globals"])
 local describe = JestGlobals.describe
 local beforeAll = JestGlobals.beforeAll
 local expect = JestGlobals.expect
 local test = JestGlobals.test
 
-local LuauPolyfill = require(Packages.LuauPolyfill)
+local LuauPolyfill = require(Packages["luau-polyfill"])
 local Array = LuauPolyfill.Array
 local Error = LuauPolyfill.Error
 local Set = LuauPolyfill.Set
 
-local alignedAnsiStyleSerializer = require(Packages.Dev.TestUtils).alignedAnsiStyleSerializer
+local alignedAnsiStyleSerializer = require(Packages["test-utils"]).alignedAnsiStyleSerializer
 local jestExpect = require(CurrentModule)
 
-local jestMock = require(Packages.Dev.JestMock).ModuleMocker
+local jestMock = require(Packages["jest-mock"]).ModuleMocker
 
 expect.extend({
 	optionalFn = function(_, fn)

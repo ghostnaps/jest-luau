@@ -8,8 +8,8 @@
  ]]
 
 local CurrentModule = script.Parent
-local Packages = CurrentModule.Parent
-local Promise = require(Packages.Promise)
+local Packages = CurrentModule.Parent.roblox_packages
+local Promise = require(Packages["promise"])
 
 local exports = {}
 

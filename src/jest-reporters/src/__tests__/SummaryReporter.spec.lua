@@ -7,20 +7,20 @@
  ]]
 
 local CurrentModule = script.Parent.Parent
-local Packages = CurrentModule.Parent
+local Packages = CurrentModule.Parent.roblox_packages
 
-local LuauPolyfill = require(Packages.LuauPolyfill)
+local LuauPolyfill = require(Packages["luau-polyfill"])
 local Array = LuauPolyfill.Array
 local Object = LuauPolyfill.Object
 local Set = LuauPolyfill.Set
 
-local JestGlobals = require(Packages.Dev.JestGlobals)
+local JestGlobals = require(Packages["jest-globals"])
 local expect = JestGlobals.expect
 local it = JestGlobals.it
 local beforeEach = JestGlobals.beforeEach
 local afterEach = JestGlobals.afterEach
 
-local Writeable = require(Packages.RobloxShared).Writeable
+local Writeable = require(Packages["roblox-shared"]).Writeable
 
 local SummaryReporter
 

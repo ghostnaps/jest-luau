@@ -9,11 +9,11 @@
 local exports = {}
 local CurrentModule = script.Parent
 local SrcModule = CurrentModule.Parent
-local Packages = SrcModule.Parent.Parent
-local LuauPolyfill = require(Packages.LuauPolyfill)
+local Packages = SrcModule.Parent.Parent.roblox_packages
+local LuauPolyfill = require(Packages["luau-polyfill"])
 local console = LuauPolyfill.console
 
-local CircusModule = require(Packages.JestTypes)
+local CircusModule = require(Packages["jest-types"])
 type Circus_EventHandler = CircusModule.Circus_EventHandler
 
 local testEventHandler: Circus_EventHandler

@@ -8,13 +8,13 @@
  ]]
 
 local CurrentModule = script.Parent.Parent
-local Packages = CurrentModule.Parent
-local Promise = require(Packages.Promise)
-local LuauPolyfill = require(Packages.LuauPolyfill)
+local Packages = CurrentModule.Parent.roblox_packages
+local Promise = require(Packages["promise"])
+local LuauPolyfill = require(Packages["luau-polyfill"])
 local Symbol = LuauPolyfill.Symbol
 local isPromise = require(CurrentModule.isPromise).default
 
-local JestGlobals = require(Packages.Dev.JestGlobals)
+local JestGlobals = require(Packages["jest-globals"])
 local expect = JestGlobals.expect
 local describe = JestGlobals.describe
 local it = JestGlobals.it

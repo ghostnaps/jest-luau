@@ -7,8 +7,8 @@
 -- */
 
 local CurrentModule = script.Parent
-local Packages = CurrentModule.Parent
-local getType = require(Packages.JestGetType).getType
+local Packages = CurrentModule.Parent.roblox_packages
+local getType = require(Packages["jest-get-type"]).getType
 
 type ReplaceableForEachCallBack = (any, any, any) -> nil
 

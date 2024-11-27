@@ -6,20 +6,20 @@
  * LICENSE file in the root directory of this source tree.
  ]]
 
-local Packages = script.Parent.Parent
-local LuauPolyfill = require(Packages.LuauPolyfill)
+local Packages = script.Parent.Parent.roblox_packages
+local LuauPolyfill = require(Packages["luau-polyfill"])
 type Array<T> = LuauPolyfill.Array<T>
 type Promise<T> = LuauPolyfill.Promise<T>
 
-local test_resultModule = require(Packages.JestTestResult)
+local test_resultModule = require(Packages["jest-test-result"])
 type Test = test_resultModule.Test
-local typesModule = require(Packages.JestTypes)
+local typesModule = require(Packages["jest-types"])
 type Config_Path = typesModule.Config_Path
-local jest_runtimeModule = require(Packages.JestRuntime)
+local jest_runtimeModule = require(Packages["jest-runtime"])
 type Context = jest_runtimeModule.Context
 
 -- ROBLOX deviation START: add additional imports and types
-local reportersModule = require(Packages.JestReporters)
+local reportersModule = require(Packages["jest-reporters"])
 type JestReporter = reportersModule.BaseReporter
 type ReporterContext = reportersModule.ReporterContext
 type Config_GlobalConfig = typesModule.Config_GlobalConfig
