@@ -19,7 +19,7 @@ diff-sequences = { workspace = "ghostnaps/diff_sequences", version = "^" }
 jest-get-type = { workspace = "ghostnaps/jest_get_type", version = "^" }
 pretty-format = { workspace = "ghostnaps/pretty_format", version = "^" }
 jest-types = { workspace = "ghostnaps/jest_types", version = "^" }
-chalk = { wally = "wally#jsdotlua/chalk", version = "^0.2.1" }
+chalk-lua = { wally = "wally#jsdotlua/chalk", version = "^0.2.1" }
 luau-polyfill = { wally = "wally#jsdotlua/luau-polyfill", version = "^1.2.7" }
 
 [dev_dependencies]

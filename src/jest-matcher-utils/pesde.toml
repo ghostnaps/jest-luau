@@ -17,7 +17,7 @@ default = "https://github.com/UpliftGames/wally-index"
 jest-diff = { workspace = "ghostnaps/jest_diff", version = "^" }
 jest-get-type = { workspace = "ghostnaps/jest_get_type", version = "^" }
 pretty-format = { workspace = "ghostnaps/pretty_format", version = "^" }
-chalk = { wally = "wally#jsdotlua/chalk", version = "^0.2.1" }
+chalk-lua = { wally = "wally#jsdotlua/chalk", version = "^0.2.1" }
 luau-polyfill = { wally = "wally#jsdotlua/luau-polyfill", version = "^1.2.7" }
 regexp = { wally = "wally#jsdotlua/luau-regexp", version = "^0.2.1" }
 

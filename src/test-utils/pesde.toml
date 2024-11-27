@@ -14,7 +14,7 @@ sourcemap_generator = ".pesde/sourcemap_generator.luau"
 default = "https://github.com/UpliftGames/wally-index"
 
 [dependencies]
-chalk = { wally = "wally#jsdotlua/chalk", version = "^0.2.1" }
+chalk-lua = { wally = "wally#jsdotlua/chalk", version = "^0.2.1" }
 luau-polyfill = { wally = "wally#jsdotlua/luau-polyfill", version = "^1.2.7" }
 jest-environment-luau = { workspace = "ghostnaps/jest_environment_luau", version = "^" }
 jest-types = { workspace = "ghostnaps/jest_types", version = "^" }

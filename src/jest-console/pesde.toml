@@ -15,7 +15,7 @@ default = "https://github.com/UpliftGames/wally-index"
 
 [dependencies]
 luau-polyfill = { wally = "wally#jsdotlua/luau-polyfill", version = "^1.2.7" }
-chalk = { wally = "wally#jsdotlua/chalk", version = "^0.2.1" }
+chalk-lua = { wally = "wally#jsdotlua/chalk", version = "^0.2.1" }
 jest-each = { workspace = "ghostnaps/jest_each", version = "^" }
 jest-message-util = { workspace = "ghostnaps/jest_message_util", version = "^" }
 jest-types = { workspace = "ghostnaps/jest_types", version = "^" }

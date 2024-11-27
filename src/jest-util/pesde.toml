@@ -19,7 +19,7 @@ promise = { wally = "wally#jsdotlua/promise", version = "^3.5.2" }
 chalk-lua = { wally = "wally#jsdotlua/chalk", version = "^0.2.1" }
 regexp = { wally = "wally#jsdotlua/luau-regexp", version = "^0.2.1" }
 picomatch = { wally = "wally#jsdotlua/picomatch", version = "^0.4.0" }
-jest_types = { workspace = "ghostnaps/jest_types", version = "^" }
+jest-types = { workspace = "ghostnaps/jest_types", version = "^" }
 roblox-shared = { workspace = "ghostnaps/roblox_shared", version = "^" }
 
 [dev_dependencies]
