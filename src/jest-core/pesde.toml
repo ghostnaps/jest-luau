@@ -14,25 +14,25 @@ sourcemap_generator = ".pesde/sourcemap_generator.luau"
 default = "https://github.com/UpliftGames/wally-index"
 
 [dependencies]
-luau-polyfill = { wally = "wally#jsdotlua/luau-polyfill", version = "^1.2.7" }
-promise = { wally = "wally#jsdotlua/promise", version = "^3.5.2" }
-chalk-lua = { wally = "wally#jsdotlua/chalk", version = "^0.2.1" }
-regexp = { wally = "wally#jsdotlua/luau-regexp", version = "^0.2.1" }
-jest-config = { workspace = "ghostnaps/jest_config", verison = "^" }
-jest-console = { workspace = "ghostnaps/jest_console", verison = "^" }
-jest-test-result = { workspace = "ghostnaps/jest_test_result", verison = "^" }
-jest-types = { workspace = "ghostnaps/jest_types", verison = "^" }
-jest-runtime = { workspace = "ghostnaps/jest_runtime", verison = "^" }
-jest-runner = { workspace = "ghostnaps/jest_runner", verison = "^" }
-jest-reporters = { workspace = "ghostnaps/jest_reporters", verison = "^" }
-jest-util = { workspace = "ghostnaps/jest_util", verison = "^" }
-jest-message-util = { workspace = "ghostnaps/jest_message_util", verison = "^" }
-jest-snapshot = { workspace = "ghostnaps/jest_snapshot", verison = "^" }
-pretty-format = { workspace = "ghostnaps/pretty_format", verison = "^" }
-roblox-shared = { workspace = "ghostnaps/roblox_shared", verison = "^" }
-emittery = { workspace = "ghostnaps/emittery", verison = "^" }
+LuauPolyfill = { wally = "wally#jsdotlua/luau-polyfill", version = "^1.2.7" }
+Promise = { wally = "wally#jsdotlua/promise", version = "^3.5.2" }
+ChalkLua = { wally = "wally#jsdotlua/chalk", version = "^0.2.1" }
+RepExp = { wally = "wally#jsdotlua/luau-regexp", version = "^0.2.1" }
+JestConfig = { workspace = "ghostnaps/jest_config", verison = "^" }
+JestConsole = { workspace = "ghostnaps/jest_console", verison = "^" }
+JestTestResult = { workspace = "ghostnaps/jest_test_result", verison = "^" }
+JestTypes = { workspace = "ghostnaps/jest_types", verison = "^" }
+JestRuntime = { workspace = "ghostnaps/jest_runtime", verison = "^" }
+JestRunner = { workspace = "ghostnaps/jest_runner", verison = "^" }
+JestReporters = { workspace = "ghostnaps/jest_reporters", verison = "^" }
+JestUtil = { workspace = "ghostnaps/jest_util", verison = "^" }
+JestMessageUtil = { workspace = "ghostnaps/jest_message_util", verison = "^" }
+JestSnapshot = { workspace = "ghostnaps/jest_snapshot", verison = "^" }
+PrettyFormat = { workspace = "ghostnaps/pretty_format", verison = "^" }
+RobloxShared = { workspace = "ghostnaps/roblox_shared", verison = "^" }
+Emittery = { workspace = "ghostnaps/emittery", verison = "^" }
 
 [dev_dependencies]
-jest-globals = { workspace = "ghostnaps/jest_globals", version = "^" }
-jest-snapshot-serializer-raw = { workspace = "ghostnaps/jest_snapshot_serializer_raw", version = "^" }
-test-utils = { workspace = "ghostnaps/test_utils", version = "^" }
+JestGlobals = { workspace = "ghostnaps/jest_globals", version = "^" }
+JestSnapshotSerializerRaw = { workspace = "ghostnaps/jest_snapshot_serializer_raw", version = "^" }
+TestUtils = { workspace = "ghostnaps/test_utils", version = "^" }

@@ -14,18 +14,18 @@ sourcemap_generator = ".pesde/sourcemap_generator.luau"
 default = "https://github.com/UpliftGames/wally-index"
 
 [dependencies]
-luau-polyfill = { wally = "wally#jsdotlua/luau-polyfill", version = "^1.2.7" }
-promise = { wally = "wally#jsdotlua/promise", version = "^3.5.2" }
-regexp = { wally = "wally#jsdotlua/luau-regexp", version = "^0.2.1" }
-jest-get-type = { workspace = "ghostnaps/jest_get_type", version = "^" }
-jest-message-util = { workspace = "ghostnaps/jest_message_util", version = "^" }
-jest-util = { workspace = "ghostnaps/jest_util", version = "^" }
-jest-matcher-utils = { workspace = "ghostnaps/jest_matcher_utils", version = "^" }
-jest-snapshot = { workspace = "ghostnaps/jest_snapshot", version = "^" }
-roblox-shared = { workspace = "ghostnaps/roblox_shared", version = "^" }
+LuauPolyfill = { wally = "wally#jsdotlua/luau-polyfill", version = "^1.2.7" }
+Promise = { wally = "wally#jsdotlua/promise", version = "^3.5.2" }
+RepExp = { wally = "wally#jsdotlua/luau-regexp", version = "^0.2.1" }
+JestGetType = { workspace = "ghostnaps/jest_get_type", version = "^" }
+JestMessageUtil = { workspace = "ghostnaps/jest_message_util", version = "^" }
+JestUtil = { workspace = "ghostnaps/jest_util", version = "^" }
+JestMatcherUtils = { workspace = "ghostnaps/jest_matcher_utils", version = "^" }
+JestSnapshot = { workspace = "ghostnaps/jest_snapshot", version = "^" }
+RobloxShared = { workspace = "ghostnaps/roblox_shared", version = "^" }
 
 [dev_dependencies]
-jest-globals = { workspace = "ghostnaps/jest_globals", version = "^" }
-jest-mock = { workspace = "ghostnaps/jest_mock", version = "^" }
-test-utils = { workspace = "ghostnaps/test_utils", version = "^" }
-chalk-lua = { wally = "wally#jsdotlua/chalk", version = "^0.2.1" }
+JestGlobals = { workspace = "ghostnaps/jest_globals", version = "^" }
+JestMock = { workspace = "ghostnaps/jest_mock", version = "^" }
+TestUtils = { workspace = "ghostnaps/test_utils", version = "^" }
+ChalkLua = { wally = "wally#jsdotlua/chalk", version = "^0.2.1" }

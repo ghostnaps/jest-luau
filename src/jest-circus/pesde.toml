@@ -14,13 +14,13 @@ sourcemap_generator = ".pesde/sourcemap_generator.luau"
 default = "https://github.com/UpliftGames/wally-index"
 
 [dependencies]
-chalk-lua = { wally = "wally#jsdotlua/chalk", version = "^0.2.1" }
-luau-polyfill = { wally = "wally#jsdotlua/luau-polyfill", version = "^1.2.7" }
-regexp = { wally = "wally#jsdotlua/luau-regexp", version = "^0.2.1" }
-jest-get-type = { workspace = "ghostnaps/jest_get_type", version = "^" }
-jest-types = { workspace = "ghostnaps/jest_types", version = "^" }
-jest-util = { workspace = "ghostnaps/jest_util", version = "^" }
-pretty-format = { workspace = "ghostnaps/pretty_format", version = "^" }
+ChalkLua = { wally = "wally#jsdotlua/chalk", version = "^0.2.1" }
+LuauPolyfill = { wally = "wally#jsdotlua/luau-polyfill", version = "^1.2.7" }
+RepExp = { wally = "wally#jsdotlua/luau-regexp", version = "^0.2.1" }
+JestGetType = { workspace = "ghostnaps/jest_get_type", version = "^" }
+JestTypes = { workspace = "ghostnaps/jest_types", version = "^" }
+JestUtil = { workspace = "ghostnaps/jest_util", version = "^" }
+PrettyFormat = { workspace = "ghostnaps/pretty_format", version = "^" }
 
 [dev_dependencies]
-jest-globals = { workspace = "ghostnaps/jest_globals", version = "^" }
+JestGlobals = { workspace = "ghostnaps/jest_globals", version = "^" }

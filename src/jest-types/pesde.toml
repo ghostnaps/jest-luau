@@ -14,5 +14,5 @@ sourcemap_generator = ".pesde/sourcemap_generator.luau"
 default = "https://github.com/UpliftGames/wally-index"
 
 [dependencies]
-luau-polyfill = { wally = "wally#jsdotlua/luau-polyfill", version = "^1.2.7" }
-regexp = { wally = "wally#jsdotlua/luau-regexp", version = "^0.2.1" }
+LuauPolyfill = { wally = "wally#jsdotlua/luau-polyfill", version = "^1.2.7" }
+RepExp = { wally = "wally#jsdotlua/luau-regexp", version = "^0.2.1" }

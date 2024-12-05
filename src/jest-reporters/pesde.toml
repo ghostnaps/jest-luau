@@ -14,20 +14,20 @@ sourcemap_generator = ".pesde/sourcemap_generator.luau"
 default = "https://github.com/UpliftGames/wally-index"
 
 [dependencies]
-chalk-lua = { wally = "wally#jsdotlua/chalk", version = "^0.2.1" }
-luau-polyfill = { wally = "wally#jsdotlua/luau-polyfill", version = "^1.2.7" }
-jest-console = { workspace = "ghostnaps/jest_console", version = "^" }
-jest-message-util = { workspace = "ghostnaps/jest_message_util", version = "^" }
-jest-mock = { workspace = "ghostnaps/jest_mock", version = "^" }
-jest-test-result = { workspace = "ghostnaps/jest_test_result", version = "^" }
-jest-types = { workspace = "ghostnaps/jest_types", version = "^" }
-jest-util = { workspace = "ghostnaps/jest_util", version = "^" }
-path = { workspace = "ghostnaps/path", version = "^" }
-roblox-shared = { workspace = "ghostnaps/roblox_shared", version = "^" }
-test-utils = { workspace = "ghostnaps/test_utils", version = "^" }
+ChalkLua = { wally = "wally#jsdotlua/chalk", version = "^0.2.1" }
+LuauPolyfill = { wally = "wally#jsdotlua/luau-polyfill", version = "^1.2.7" }
+JestConsole = { workspace = "ghostnaps/jest_console", version = "^" }
+JestMessageUtil = { workspace = "ghostnaps/jest_message_util", version = "^" }
+JestMock = { workspace = "ghostnaps/jest_mock", version = "^" }
+JestTestResult = { workspace = "ghostnaps/jest_test_result", version = "^" }
+JestTypes = { workspace = "ghostnaps/jest_types", version = "^" }
+JestUtil = { workspace = "ghostnaps/jest_util", version = "^" }
+Path = { workspace = "ghostnaps/path", version = "^" }
+RobloxShared = { workspace = "ghostnaps/roblox_shared", version = "^" }
+TestUtils = { workspace = "ghostnaps/test_utils", version = "^" }
 
 [dev_dependencies]
-jest-config = { workspace = "ghostnaps/jest_config", version = "^" }
-jest-globals = { workspace = "ghostnaps/jest_globals", version = "^" }
-jest-snapshot-serializer-raw = { workspace = "ghostnaps/jest_snapshot_serializer_raw", version = "^" }
-pretty-format = { workspace = "ghostnaps/pretty_format", version = "^" }
+JestConfig = { workspace = "ghostnaps/jest_config", version = "^" }
+JestGlobals = { workspace = "ghostnaps/jest_globals", version = "^" }
+JestSnapshotSerializerRaw = { workspace = "ghostnaps/jest_snapshot_serializer_raw", version = "^" }
+PrettyFormat = { workspace = "ghostnaps/pretty_format", version = "^" }

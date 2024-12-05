@@ -19,5 +19,5 @@ sourcemap_generator = ".pesde/sourcemap_generator.luau"
 default = "https://github.com/daimond113/pesde-index"
 
 [dev_dependencies]
-jest = { workspace = "ghostnaps/jest", version = "^" }
-jest-globals = { workspace = "ghostnaps/jest_globals", version = "^" }
+Jest = { workspace = "ghostnaps/jest", version = "^" }
+JestGlobals = { workspace = "ghostnaps/jest_globals", version = "^" }

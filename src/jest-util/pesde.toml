@@ -14,13 +14,13 @@ sourcemap_generator = ".pesde/sourcemap_generator.luau"
 default = "https://github.com/UpliftGames/wally-index"
 
 [dependencies]
-luau-polyfill = { wally = "wally#jsdotlua/luau-polyfill", version = "^1.2.7" }
-promise = { wally = "wally#jsdotlua/promise", version = "^3.5.2" }
-chalk-lua = { wally = "wally#jsdotlua/chalk", version = "^0.2.1" }
-regexp = { wally = "wally#jsdotlua/luau-regexp", version = "^0.2.1" }
-picomatch = { wally = "wally#jsdotlua/picomatch", version = "^0.4.0" }
-jest-types = { workspace = "ghostnaps/jest_types", version = "^" }
-roblox-shared = { workspace = "ghostnaps/roblox_shared", version = "^" }
+LuauPolyfill = { wally = "wally#jsdotlua/luau-polyfill", version = "^1.2.7" }
+Promise = { wally = "wally#jsdotlua/promise", version = "^3.5.2" }
+ChalkLua = { wally = "wally#jsdotlua/chalk", version = "^0.2.1" }
+RepExp = { wally = "wally#jsdotlua/luau-regexp", version = "^0.2.1" }
+Picomatch = { wally = "wally#jsdotlua/picomatch", version = "^0.4.0" }
+JestTypes = { workspace = "ghostnaps/jest_types", version = "^" }
+RobloxShared = { workspace = "ghostnaps/roblox_shared", version = "^" }
 
 [dev_dependencies]
-jest-globals = { workspace = "ghostnaps/jest_globals", version = "^" }
+JestGlobals = { workspace = "ghostnaps/jest_globals", version = "^" }

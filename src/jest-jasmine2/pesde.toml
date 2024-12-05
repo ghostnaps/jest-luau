@@ -14,10 +14,10 @@ sourcemap_generator = ".pesde/sourcemap_generator.luau"
 default = "https://github.com/UpliftGames/wally-index"
 
 [dependencies]
-luau-polyfill = { wally = "wally#jsdotlua/luau-polyfill", version = "^1.2.7" }
+LuauPolyfill = { wally = "wally#jsdotlua/luau-polyfill", version = "^1.2.7" }
 
 [dev_dependencies]
-promise = { wally = "wally#jsdotlua/promise", version = "^3.5.2" }
+Promise = { wally = "wally#jsdotlua/promise", version = "^3.5.2" }
 expect = { workspace = "ghostnaps/expect", version = "^" }
-jest-globals = { workspace = "ghostnaps/jest_globals", version = "^" }
-roblox-shared = { workspace = "ghostnaps/roblox_shared", version = "^" }
+JestGlobals = { workspace = "ghostnaps/jest_globals", version = "^" }
+RobloxShared = { workspace = "ghostnaps/roblox_shared", version = "^" }

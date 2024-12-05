@@ -14,7 +14,7 @@ sourcemap_generator = ".pesde/sourcemap_generator.luau"
 default = "https://github.com/UpliftGames/wally-index"
 
 [dependencies]
-jest-core = { workspace = "ghostnaps/jest_core", version = "^" }
+JestCore = { workspace = "ghostnaps/jest_core", version = "^" }
 
 [dev_dependencies]
-jest-globals = { workspace = "ghostnaps/jest_globals", version = "^" }
+JestGlobals = { workspace = "ghostnaps/jest_globals", version = "^" }

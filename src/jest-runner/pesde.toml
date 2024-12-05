@@ -14,20 +14,20 @@ sourcemap_generator = ".pesde/sourcemap_generator.luau"
 default = "https://github.com/UpliftGames/wally-index"
 
 [dependencies]
-luau-polyfill = { wally = "wally#jsdotlua/luau-polyfill", version = "^1.2.7" }
-promise = { wally = "wally#jsdotlua/promise", version = "^3.5.2" }
-chalk-lua = { wally = "wally#jsdotlua/chalk", version = "^0.2.1" }
-jest-console = { workspace = "ghostnaps/jest_console", version = "^" }
-jest-environment = { workspace = "ghostnaps/jest_environment", version = "^" }
-jest-message-util = { workspace = "ghostnaps/jest_message_util", version = "^" }
-jest-test-result = { workspace = "ghostnaps/jest_test_result", version = "^" }
-jest-types = { workspace = "ghostnaps/jest_types", version = "^" }
-jest-util = { workspace = "ghostnaps/jest_util", version = "^" }
-emittery = { workspace = "ghostnaps/emittery", version = "^" }
-jest-circus = { workspace = "ghostnaps/jest_circus", version = "^" }
-jest-runtime = { workspace = "ghostnaps/jest_runtime", version = "^" }
-throat = { workspace = "ghostnaps/throat", version = "^" }
-roblox-shared = { workspace = "ghostnaps/roblox_shared", version = "^" }
+LuauPolyfill = { wally = "wally#jsdotlua/luau-polyfill", version = "^1.2.7" }
+Promise = { wally = "wally#jsdotlua/promise", version = "^3.5.2" }
+ChalkLua = { wally = "wally#jsdotlua/chalk", version = "^0.2.1" }
+JestConsole = { workspace = "ghostnaps/jest_console", version = "^" }
+JestEnvironment = { workspace = "ghostnaps/jest_environment", version = "^" }
+JestMessageUtil = { workspace = "ghostnaps/jest_message_util", version = "^" }
+JestTestResult = { workspace = "ghostnaps/jest_test_result", version = "^" }
+JestTypes = { workspace = "ghostnaps/jest_types", version = "^" }
+JestUtil = { workspace = "ghostnaps/jest_util", version = "^" }
+Emittery = { workspace = "ghostnaps/emittery", version = "^" }
+JestCircus = { workspace = "ghostnaps/jest_circus", version = "^" }
+JestRuntime = { workspace = "ghostnaps/jest_runtime", version = "^" }
+Throat = { workspace = "ghostnaps/throat", version = "^" }
+RobloxShared = { workspace = "ghostnaps/roblox_shared", version = "^" }
 
 [dev_dependencies]
-jest-globals = { workspace = "ghostnaps/jest_globals", version = "^" }
+JestGlobals = { workspace = "ghostnaps/jest_globals", version = "^" }

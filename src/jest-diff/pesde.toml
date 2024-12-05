@@ -16,12 +16,12 @@ default = "https://github.com/UpliftGames/wally-index"
 
 [dependencies]
 diff-sequences = { workspace = "ghostnaps/diff_sequences", version = "^" }
-jest-get-type = { workspace = "ghostnaps/jest_get_type", version = "^" }
-pretty-format = { workspace = "ghostnaps/pretty_format", version = "^" }
-jest-types = { workspace = "ghostnaps/jest_types", version = "^" }
-chalk-lua = { wally = "wally#jsdotlua/chalk", version = "^0.2.1" }
-luau-polyfill = { wally = "wally#jsdotlua/luau-polyfill", version = "^1.2.7" }
+JestGetType = { workspace = "ghostnaps/jest_get_type", version = "^" }
+PrettyFormat = { workspace = "ghostnaps/pretty_format", version = "^" }
+JestTypes = { workspace = "ghostnaps/jest_types", version = "^" }
+ChalkLua = { wally = "wally#jsdotlua/chalk", version = "^0.2.1" }
+LuauPolyfill = { wally = "wally#jsdotlua/luau-polyfill", version = "^1.2.7" }
 
 [dev_dependencies]
-jest-globals = { workspace = "ghostnaps/jest_globals", version = "^" }
-test-utils = { workspace = "ghostnaps/test_utils", version = "^" }
+JestGlobals = { workspace = "ghostnaps/jest_globals", version = "^" }
+TestUtils = { workspace = "ghostnaps/test_utils", version = "^" }
