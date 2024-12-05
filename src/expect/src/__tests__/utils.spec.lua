@@ -8,18 +8,18 @@
 --  */
 
 local CurrentModule = script.Parent.Parent
-local Packages = CurrentModule.Parent.roblox_packages
+local Packages = CurrentModule.Parent
 
-local JestGlobals = require(Packages["jest-globals"])
+local JestGlobals = require(Packages.Dev.JestGlobals)
 local expect = JestGlobals.expect
 local describe = JestGlobals.describe
 local test = JestGlobals.test
 local testSKIP = JestGlobals.test.skip
 
-local LuauPolyfill = require(Packages["luau-polyfill"])
+local LuauPolyfill = require(Packages.LuauPolyfill)
 local Set = LuauPolyfill.Set
 
-local stringify = require(Packages["jest-matcher-utils"]).stringify
+local stringify = require(Packages.JestMatcherUtils).stringify
 
 local emptyObject = require(CurrentModule.utils).emptyObject
 local getObjectSubset = require(CurrentModule.utils).getObjectSubset

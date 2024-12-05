@@ -15,14 +15,14 @@
 -- ROBLOX note: no upstream
 
 local CurrentModule = script.Parent
-local Packages = CurrentModule.Parent.Parent.roblox_packages
+local Packages = CurrentModule.Parent.Parent
 
 local Writeable = require(CurrentModule.Parent.Writeable).Writeable
 
-local JestConfig = require(Packages["jest-config"])
+local JestConfig = require(Packages.Dev.JestConfig)
 
-local ModuleMocker = require(Packages["jest-mock"]).ModuleMocker
-local JestGlobals = require(Packages["jest-globals"])
+local ModuleMocker = require(Packages.JestMock).ModuleMocker
+local JestGlobals = require(Packages.Dev.JestGlobals)
 local expect = JestGlobals.expect
 local describe = JestGlobals.describe
 local it = JestGlobals.it

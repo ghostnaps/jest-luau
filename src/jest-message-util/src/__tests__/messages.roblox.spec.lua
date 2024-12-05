@@ -12,16 +12,16 @@
 	* See the License for the specific language governing permissions and
 	* limitations under the License.
 ]]
-local Packages = script.Parent.Parent.Parent.roblox_packages
+local Packages = script.Parent.Parent.Parent
 
-local JestGlobals = require(Packages["jest-globals"])
+local JestGlobals = require(Packages.Dev.JestGlobals)
 local expect = JestGlobals.expect
 local it = JestGlobals.it
 
-local Promise = require(Packages["promise"])
-local Error = require(Packages["luau-polyfill"]).Error
+local Promise = require(Packages.Dev.Promise)
+local Error = require(Packages.LuauPolyfill).Error
 
-local RobloxShared = require(Packages["roblox-shared"])
+local RobloxShared = require(Packages.RobloxShared)
 local pruneDeps = RobloxShared.pruneDeps
 
 local CurentModule = require(script.Parent.Parent)

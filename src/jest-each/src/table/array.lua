@@ -7,14 +7,14 @@
  *
  ]]
 
-local Packages = script.Parent.Parent.Parent.roblox_packages
+local Packages = script.Parent.Parent.Parent
 
-local LuauPolyfill = require(Packages["luau-polyfill"])
+local LuauPolyfill = require(Packages.LuauPolyfill)
 local Array = LuauPolyfill.Array
 local Boolean = LuauPolyfill.Boolean
 type Array<T> = LuauPolyfill.Array<T>
 
-local RegExp = require(Packages["regexp"])
+local RegExp = require(Packages.RegExp)
 
 local exports = {}
 
@@ -23,12 +23,12 @@ local exports = {}
 local format = require(script.Parent.format)
 -- ROBLOX deviation END
 
-local typesModule = require(Packages["jest-types"])
+local typesModule = require(Packages.JestTypes)
 type Global_ArrayTable = typesModule.Global_ArrayTable
 type Global_Col = typesModule.Global_Col
 type Global_Row = typesModule.Global_Row
 type Global_Table = typesModule.Global_Table
-local pretty = require(Packages["pretty-format"]).format
+local pretty = require(Packages.PrettyFormat).format
 
 -- ROBLOX devation: Circular dependency, inline type
 -- local bindModule = require(script.Parent.Parent.bind)

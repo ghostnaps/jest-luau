@@ -7,21 +7,21 @@
  ]]
 
 local CurrentModule = script.Parent.Parent
-local Packages = CurrentModule.Parent.roblox_packages
+local Packages = CurrentModule.Parent
 
-local JestGlobals = require(Packages["jest-globals"])
+local JestGlobals = require(Packages.Dev.JestGlobals)
 local expect = JestGlobals.expect
 local it = JestGlobals.it
 
-local LuauPolyfill = require(Packages["luau-polyfill"])
+local LuauPolyfill = require(Packages.LuauPolyfill)
 local Array = LuauPolyfill.Array
 
 local getSnapshotSummary = require(CurrentModule.getSnapshotSummary).default
 
-local testResultModule = require(Packages["jest-test-result"])
+local testResultModule = require(Packages.JestTestResult)
 type SnapshotSummary = testResultModule.SnapshotSummary
 
-local typesModule = require(Packages["jest-types"])
+local typesModule = require(Packages.JestTypes)
 type Config_GlobalConfig = typesModule.Config_GlobalConfig
 
 local UPDATE_COMMAND = "press --u"

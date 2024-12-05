@@ -7,15 +7,15 @@
  ]]
 
 local CurrentModule = script.Parent.Parent
-local Packages = CurrentModule.Parent.roblox_packages
-local React = require(Packages["react"])
+local Packages = CurrentModule.Parent
+local React = require(Packages.Dev.React)
 
 type ReactElement = React.ReactElement
 local PrettyFormat = require(CurrentModule)
 local plugins = PrettyFormat.plugins
 local setPrettyPrint = require(script.Parent.setPrettyPrint).default
 local ReactElement = plugins.ReactElement
-local JestGlobals = require(Packages["jest-globals"])
+local JestGlobals = require(Packages.Dev.JestGlobals)
 -- ROBLOX deviation START: importing expectExtended to avoid analyze errors for additional matchers
 local expect = JestGlobals.expectExtended
 -- ROBLOX deviation END
@@ -37,14 +37,11 @@ describe("ReactElement Plugin", function()
 			  displayName?: string;
 			};
 		]]
-	local forwardRefComponent: typeof(setmetatable(
-		{} :: {
-			displayName: string?,
-		},
-		{
-			__call = (function() end :: any) :: (_self: any, _props: unknown, _ref: unknown) -> ReactElement | nil,
-		}
-	))
+	local forwardRefComponent: typeof(setmetatable({} :: {
+		displayName: string?,
+	}, {
+		__call = (function() end :: any) :: (_self: any, _props: unknown, _ref: unknown) -> ReactElement | nil,
+	}))
 	-- ROBLOX deviation END
 
 	local forwardRefExample: ReturnType<typeof(React.forwardRef)>

@@ -6,8 +6,8 @@
  * LICENSE file in the root directory of this source tree.
  ]]
 
-local Packages = script.Parent.Parent.roblox_packages
-local LuauPolyfill = require(Packages["luau-polyfill"])
+local Packages = script.Parent.Parent
+local LuauPolyfill = require(Packages.LuauPolyfill)
 local Array = LuauPolyfill.Array
 local Object = LuauPolyfill.Object
 local Set = LuauPolyfill.Set
@@ -16,18 +16,18 @@ local Boolean = LuauPolyfill.Boolean
 type Array<T> = LuauPolyfill.Array<T>
 type Object = LuauPolyfill.Object
 type Promise<T> = LuauPolyfill.Promise<T>
-local Promise = require(Packages["promise"])
+local Promise = require(Packages.Promise)
 
 local exports = {}
 
 -- ROBLOX deviation START: unused
 -- local path = require(Packages.path)
--- local chalk = require(Packages["chalk-lua"])
+-- local chalk = require(Packages.ChalkLua)
 -- local exit = require(Packages.exit)
 -- local fs = require(Packages["graceful-fs"])
 -- ROBLOX deviation END
-local CustomConsole = require(Packages["jest-console"]).CustomConsole
-local test_resultModule = require(Packages["jest-test-result"])
+local CustomConsole = require(Packages.JestConsole).CustomConsole
+local test_resultModule = require(Packages.JestTestResult)
 type AggregatedResult = test_resultModule.AggregatedResult
 type Test = test_resultModule.Test
 type TestContext = test_resultModule.TestContext
@@ -40,7 +40,7 @@ local makeEmptyAggregatedTestResult = test_resultModule.makeEmptyAggregatedTestR
 -- local test_sequencerModule = require(Packages["@jest"]["test-sequencer"])
 -- type TestSequencer = test_sequencerModule.default
 -- ROBLOX deviation END
-local jestTypesModule = require(Packages["jest-types"])
+local jestTypesModule = require(Packages.JestTypes)
 type Config_GlobalConfig = jestTypesModule.Config_GlobalConfig
 type Config_Path = jestTypesModule.Config_Path
 -- ROBLOX deviation START: changed files not supported
@@ -51,10 +51,10 @@ type ChangedFiles = nil
 type ChangedFilesPromise = Promise<ChangedFiles>
 -- local Resolver = require(Packages["jest-resolve"]).default
 -- ROBLOX deviation END
-local jest_runtimeModule = require(Packages["jest-runtime"])
+local jest_runtimeModule = require(Packages.JestRuntime)
 type Context = jest_runtimeModule.Context
 -- ROBLOX deviation START:
--- local jest_utilModule = require(Packages["jest-util"])
+-- local jest_utilModule = require(Packages.JestUtil)
 -- local requireOrImportModule = jest_utilModule.requireOrImportModule
 -- local tryRealpath = jest_utilModule.tryRealpath
 -- local jest_watcherModule = require(Packages["jest-watcher"])
@@ -88,7 +88,7 @@ type Filter = typesModule.Filter
 type TestRunData = typesModule.TestRunData
 
 -- ROBLOX deviation START: added missing variables to limit nr deviations
-local RobloxShared = require(Packages["roblox-shared"])
+local RobloxShared = require(Packages.RobloxShared)
 local nodeUtils = RobloxShared.nodeUtils
 local process = nodeUtils.process
 local exit = nodeUtils.exit

@@ -20,11 +20,11 @@
 ]]
 
 local CurrentModule = script
-local Packages = CurrentModule.Parent.roblox_packages
+local Packages = CurrentModule.Parent
 
-local getType = require(Packages["jest-get-type"]).getType
+local getType = require(Packages.JestGetType).getType
 
-local jestMock = require(Packages["jest-mock"]).ModuleMocker
+local jestMock = require(Packages.JestMock).ModuleMocker
 
 local realDelay = delay
 local realTick = tick

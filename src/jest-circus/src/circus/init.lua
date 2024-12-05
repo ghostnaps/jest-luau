@@ -7,7 +7,7 @@
  ]]
 
 local CurrentModule = script
-local Packages = CurrentModule.Parent.Parent.roblox_packages
+local Packages = CurrentModule.Parent.Parent
 
 -- ROBLOX FIXME
 type FIXME_ANALYZE = any
@@ -21,7 +21,7 @@ local _dispatchDescribe: (
 ) -> ()
 -- ROBLOX deviation END
 local exports = {}
-local typesModule = require(Packages["jest-types"])
+local typesModule = require(Packages.JestTypes)
 type Circus_HookFn = typesModule.Circus_HookFn
 type Circus_HookType = typesModule.Circus_HookType
 type Circus_BlockFn = typesModule.Circus_BlockFn
@@ -34,8 +34,8 @@ type Circus_TestMode = typesModule.Circus_TestMode
 type Circus_Event = typesModule.Circus_Event
 type Circus_State = typesModule.Circus_State
 type Global_It = typesModule.Global_It
-local bindEach = require(Packages["jest-each"]).bind
-local jest_utilModule = require(Packages["jest-util"])
+local bindEach = require(Packages.JestEach).bind
+local jest_utilModule = require(Packages.JestUtil)
 local ErrorWithStack = jest_utilModule.ErrorWithStack
 local convertDescriptorToString = jest_utilModule.convertDescriptorToString
 local isPromise = jest_utilModule.isPromise
@@ -51,7 +51,7 @@ type DescribeFn = typeof(setmetatable({}, {
 	__call = (nil :: any) :: (_self: any, blockName: Circus_BlockNameLike, blockFn: Circus_BlockFn) -> (),
 }))
 
-local LuauPolyfill = require(Packages["luau-polyfill"])
+local LuauPolyfill = require(Packages.LuauPolyfill)
 type Error = LuauPolyfill.Error
 
 local describe = (function()

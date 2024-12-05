@@ -7,11 +7,11 @@
  ]]
 
 local rootWorkspace = script.Parent.Parent
-local LuauPolyfill = require(rootWorkspace.roblox_packages["luau-polyfill"])
+local LuauPolyfill = require(rootWorkspace.LuauPolyfill)
 type Array<T> = LuauPolyfill.Array<T>
 type Object = LuauPolyfill.Object
 
-local RegExp = require(rootWorkspace.roblox_packages["regexp"])
+local RegExp = require(rootWorkspace.RegExp)
 type RegExp = RegExp.RegExp
 
 type Record<T, U> = { [T]: U }
@@ -22,7 +22,7 @@ type TemplateStringsArray = Array<string>
 -- type ForegroundColor = chalkModule.ForegroundColor
 type ForegroundColor = string
 
--- local istanbul_reportsModule = require(rootWorkspace.roblox_packages["istanbul-reports"])
+-- local istanbul_reportsModule = require(rootWorkspace["istanbul-reports"])
 -- type ReportOptions = istanbul_reportsModule.ReportOptions
 type ReportOptions = Object
 

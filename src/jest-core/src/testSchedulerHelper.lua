@@ -6,13 +6,13 @@
  * LICENSE file in the root directory of this source tree.
  ]]
 
-local Packages = script.Parent.Parent.roblox_packages
-local LuauPolyfill = require(Packages["luau-polyfill"])
+local Packages = script.Parent.Parent
+local LuauPolyfill = require(Packages.LuauPolyfill)
 type Array<T> = LuauPolyfill.Array<T>
 local exports = {}
-local test_resultModule = require(Packages["jest-test-result"])
+local test_resultModule = require(Packages.JestTestResult)
 type Test = test_resultModule.Test
-local typesModule = require(Packages["jest-types"])
+local typesModule = require(Packages.JestTypes)
 type Config_GlobalConfig = typesModule.Config_GlobalConfig
 -- ROBLOX deviation START: always run in band
 -- local SLOW_TEST_TIME = 1000

@@ -7,25 +7,25 @@
  ]]
 
 local CurrentModule = script.Parent
-local Packages = CurrentModule.Parent.roblox_packages
+local Packages = CurrentModule.Parent
 
-local LuauPolyfill = require(Packages["luau-polyfill"])
+local LuauPolyfill = require(Packages.LuauPolyfill)
 local Boolean = LuauPolyfill.Boolean
 
 local exports = {}
 
-local chalk = require(Packages["chalk-lua"])
+local chalk = require(Packages.ChalkLua)
 
 -- ROBLOX deviation: Makes urls clickable in the terminal. Not able to support
 -- local terminalLink = require(Packages["terminal-link"])
-local testResultModule = require(Packages["jest-test-result"])
+local testResultModule = require(Packages.JestTestResult)
 type TestResult = testResultModule.TestResult
 
-local jestTypesModule = require(Packages["jest-types"])
+local jestTypesModule = require(Packages.JestTypes)
 type Config_GlobalConfig = jestTypesModule.Config_GlobalConfig
 type Config_ProjectConfig = jestTypesModule.Config_ProjectConfig
 
-local formatTime = require(Packages["jest-util"]).formatTime
+local formatTime = require(Packages.JestUtil).formatTime
 
 local utilsModule = require(CurrentModule.utils)
 local formatTestPath = utilsModule.formatTestPath

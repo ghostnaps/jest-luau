@@ -7,11 +7,11 @@
 --  */
 
 local CurrentModule = script.Parent
-local Packages = CurrentModule.Parent.roblox_packages
-local LuauPolyfill = require(Packages["luau-polyfill"])
+local Packages = CurrentModule.Parent
+local LuauPolyfill = require(Packages.LuauPolyfill)
 type Array<T> = LuauPolyfill.Array<T>
 
-local diffSequences = require(Packages["diff-sequences"])
+local diffSequences = require(Packages.DiffSequences)
 
 local CleanupSemantic = require(CurrentModule.CleanupSemantic)
 local DIFF_DELETE = CleanupSemantic.DIFF_DELETE

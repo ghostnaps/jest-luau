@@ -1,10 +1,10 @@
 -- ROBLOX upstream: https://github.com/facebook/jest/blob/v28.0.0/jest-runtime/src/__tests__/runtime_mock.test.js
 local CurrentModule = script.Parent.Parent
-local Packages = CurrentModule.Parent.roblox_packages
-local Promise = require(Packages["promise"])
-local JestGlobals = require(Packages["jest-globals"])
+local Packages = CurrentModule.Parent
+local Promise = require(Packages.Promise)
+local JestGlobals = require(Packages.Dev.JestGlobals)
 -- ROBLOX deviation: pass config to runtime new
-local JestConfig = require(Packages["jest-config"])
+local JestConfig = require(Packages.Dev.JestConfig)
 local beforeEach = JestGlobals.beforeEach
 local describe = JestGlobals.describe
 local expect = JestGlobals.expect

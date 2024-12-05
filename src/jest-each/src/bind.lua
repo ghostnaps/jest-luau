@@ -6,9 +6,9 @@
  * LICENSE file in the root directory of this source tree.
  *
  ]]
-local Packages = script.Parent.Parent.roblox_packages
+local Packages = script.Parent.Parent
 
-local LuauPolyfill = require(Packages["luau-polyfill"])
+local LuauPolyfill = require(Packages.LuauPolyfill)
 local Array = LuauPolyfill.Array
 local Object = LuauPolyfill.Object
 local String = LuauPolyfill.String
@@ -18,7 +18,7 @@ local NIL = require(script.Parent.nilPlaceholder)
 
 local exports = {}
 
-local typesModule = require(Packages["jest-types"])
+local typesModule = require(Packages.JestTypes)
 type Global_ConcurrentTestFn = typesModule.Global_ConcurrentTestFn
 type Global_EachTable = typesModule.Global_EachTable
 type Global_EachTestFn<EachCallback> = typesModule.Global_EachTestFn<EachCallback>
@@ -26,7 +26,7 @@ type Global_TemplateData = typesModule.Global_TemplateData
 type Global_ArrayTable = typesModule.Global_ArrayTable
 type Global_DoneFn = typesModule.Global_DoneFn
 
-local jestutilModule = require(Packages["jest-util"])
+local jestutilModule = require(Packages.JestUtil)
 local ErrorWithStack = jestutilModule.ErrorWithStack
 local convertDescriptorToString = jestutilModule.convertDescriptorToString
 

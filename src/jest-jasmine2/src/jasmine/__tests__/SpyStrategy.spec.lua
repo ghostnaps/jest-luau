@@ -7,9 +7,9 @@
 ]]
 
 local CurrentModule = script.Parent.Parent
-local Packages = CurrentModule.Parent.Parent.roblox_packages
+local Packages = CurrentModule.Parent.Parent
 
-local JestGlobals = require(Packages["jest-globals"])
+local JestGlobals = require(Packages.Dev.JestGlobals)
 local expect = JestGlobals.expect
 local describe = JestGlobals.describe
 local it = JestGlobals.it
@@ -17,7 +17,7 @@ local it = JestGlobals.it
 local SpyStrategy = require(CurrentModule.SpyStrategy)
 local createSpy = require(CurrentModule.createSpy)
 
-local Promise = require(Packages["promise"])
+local Promise = require(Packages.Dev.Promise)
 
 describe("SpyStrategy", function()
 	it("defaults its name to unknown", function()

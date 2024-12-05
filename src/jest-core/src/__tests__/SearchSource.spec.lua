@@ -6,8 +6,8 @@
  * LICENSE file in the root directory of this source tree.
  *
  ]]
-local Packages = script.Parent.Parent.Parent.roblox_packages
-local LuauPolyfill = require(Packages["luau-polyfill"])
+local Packages = script.Parent.Parent.Parent
+local LuauPolyfill = require(Packages.LuauPolyfill)
 local Array = LuauPolyfill.Array
 -- ROBLOX deviation START: not used
 -- local Boolean = LuauPolyfill.Boolean
@@ -16,8 +16,8 @@ local Array = LuauPolyfill.Array
 -- ROBLOX deviation END
 type Array<T> = LuauPolyfill.Array<T>
 type Promise<T> = LuauPolyfill.Promise<T>
-local Promise = require(Packages["promise"])
-local JestGlobals = require(Packages["jest-globals"])
+local Promise = require(Packages.Promise)
+local JestGlobals = require(Packages.Dev.JestGlobals)
 local beforeEach = JestGlobals.beforeEach
 local describe = JestGlobals.describe
 local expect = JestGlobals.expect
@@ -26,9 +26,9 @@ local it = JestGlobals.it
 -- local jest = JestGlobals.jest
 -- local path = require(Packages.path)
 -- ROBLOX deviation END
-local jestTestResultModule = require(Packages["jest-test-result"])
+local jestTestResultModule = require(Packages.JestTestResult)
 type Test = jestTestResultModule.Test
-local jestTypesModule = require(Packages["jest-types"])
+local jestTypesModule = require(Packages.JestTypes)
 -- ROBLOX deviation START: not used
 -- type Config = jestTypesModule.Config
 -- ROBLOX deviation END
@@ -36,9 +36,9 @@ type Config_Argv = jestTypesModule.Config_Argv
 type Config_Path = jestTypesModule.Config_Path
 type Config_InitialOptions = jestTypesModule.Config_InitialOptions
 type Config_ProjectConfig = jestTypesModule.Config_ProjectConfig
-local normalize = require(Packages["jest-config"]).normalize
+local normalize = require(Packages.JestConfig).normalize
 -- ROBLOX deviation START: not used
--- local Runtime = require(Packages["jest-runtime"]).default
+-- local Runtime = require(Packages.JestRuntime).default
 -- ROBLOX deviation END
 local SearchSourceModule = require(script.Parent.Parent.SearchSource)
 local SearchSource = SearchSourceModule.default

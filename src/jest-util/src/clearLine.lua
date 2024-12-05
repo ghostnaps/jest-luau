@@ -8,10 +8,10 @@
  ]]
 
 local CurrentModule = script.Parent
-local Packages = CurrentModule.Parent.roblox_packages
-local LuauPolyfill = require(Packages["luau-polyfill"])
+local Packages = CurrentModule.Parent
+local LuauPolyfill = require(Packages.LuauPolyfill)
 local Boolean = LuauPolyfill.Boolean
-local RobloxShared = require(Packages["roblox-shared"])
+local RobloxShared = require(Packages.RobloxShared)
 type Writeable = RobloxShared.Writeable
 local exports = {}
 

@@ -8,18 +8,18 @@
 --  */
 
 local CurrentModule = script
-local Packages = CurrentModule.Parent.roblox_packages
+local Packages = CurrentModule.Parent
 
-local LuauPolyfill = require(Packages["luau-polyfill"])
+local LuauPolyfill = require(Packages.LuauPolyfill)
 local Array = LuauPolyfill.Array
 type Array<T> = LuauPolyfill.Array<T>
 local Error = LuauPolyfill.Error
 local Number = LuauPolyfill.Number
 local Symbol = LuauPolyfill.Symbol
 
-local chalk = require(Packages["chalk-lua"])
+local chalk = require(Packages.ChalkLua)
 
-local JestDiff = require(Packages["jest-diff"])
+local JestDiff = require(Packages.JestDiff)
 local DIFF_DELETE = JestDiff.DIFF_DELETE
 local DIFF_EQUAL = JestDiff.DIFF_EQUAL
 local DIFF_INSERT = JestDiff.DIFF_INSERT
@@ -29,11 +29,11 @@ local diffDefault = JestDiff.diff
 local diffStringsRaw = JestDiff.diffStringsRaw
 local diffStringsUnified = JestDiff.diffStringsUnified
 
-local JestGetType = require(Packages["jest-get-type"])
+local JestGetType = require(Packages.JestGetType)
 local getType = JestGetType.getType
 local isPrimitive = JestGetType.isPrimitive
 
-local PrettyFormat = require(Packages["pretty-format"])
+local PrettyFormat = require(Packages.PrettyFormat)
 local prettyFormat = PrettyFormat.format
 
 local Replaceable = require(CurrentModule.Replaceable)

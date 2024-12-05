@@ -7,14 +7,14 @@
  ]]
 
 local CurrentModule = script.Parent.Parent
-local Packages = CurrentModule.Parent.roblox_packages
+local Packages = CurrentModule.Parent
 
-local LuauPolyfill = require(Packages["luau-polyfill"])
+local LuauPolyfill = require(Packages.LuauPolyfill)
 local Array = LuauPolyfill.Array
 local Object = LuauPolyfill.Object
 local Symbol = LuauPolyfill.Symbol
 
-local JestGlobals = require(Packages["jest-globals"])
+local JestGlobals = require(Packages.Dev.JestGlobals)
 local expect = JestGlobals.expect
 local describe = JestGlobals.describe
 local it = JestGlobals.it
@@ -22,9 +22,9 @@ local itFIXME = function(description: string, ...: any)
 	JestGlobals.it.todo(description)
 end
 
-local React = require(Packages["react"])
+local React = require(Packages.Dev.React)
 type ReactElement = React.ReactElement
-local renderer = require(Packages["react"]TestRenderer)
+local renderer = require(Packages.Dev.ReactTestRenderer)
 local ParentModule = require(script.Parent.Parent)
 local prettyFormat = ParentModule.default
 local plugins = ParentModule.plugins

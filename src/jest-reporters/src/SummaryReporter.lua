@@ -7,9 +7,9 @@
  ]]
 
 local CurrentModule = script.Parent
-local Packages = CurrentModule.Parent.roblox_packages
+local Packages = CurrentModule.Parent
 
-local LuauPolyfill = require(Packages["luau-polyfill"])
+local LuauPolyfill = require(Packages.LuauPolyfill)
 local Array = LuauPolyfill.Array
 local Boolean = LuauPolyfill.Boolean
 local Set = LuauPolyfill.Set
@@ -17,13 +17,13 @@ type Set<T> = LuauPolyfill.Set<T>
 
 local exports = {}
 
-local chalk = require(Packages["chalk-lua"])
+local chalk = require(Packages.ChalkLua)
 
-local testResultModule = require(Packages["jest-test-result"])
+local testResultModule = require(Packages.JestTestResult)
 type AggregatedResult = testResultModule.AggregatedResult
 type SnapshotSummary = testResultModule.SnapshotSummary
 
-local jestTypesModule = require(Packages["jest-types"])
+local jestTypesModule = require(Packages.JestTypes)
 type Config_GlobalConfig = jestTypesModule.Config_GlobalConfig
 type Config_ProjectConfig = jestTypesModule.Config_ProjectConfig
 type Config_Path = jestTypesModule.Config_Path

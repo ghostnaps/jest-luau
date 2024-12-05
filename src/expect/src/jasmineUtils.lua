@@ -20,11 +20,11 @@
 -- */
 
 local CurrentModule = script.Parent
-local Packages = CurrentModule.Parent.roblox_packages
+local Packages = CurrentModule.Parent
 
-local RobloxShared = require(Packages["roblox-shared"])
+local RobloxShared = require(Packages.RobloxShared)
 
-local LuauPolyfill = require(Packages["luau-polyfill"])
+local LuauPolyfill = require(Packages.LuauPolyfill)
 type Array<T> = LuauPolyfill.Array<T>
 -- ROBLOX deviation: Tester type defined in file since type imports are not yet
 -- supported

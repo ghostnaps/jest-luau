@@ -6,8 +6,8 @@
 --  * LICENSE file in the root directory of this source tree.
 --  */
 local CurrentModule = script.Parent
-local Packages = CurrentModule.Parent.roblox_packages
-local LuauPolyfill = require(Packages["luau-polyfill"])
+local Packages = CurrentModule.Parent
+local LuauPolyfill = require(Packages.LuauPolyfill)
 type Object = LuauPolyfill.Object
 
 -- ROBLOX TODO: upstream is `MatcherState &`, which is from `expect` package, but would result in a circular rotriever dependency

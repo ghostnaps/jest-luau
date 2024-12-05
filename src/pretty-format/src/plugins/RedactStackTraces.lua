@@ -15,17 +15,17 @@
 -- ROBLOX NOTE: no upstream
 
 local CurrentModule = script.Parent.Parent
-local Packages = CurrentModule.Parent.roblox_packages
+local Packages = CurrentModule.Parent
 
-local JestGetType = require(Packages["jest-get-type"])
+local JestGetType = require(Packages.JestGetType)
 local getType = JestGetType.getType
 
-local LuauPolyfill = require(Packages["luau-polyfill"])
+local LuauPolyfill = require(Packages.LuauPolyfill)
 local Object = LuauPolyfill.Object
 local Array = LuauPolyfill.Array
 local instanceof = LuauPolyfill.instanceof
 
-local redactStackTrace = require(Packages["roblox-shared"]).redactStackTrace
+local redactStackTrace = require(Packages.RobloxShared).redactStackTrace
 
 local Types = require(CurrentModule.Types)
 type Config = Types.Config

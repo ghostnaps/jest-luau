@@ -6,9 +6,9 @@
  * LICENSE file in the root directory of this source tree.
  ]]
 
-local Packages = script.Parent.Parent.roblox_packages
+local Packages = script.Parent.Parent
 
-local LuauPolyfill = require(Packages["luau-polyfill"])
+local LuauPolyfill = require(Packages.LuauPolyfill)
 type Array<T> = LuauPolyfill.Array<T>
 type Error = LuauPolyfill.Error
 type Record<K, T> = { [K]: T }
@@ -24,10 +24,10 @@ type CoverageMapData = any
 -- ROBLOX deviation END
 
 -- ROBLOX TODO: once jest-console package is available
--- local consoleModule = require(Packages["jest-console"])
+-- local consoleModule = require(Packages.JestConsole)
 type ConsoleBuffer = any -- [[ consoleModule.ConsoleBuffer ]]
 
-local typesModule = require(Packages["jest-types"])
+local typesModule = require(Packages.JestTypes)
 type Config_Path = typesModule.Config_Path
 type Config_ProjectConfig = typesModule.Config_ProjectConfig
 type Config_DisplayName = typesModule.Config_DisplayName

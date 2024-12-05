@@ -6,12 +6,12 @@
  * LICENSE file in the root directory of this source tree.
  ]]
 local CurrentModule = script.Parent
-local Packages = CurrentModule.Parent.roblox_packages
+local Packages = CurrentModule.Parent
 
-local LuauPolyfill = require(Packages["luau-polyfill"])
+local LuauPolyfill = require(Packages.LuauPolyfill)
 local Boolean = LuauPolyfill.Boolean
 
-local typesModule = require(Packages["jest-types"])
+local typesModule = require(Packages.JestTypes)
 type Config_Path = typesModule.Config_Path
 
 local types = require(CurrentModule.types)

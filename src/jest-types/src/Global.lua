@@ -7,7 +7,7 @@
 ]]
 
 local rootWorkspace = script.Parent.Parent
-local LuauPolyfill = require(rootWorkspace.roblox_packages["luau-polyfill"])
+local LuauPolyfill = require(rootWorkspace.LuauPolyfill)
 type Array<T> = LuauPolyfill.Array<T>
 type Error = LuauPolyfill.Error
 type Object = LuauPolyfill.Object
@@ -22,7 +22,7 @@ type TemplateStringsArray = Array<string>
 type void = nil
 
 -- ROBLOX deviation START: Package not available, setting type to object
--- local istanbul_lib_coverageModule = require(rootWorkspace.roblox_packages["istanbul-lib-coverage"])
+-- local istanbul_lib_coverageModule = require(rootWorkspace["istanbul-lib-coverage"])
 type CoverageMapData = Object
 -- ROBLOX deviation END
 

@@ -11,13 +11,13 @@
 -- on filling the rest of utils out as we continue with the jest-snapshot file.
 
 local CurrentModule = script.Parent
-local Packages = CurrentModule.Parent.roblox_packages
+local Packages = CurrentModule.Parent
 
-local RobloxShared = require(Packages["roblox-shared"])
+local RobloxShared = require(Packages.RobloxShared)
 local getDataModelService = RobloxShared.getDataModelService
 local FileSystemService = getDataModelService("FileSystemService")
 
-local LuauPolyfill = require(Packages["luau-polyfill"])
+local LuauPolyfill = require(Packages.LuauPolyfill)
 local Array = LuauPolyfill.Array
 local Error = LuauPolyfill.Error
 local Object = LuauPolyfill.Object
@@ -25,14 +25,14 @@ local String = LuauPolyfill.String
 
 type Array<T> = LuauPolyfill.Array<T>
 
--- local chalk = require(Packages["chalk-lua"])
+-- local chalk = require(Packages.ChalkLua)
 
 -- ROBLOX TODO: ADO-1633 fix Jest Types imports
--- local Config = require(Packages["jest-types"]).Config
+-- local Config = require(Packages.JestTypes).Config
 type ConfigPath = string
 type ConfigSnapshotUpdateState = string
 
-local PrettyFormat = require(Packages["pretty-format"])
+local PrettyFormat = require(Packages.PrettyFormat)
 local PrettyFormat_ = require(CurrentModule.PrettyFormat)
 
 -- ROBLOX TODO: fix PrettyFormat types imports

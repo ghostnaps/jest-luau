@@ -6,12 +6,12 @@
  * LICENSE file in the root directory of this source tree.
  *
  ]]
-local Packages = script.Parent.Parent.Parent.roblox_packages
-local JestGlobals = require(Packages["jest-globals"])
+local Packages = script.Parent.Parent.Parent
+local JestGlobals = require(Packages.Dev.JestGlobals)
 local describe = JestGlobals.describe
 local expect = JestGlobals.expect
 local it = JestGlobals.it
-local alignedAnsiStyleSerializer = require(Packages["test-utils"]).alignedAnsiStyleSerializer
+local alignedAnsiStyleSerializer = require(Packages.Dev.TestUtils).alignedAnsiStyleSerializer
 local jestExpect = require(script.Parent.Parent)
 
 expect.addSnapshotSerializer(alignedAnsiStyleSerializer)

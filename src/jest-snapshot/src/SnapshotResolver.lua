@@ -6,31 +6,31 @@
  * LICENSE file in the root directory of this source tree.
  ]]
 
-local Packages = script.Parent.Parent.roblox_packages
-local LuauPolyfill = require(Packages["luau-polyfill"])
+local Packages = script.Parent.Parent
+local LuauPolyfill = require(Packages.LuauPolyfill)
 local Error = LuauPolyfill.Error
 local Map = LuauPolyfill.Map
 local String = LuauPolyfill.String
 type Array<T> = LuauPolyfill.Array<T>
 type Promise<T> = LuauPolyfill.Promise<T>
-local Promise = require(Packages["promise"])
+local Promise = require(Packages.Promise)
 
 local exports = {}
 
 -- ROBLOX deviation START: not needed
 -- local path = require(Packages.path)
--- local chalk = require(Packages["chalk-lua"])
+-- local chalk = require(Packages.ChalkLua)
 -- local createTranspilingRequire = require(Packages["@jest"].transform).createTranspilingRequire
 -- ROBLOX deviation END
-local typesModule = require(Packages["jest-types"])
+local typesModule = require(Packages.JestTypes)
 type Config_Path = typesModule.Config_Path
 type Config_ProjectConfig = typesModule.Config_ProjectConfig
 -- ROBLOX deviation START: not needed
--- local interopRequireDefault = require(Packages["jest-util"]).interopRequireDefault
+-- local interopRequireDefault = require(Packages.JestUtil).interopRequireDefault
 -- ROBLOX deviation END
 
 -- ROBLOX deviation START: additinal dependencies
-local RobloxShared = require(Packages["roblox-shared"])
+local RobloxShared = require(Packages.RobloxShared)
 local getParent = RobloxShared.getParent
 local getDataModelService = RobloxShared.getDataModelService
 local CoreScriptSyncService = getDataModelService("CoreScriptSyncService")

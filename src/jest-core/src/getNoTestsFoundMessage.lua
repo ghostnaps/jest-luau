@@ -6,13 +6,13 @@
  * LICENSE file in the root directory of this source tree.
  ]]
 
-local Packages = script.Parent.Parent.roblox_packages
-local LuauPolyfill = require(Packages["luau-polyfill"])
+local Packages = script.Parent.Parent
+local LuauPolyfill = require(Packages.LuauPolyfill)
 local Boolean = LuauPolyfill.Boolean
 
 local exports = {}
 
-local jestTypesModule = require(Packages["jest-types"])
+local jestTypesModule = require(Packages.JestTypes)
 type Config_GlobalConfig = jestTypesModule.Config_GlobalConfig
 local getNoTestFound = require(script.Parent.getNoTestFound).default
 -- ROBLOX deviation START: not needed

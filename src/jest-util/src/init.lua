@@ -7,7 +7,7 @@
  * LICENSE file in the root directory of this source tree.
  ]]
 
-local LuauPolyfill = require(script.Parent.roblox_packages["luau-polyfill"])
+local LuauPolyfill = require(script.Parent.LuauPolyfill)
 local Object = LuauPolyfill.Object
 
 local exports = {}

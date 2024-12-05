@@ -8,23 +8,23 @@
 --  */
 
 local CurrentModule = script.Parent.Parent
-local Packages = CurrentModule.Parent.roblox_packages
+local Packages = CurrentModule.Parent
 
-local LuauPolyfill = require(Packages["luau-polyfill"])
+local LuauPolyfill = require(Packages.LuauPolyfill)
 -- ROBLOX deviation START: not used
 -- local Array = LuauPolyfill.Array
 -- ROBLOX deviation END
 local Symbol = LuauPolyfill.Symbol
 
-local RegExp = require(Packages["regexp"])
+local RegExp = require(Packages.RegExp)
 
-local equals = require(Packages["roblox-shared"]).expect.equals
+local equals = require(Packages.Dev.RobloxShared).expect.equals
 
-local chalk = require(Packages["chalk-lua"])
+local chalk = require(Packages.ChalkLua)
 
-local prettyFormat = require(Packages["pretty-format"]).format
+local prettyFormat = require(Packages.PrettyFormat).format
 
-local JestGlobals = require(Packages["jest-globals"])
+local JestGlobals = require(Packages.Dev.JestGlobals)
 local expect = JestGlobals.expect
 local describe = JestGlobals.describe
 local it = JestGlobals.it
@@ -32,7 +32,7 @@ local jest = JestGlobals.jest
 local test = JestGlobals.test
 local beforeAll = JestGlobals.beforeAll
 
-local alignedAnsiStyleSerializer = require(Packages["test-utils"]).alignedAnsiStyleSerializer
+local alignedAnsiStyleSerializer = require(Packages.Dev.TestUtils).alignedAnsiStyleSerializer
 
 local JestMatcherUtils = require(CurrentModule)
 -- ROBLOX deviation: omitted MatcherHintOptions import
@@ -443,7 +443,7 @@ end)
 describe("printDiffOrStringify", function()
 	test("expected asymmetric matchers should be diffable", function()
 		-- ROBLOX deviation: pass in ModuleScript instead of string
-		jest.dontMock(Packages["jest-diff"])
+		jest.dontMock(Packages.JestDiff)
 		jest.resetModules()
 
 		-- ROBLOX deviation START: fix incorrect 'require' call

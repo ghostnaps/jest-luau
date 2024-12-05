@@ -6,8 +6,8 @@
  * LICENSE file in the root directory of this source tree.
  *
  ]]
-local Packages = script.Parent.Parent.Parent.roblox_packages
-local LuauPolyfill = require(Packages["luau-polyfill"])
+local Packages = script.Parent.Parent.Parent
+local LuauPolyfill = require(Packages.LuauPolyfill)
 local Array = LuauPolyfill.Array
 local Boolean = LuauPolyfill.Boolean
 local Object = LuauPolyfill.Object
@@ -20,12 +20,12 @@ type Array<T> = LuauPolyfill.Array<T>
 type Object = LuauPolyfill.Object
 -- ROBLOX deviation END
 type Record<K, T> = { [K]: T } --[[ ROBLOX TODO: TS 'Record' built-in type is not available in Luau ]]
-local Promise = require(Packages["promise"])
+local Promise = require(Packages.Promise)
 -- ROBLOX deviation START: add RegExp
-local RegExp = require(Packages["regexp"])
+local RegExp = require(Packages.RegExp)
 type RegExp = RegExp.RegExp
 -- ROBLOX deviation END
-local JestGlobals = require(Packages["jest-globals"])
+local JestGlobals = require(Packages.Dev.JestGlobals)
 -- ROBLOX deviation START: not used
 -- local afterAll = JestGlobals.afterAll
 -- ROBLOX deviation END
@@ -51,7 +51,7 @@ type jest_SpyInstance = any
 -- local semver = require(Packages.semver)
 -- local stripAnsi = require(Packages["strip-ansi"]).default
 -- ROBLOX deviation END
-local jestTypesModule = require(Packages["jest-types"])
+local jestTypesModule = require(Packages.JestTypes)
 -- ROBLOX deviation START: not used
 -- type Config = jestTypesModule.Config
 -- ROBLOX deviation END
@@ -91,7 +91,7 @@ local function pathToInstance(path)
 		Object.None
 	).leaf
 end
-local RobloxShared = require(Packages["roblox-shared"])
+local RobloxShared = require(Packages.RobloxShared)
 local JSON = RobloxShared.nodeUtils.JSON
 local getRelativePath = RobloxShared.getRelativePath
 -- ROBLOX deviation END
@@ -393,19 +393,16 @@ local function testPathArray(key: string)
 	-- ROBLOX deviation END
 	it("does not change absolute paths", function()
 		return Promise.resolve():andThen(function()
-			local options = normalize(
-				{
-					-- ROBLOX deviation START: uses pathToInstance helper function
-					-- [tostring(key)] = { "/an/abs/path", "/another/abs/path" },
-					-- rootDir = "/root/path/foo",
-					[key] = { pathToInstance("/an/abs/path"), pathToInstance("/another/abs/path") },
-					rootDir = pathToInstance("/root/path/foo"),
-					-- ROBLOX deviation END
-					-- ROBLOX deviation START: cast to type any to suppress type error
-					-- }, {} :: Config_Argv):expect().options
-				} :: any,
-				{} :: Config_Argv
-			):expect().options
+			local options = normalize({
+				-- ROBLOX deviation START: uses pathToInstance helper function
+				-- [tostring(key)] = { "/an/abs/path", "/another/abs/path" },
+				-- rootDir = "/root/path/foo",
+				[key] = { pathToInstance("/an/abs/path"), pathToInstance("/another/abs/path") },
+				rootDir = pathToInstance("/root/path/foo"),
+				-- ROBLOX deviation END
+				-- ROBLOX deviation START: cast to type any to suppress type error
+				-- }, {} :: Config_Argv):expect().options
+			} :: any, {} :: Config_Argv):expect().options
 			-- ROBLOX deviation END
 			-- ROBLOX deviation START
 			-- expect(options[tostring(key)]).toEqual({ expectedPathAbs, expectedPathAbsAnother })

@@ -9,9 +9,9 @@
 -- ROBLOX deviation: ansi-styles not ported
 
 local CurrentModule = script
-local Packages = CurrentModule.Parent.roblox_packages
+local Packages = CurrentModule.Parent
 
-local LuauPolyfill = require(Packages["luau-polyfill"])
+local LuauPolyfill = require(Packages.LuauPolyfill)
 local Error = LuauPolyfill.Error
 local Object = LuauPolyfill.Object
 local extends = LuauPolyfill.extends
@@ -29,7 +29,7 @@ local ReactElement = require(CurrentModule.plugins.ReactElement)
 local ReactTestComponent = require(CurrentModule.plugins.ReactTestComponent)
 local RedactStackTraces = require(CurrentModule.plugins.RedactStackTraces)
 
-local JestGetType = require(Packages["jest-get-type"])
+local JestGetType = require(Packages.JestGetType)
 local getType = JestGetType.getType
 local isRobloxBuiltin = JestGetType.isRobloxBuiltin
 

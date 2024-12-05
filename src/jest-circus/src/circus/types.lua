@@ -7,16 +7,16 @@
  ]]
 
 local CurrentModule = script.Parent
-local Packages = CurrentModule.Parent.Parent.roblox_packages
-local LuauPolyfill = require(Packages["luau-polyfill"])
+local Packages = CurrentModule.Parent.Parent
+local LuauPolyfill = require(Packages.LuauPolyfill)
 local Symbol = LuauPolyfill.Symbol
 
 local exports = {}
 
 -- Used as type
-local typesModule = require(Packages["jest-types"])
+local typesModule = require(Packages.JestTypes)
 type Circus_State = typesModule.Circus_State
-local expect = require(Packages["expect"])
+local expect = require(Packages.Expect)
 
 local STATE_SYM = (Symbol("JEST_STATE_SYMBOL") :: unknown) :: "STATE_SYM_SYMBOL"
 exports.STATE_SYM = STATE_SYM

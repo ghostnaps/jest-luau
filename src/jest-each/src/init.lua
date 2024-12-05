@@ -7,8 +7,8 @@
  *
  ]]
 
-local Packages = script.Parent.roblox_packages
-local LuauPolyfill = require(Packages["luau-polyfill"])
+local Packages = script.Parent
+local LuauPolyfill = require(Packages.LuauPolyfill)
 local Array = LuauPolyfill.Array
 local Boolean = LuauPolyfill.Boolean
 local Error = LuauPolyfill.Error
@@ -21,7 +21,7 @@ local NIL = require(script.nilPlaceholder)
 
 local exports = {}
 
-local typesModule = require(Packages["jest-types"])
+local typesModule = require(Packages.JestTypes)
 type Global_BlockFn = typesModule.Global_BlockFn
 type Global_Global = typesModule.Global_Global
 type Global_EachTable = typesModule.Global_EachTable

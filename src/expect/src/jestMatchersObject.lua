@@ -7,15 +7,15 @@
 --  *
 --  */
 local CurrentModule = script.Parent
-local Packages = CurrentModule.Parent.roblox_packages
+local Packages = CurrentModule.Parent
 
-local LuauPolyfill = require(Packages["luau-polyfill"])
+local LuauPolyfill = require(Packages.LuauPolyfill)
 local Symbol = LuauPolyfill.Symbol
 local Object = LuauPolyfill.Object
 local Error = LuauPolyfill.Error
 type Partial<T> = any
 
-local getType = require(Packages["jest-get-type"]).getType
+local getType = require(Packages.JestGetType).getType
 local AsymmetricMatcher = require(CurrentModule.asymmetricMatchers).AsymmetricMatcher
 
 local Types = require(CurrentModule.types)

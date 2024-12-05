@@ -6,21 +6,21 @@
  * LICENSE file in the root directory of this source tree.
  ]]
 
-local Packages = script.Parent.Parent.roblox_packages
-local LuauPolyfill = require(Packages["luau-polyfill"])
+local Packages = script.Parent.Parent
+local LuauPolyfill = require(Packages.LuauPolyfill)
 local Array = LuauPolyfill.Array
 local Object = LuauPolyfill.Object
 type Record<K, T> = { [K]: T }
 
 local exports = {}
 
-local typesModule = require(Packages["jest-types"])
+local typesModule = require(Packages.JestTypes)
 type Config_Argv = typesModule.Config_Argv
 type Config_InitialOptions = typesModule.Config_InitialOptions
 local isJSONString = require(script.Parent.utils).isJSONString
 
 -- ROBLOX deviation START: added missing variables to limit nr deviations
-local RobloxShared = require(Packages["roblox-shared"])
+local RobloxShared = require(Packages.RobloxShared)
 local nodeUtils = RobloxShared.nodeUtils
 local JSON = nodeUtils.JSON
 -- ROBLOX deviation END

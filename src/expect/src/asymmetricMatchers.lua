@@ -9,9 +9,9 @@
 --  */
 
 local CurrentModule = script.Parent
-local Packages = CurrentModule.Parent.roblox_packages
+local Packages = CurrentModule.Parent
 
-local LuauPolyfill = require(Packages["luau-polyfill"])
+local LuauPolyfill = require(Packages.LuauPolyfill)
 local Array = LuauPolyfill.Array
 local Boolean = LuauPolyfill.Boolean
 local Error = LuauPolyfill.Error
@@ -20,15 +20,15 @@ local Symbol = LuauPolyfill.Symbol
 local instanceof = LuauPolyfill.instanceof
 
 type Array<T> = LuauPolyfill.Array<T>
-local RegExp = require(Packages["regexp"])
+local RegExp = require(Packages.RegExp)
 type RegExp = RegExp.RegExp
 
-local getType = require(Packages["jest-get-type"]).getType
+local getType = require(Packages.JestGetType).getType
 
 -- ROBLOX TODO: import jest-matcher-utils when available
 -- import * as matcherUtils from 'jest-matcher-utils';
 local matcherUtils = {} :: any
-local pluralize = require(Packages["jest-util"]).pluralize
+local pluralize = require(Packages.JestUtil).pluralize
 local JasmineUtils = require(CurrentModule.jasmineUtils)
 local equals = JasmineUtils.equals
 local hasProperty = JasmineUtils.hasProperty

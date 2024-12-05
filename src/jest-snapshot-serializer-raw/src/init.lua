@@ -5,8 +5,8 @@
 	Copyright (c) Ika <ikatyang@gmail.com> (https://github.com/ikatyang)
 ]]
 
-local Packages = script.Parent.roblox_packages
-local LuauPolyfill = require(Packages["luau-polyfill"])
+local Packages = script.Parent
+local LuauPolyfill = require(Packages.LuauPolyfill)
 local Symbol = LuauPolyfill.Symbol
 
 local always = require(script.always)

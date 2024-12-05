@@ -15,16 +15,16 @@
 -- ROBLOX NOTE: no upstream
 
 local CurrentModule = script.Parent.Parent
-local Packages = CurrentModule.Parent.roblox_packages
+local Packages = CurrentModule.Parent
 
-local JestGlobals = require(Packages["jest-globals"])
+local JestGlobals = require(Packages.Dev.JestGlobals)
 local expect = JestGlobals.expect
 local describe = JestGlobals.describe
 local it = JestGlobals.it
 local beforeAll = JestGlobals.beforeAll
 local afterAll = JestGlobals.afterAll
 
-local JestConfig = require(Packages["jest-config"])
+local JestConfig = require(Packages.Dev.JestConfig)
 
 local JestRuntime = require(CurrentModule)
 -- ROBLOX TODO: using RuntimePrivate type until better approach is found

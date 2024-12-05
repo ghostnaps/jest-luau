@@ -15,9 +15,9 @@
 -- ROBLOX NOTE: no upstream
 local srcWorkspace = script.Parent
 local rootWorkspace = srcWorkspace.Parent
-local Packages = rootWorkspace.roblox_packages
+local Packages = rootWorkspace
 
-local LuauPolyfill = require(Packages["luau-polyfill"])
+local LuauPolyfill = require(Packages.LuauPolyfill)
 local Boolean = LuauPolyfill.Boolean
 type Object = LuauPolyfill.Object
 

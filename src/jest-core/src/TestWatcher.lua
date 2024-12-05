@@ -6,15 +6,15 @@
  * LICENSE file in the root directory of this source tree.
  ]]
 
-local Packages = script.Parent.Parent.roblox_packages
-local LuauPolyfill = require(Packages["luau-polyfill"])
+local Packages = script.Parent.Parent
+local LuauPolyfill = require(Packages.LuauPolyfill)
 local Object = LuauPolyfill.Object
 type Promise<T> = LuauPolyfill.Promise<T>
-local Promise = require(Packages["promise"])
+local Promise = require(Packages.Promise)
 
 local exports = {}
 
-local emitteryModule = require(Packages["emittery"])
+local emitteryModule = require(Packages.Emittery)
 local emittery = emitteryModule.default
 type emittery<EventData> = emitteryModule.Emittery
 

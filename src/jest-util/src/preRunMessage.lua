@@ -8,14 +8,14 @@
  ]]
 
 local CurrentModule = script.Parent
-local Packages = CurrentModule.Parent.roblox_packages
+local Packages = CurrentModule.Parent
 local exports = {}
 
-local chalk = require(Packages["chalk-lua"])
+local chalk = require(Packages.ChalkLua)
 local clearLine = require(script.Parent.clearLine).default
 local isInteractive = require(script.Parent.isInteractive).default
 
-local RobloxShared = require(Packages["roblox-shared"])
+local RobloxShared = require(Packages.RobloxShared)
 type Writeable = RobloxShared.Writeable
 
 local function print(stream: Writeable): ()

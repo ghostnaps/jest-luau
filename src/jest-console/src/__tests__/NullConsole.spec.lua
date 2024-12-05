@@ -15,14 +15,14 @@
 -- ROBLOX note: no upstream
 
 local CurrentModule = script.Parent
-local Packages = CurrentModule.Parent.Parent.roblox_packages
-local JestGlobals = require(Packages["jest-globals"])
+local Packages = CurrentModule.Parent.Parent
+local JestGlobals = require(Packages.Dev.JestGlobals)
 local expect = JestGlobals.expect
 local describe = JestGlobals.describe
 local it = JestGlobals.it
 local beforeEach = JestGlobals.beforeEach
 
-local Writeable = require(Packages["roblox-shared"]).Writeable
+local Writeable = require(Packages.RobloxShared).Writeable
 
 local NullConsoleModule = require(CurrentModule.Parent.NullConsole)
 local NullConsole = NullConsoleModule.default

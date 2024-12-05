@@ -15,8 +15,8 @@
 ]]
 -- ROBLOX NOTE: no upstream
 
-local Packages = script:FindFirstAncestor("JestBenchmark").Parent.roblox_packages
-local JestGlobals = require(Packages["jest-globals"])
+local Packages = script:FindFirstAncestor("JestBenchmark").Parent
+local JestGlobals = require(Packages.JestGlobals)
 local it = JestGlobals.it
 local expect = JestGlobals.expect
 local jest = JestGlobals.jest

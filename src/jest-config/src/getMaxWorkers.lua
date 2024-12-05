@@ -6,8 +6,8 @@
  * LICENSE file in the root directory of this source tree.
  ]]
 
-local Packages = script.Parent.Parent.roblox_packages
-local LuauPolyfill = require(Packages["luau-polyfill"])
+local Packages = script.Parent.Parent
+local LuauPolyfill = require(Packages.LuauPolyfill)
 -- ROBLOX deviation START: no needed
 -- local Boolean = LuauPolyfill.Boolean
 -- ROBLOX deviation END
@@ -18,7 +18,7 @@ local exports = {}
 -- ROBLOX deviation START: no needed
 -- local cpus = require(Packages.os).cpus
 -- ROBLOX deviation END
-local typesModule = require(Packages["jest-types"])
+local typesModule = require(Packages.JestTypes)
 type Config_Argv = typesModule.Config_Argv
 
 -- ROBLOX deviation START: additional types

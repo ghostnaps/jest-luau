@@ -7,11 +7,11 @@
  ]]
 
 local CurrentModule = script.Parent
-local Packages = CurrentModule.Parent.Parent.roblox_packages
+local Packages = CurrentModule.Parent.Parent
 local exports = {}
-local testResultModule = require(Packages["jest-test-result"])
+local testResultModule = require(Packages.JestTestResult)
 type TestFileEvent = testResultModule.TestFileEvent
-local typesModule = require(Packages["jest-types"])
+local typesModule = require(Packages.JestTypes)
 type Circus_Event = typesModule.Circus_Event
 local utilsModule = require(script.Parent.utils)
 local makeSingleTestResult = utilsModule.makeSingleTestResult

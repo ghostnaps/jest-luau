@@ -7,19 +7,19 @@
 --  *
 --  */
 
-local Packages = script.Parent.Parent.roblox_packages
-local LuauPolyfill = require(Packages["luau-polyfill"])
+local Packages = script.Parent.Parent
+local LuauPolyfill = require(Packages.LuauPolyfill)
 local Error = LuauPolyfill.Error
 
-local JestEnvironment = require(Packages["jest-environment"])
+local JestEnvironment = require(Packages.JestEnvironment)
 type Jest = JestEnvironment.Jest
-local importedExpect = require(Packages["expect"])
+local importedExpect = require(Packages.Expect)
 
 -- ROBLOX deviation START: additional imports
-local jestTypesModule = require(Packages["jest-types"])
+local jestTypesModule = require(Packages.JestTypes)
 type TestFrameworkGlobals = jestTypesModule.Global_TestFrameworkGlobals
 
-local ExpectModule = require(Packages["expect"])
+local ExpectModule = require(Packages.Expect)
 type MatcherState = ExpectModule.MatcherState
 type ExpectExtended<E, State = MatcherState> = ExpectModule.ExpectExtended<E, State>
 -- ROBLOX deviation END

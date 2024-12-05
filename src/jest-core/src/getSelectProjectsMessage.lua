@@ -6,16 +6,16 @@
  * LICENSE file in the root directory of this source tree.
  ]]
 
-local Packages = script.Parent.Parent.roblox_packages
-local LuauPolyfill = require(Packages["luau-polyfill"])
+local Packages = script.Parent.Parent
+local LuauPolyfill = require(Packages.LuauPolyfill)
 local Array = LuauPolyfill.Array
 local Boolean = LuauPolyfill.Boolean
 type Array<T> = LuauPolyfill.Array<T>
 
 local exports = {}
 
-local chalk = require(Packages["chalk-lua"])
-local typesModule = require(Packages["jest-types"])
+local chalk = require(Packages.ChalkLua)
+local typesModule = require(Packages.JestTypes)
 type Config_ProjectConfig = typesModule.Config_ProjectConfig
 local getProjectDisplayName = require(script.Parent.getProjectDisplayName).default
 

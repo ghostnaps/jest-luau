@@ -6,11 +6,11 @@
  * LICENSE file in the root directory of this source tree.
  ]]
 
-local Packages = script.Parent.Parent.roblox_packages
-local LuauPolyfill = require(Packages["luau-polyfill"])
+local Packages = script.Parent.Parent
+local LuauPolyfill = require(Packages.LuauPolyfill)
 local Error = LuauPolyfill.Error
 type Promise<T> = LuauPolyfill.Promise<T>
-local Promise = require(Packages["promise"])
+local Promise = require(Packages.Promise)
 
 local exports = {}
 
@@ -20,11 +20,11 @@ local exports = {}
 -- local ts_nodeModule = require(Packages["ts-node"])
 -- type Service = ts_nodeModule.Service
 -- ROBLOX deviation END
-local typesModule = require(Packages["jest-types"])
+local typesModule = require(Packages.JestTypes)
 type Config_InitialOptions = typesModule.Config_InitialOptions
 -- ROBLOX deviation START: not needed
 -- type Config_Path = typesModule.Config_Path
--- local jest_utilModule = require(Packages["jest-util"])
+-- local jest_utilModule = require(Packages.JestUtil)
 -- local interopRequireDefault = jest_utilModule.interopRequireDefault
 -- local requireOrImportModule = jest_utilModule.requireOrImportModule
 -- local constantsModule = require(script.Parent.constants)

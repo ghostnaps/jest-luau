@@ -9,8 +9,8 @@
 -- ROBLOX deviation START: skipped
 -- type void = nil --[[ ROBLOX FIXME: adding `void` type alias to make it easier to use Luau `void` equivalent when supported ]]
 -- ROBLOX deviation END
-local Packages = script.Parent.roblox_packages
-local LuauPolyfill = require(Packages["luau-polyfill"])
+local Packages = script.Parent
+local LuauPolyfill = require(Packages.LuauPolyfill)
 -- ROBLOX deviation START: skipped
 -- local Array = LuauPolyfill.Array
 -- ROBLOX deviation END
@@ -37,7 +37,7 @@ type Promise<T> = LuauPolyfill.Promise<T>
 type Omit<T, K> = T --[[ ROBLOX TODO: TS 'Omit' built-in type is not available in Luau ]]
 -- ROBLOX deviation START: skipped
 -- type Parameters<T> = any --[[ ROBLOX TODO: TS 'Parameters' built-in type is not available in Luau ]]
--- local Promise = require(Packages["promise"])
+-- local Promise = require(Packages.Promise)
 -- local exports = {}
 -- local nativeModule = require(Packages.module)
 -- local path = require(Packages.path)
@@ -62,19 +62,19 @@ type Omit<T, K> = T --[[ ROBLOX TODO: TS 'Omit' built-in type is not available i
 -- local fs = require(Packages["graceful-fs"])
 -- local slash = require(Packages.slash)
 -- local stripBOM = require(Packages["strip-bom"])
--- local jestEnvironmentModule = require(Packages["jest-environment"])
+-- local jestEnvironmentModule = require(Packages.JestEnvironment)
 -- type Jest = jestEnvironmentModule.Jest
 -- type JestEnvironment = jestEnvironmentModule.JestEnvironment
 -- type Module = jestEnvironmentModule.Module
 -- type ModuleWrapper = jestEnvironmentModule.ModuleWrapper
--- local jestFakeTimersModule = require(Packages["jest-fake-timers"])
+-- local jestFakeTimersModule = require(Packages.JestFakeTimers)
 -- type LegacyFakeTimers = jestFakeTimersModule.LegacyFakeTimers
 -- type ModernFakeTimers = jestFakeTimersModule.ModernFakeTimers
--- local jestGlobalsModule = require(Packages["jest-globals"])
+-- local jestGlobalsModule = require(Packages.Dev.JestGlobals)
 -- local JestGlobals = jestGlobalsModule
 -- local jestSourceMapModule = require(Packages["@jest"]["source-map"])
 -- type SourceMapRegistry = jestSourceMapModule.SourceMapRegistry
--- local jestTestResultModule = require(Packages["jest-test-result"])
+-- local jestTestResultModule = require(Packages.JestTestResult)
 -- type RuntimeTransformResult = jestTestResultModule.RuntimeTransformResult
 -- type V8CoverageResult = jestTestResultModule.V8CoverageResult
 -- local jestTransformModule = require(Packages["@jest"].transform)
@@ -85,7 +85,7 @@ type Omit<T, K> = T --[[ ROBLOX TODO: TS 'Omit' built-in type is not available i
 -- local TransformationOptions = jestTransformModule.TransformationOptions
 -- local handlePotentialSyntaxError = jestTransformModule.handlePotentialSyntaxError
 -- local shouldInstrument = jestTransformModule.shouldInstrument
-local jestTypesModule = require(Packages["jest-types"])
+local jestTypesModule = require(Packages.JestTypes)
 -- type Config = jestTypesModule.Config
 -- type Config_Path = jestTypesModule.Config_Path
 type Config_ProjectConfig = jestTypesModule.Config_ProjectConfig
@@ -94,11 +94,11 @@ type Config_ProjectConfig = jestTypesModule.Config_ProjectConfig
 -- local jestHasteMapModule = require(Packages["jest-haste-map"])
 -- type IModuleMap = jestHasteMapModule.IModuleMap
 -- local HasteMap = require(Packages["jest-haste-map"]).default
--- local jestMessageUtilModule = require(Packages["jest-message-util"])
+-- local jestMessageUtilModule = require(Packages.JestMessageUtil)
 -- local formatStackTrace = jestMessageUtilModule.formatStackTrace
 -- local separateMessageFromStack = jestMessageUtilModule.separateMessageFromStack
 -- ROBLOX deviation END
-local jestMockModule = require(Packages["jest-mock"])
+local jestMockModule = require(Packages.JestMock)
 -- ROBLOX deviation: not implemented yet
 -- type MockFunctionMetadata = jestMockModule.MockFunctionMetadata
 -- ROBLOX deviation END
@@ -107,7 +107,7 @@ type ModuleMocker = jestMockModule.ModuleMocker
 local ModuleMocker = jestMockModule.ModuleMocker
 -- ROBLOX deviation END
 -- ROBLOX deviation START: mocking globals
-local jestMockGenvModule = require(Packages["jest-mock-genv"])
+local jestMockGenvModule = require(Packages.JestMockGenv)
 local GlobalMocker = jestMockGenvModule.GlobalMocker
 type GlobalMocker = jestMockGenvModule.GlobalMocker
 -- ROBLOX deviation START: skipped
@@ -115,8 +115,8 @@ type GlobalMocker = jestMockGenvModule.GlobalMocker
 -- local jestResolveModule = require(Packages["jest-resolve"])
 -- local Resolver = jestResolveModule.default
 -- local ResolveModuleConfig = jestResolveModule.ResolveModuleConfig
--- local Snapshot = require(Packages["jest-snapshot"])
--- local jestUtilModule = require(Packages["jest-util"])
+-- local Snapshot = require(Packages.JestSnapshot)
+-- local jestUtilModule = require(Packages.JestUtil)
 -- local createDirectory = jestUtilModule.createDirectory
 -- local deepCyclicCopy = jestUtilModule.deepCyclicCopy
 -- local helpersModule = require(script.helpers)
@@ -140,9 +140,9 @@ local _typesModule = require(script._types)
 export type Jest = _typesModule.Jest
 type MockFactory = _typesModule.MockFactory
 
-local jestExpectModule = require(Packages["expect"])
+local jestExpectModule = require(Packages.Expect)
 type Expect = jestExpectModule.Expect
-local JestFakeTimers = require(Packages["jest-fake-timers"])
+local JestFakeTimers = require(Packages.JestFakeTimers)
 type FakeTimers = JestFakeTimers.FakeTimers
 -- ROBLOX deviation END
 -- local esmIsAvailable = typeof(SourceTextModule) == "function"
@@ -2826,8 +2826,8 @@ function Runtime_private:getGlobalsFromEnvironment(): JestGlobals
 	end
 
 	-- ROBLOX deviation START: additional extracted variables
-	local jestSnapshot = self:requireModuleOrMock(Packages["jest-snapshot"])
-	local jestExpect = self:requireModuleOrMock(Packages["expect"])
+	local jestSnapshot = self:requireModuleOrMock(Packages.JestSnapshot)
+	local jestExpect = self:requireModuleOrMock(Packages.Expect)
 	-- ROBLOX deviation END
 
 	return {

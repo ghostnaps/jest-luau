@@ -8,23 +8,23 @@
 --  */
 
 local CurrentModule = script.Parent
-local Packages = CurrentModule.Parent.roblox_packages
+local Packages = CurrentModule.Parent
 
-local LuauPolyfill = require(Packages["luau-polyfill"])
+local LuauPolyfill = require(Packages.LuauPolyfill)
 local Array = LuauPolyfill.Array
 local Error = LuauPolyfill.Error
 local Number = LuauPolyfill.Number
 local Object = LuauPolyfill.Object
 local instanceof = LuauPolyfill.instanceof
 
-local RegExp = require(Packages["regexp"])
+local RegExp = require(Packages.RegExp)
 type RegExp = RegExp.RegExp
 
-local JestGetType = require(Packages["jest-get-type"])
+local JestGetType = require(Packages.JestGetType)
 local getType = JestGetType.getType
 local isPrimitive = JestGetType.isPrimitive
 
-local JestMatcherUtils = require(Packages["jest-matcher-utils"])
+local JestMatcherUtils = require(Packages.JestMatcherUtils)
 local DIM_COLOR = JestMatcherUtils.DIM_COLOR
 local EXPECTED_COLOR = JestMatcherUtils.EXPECTED_COLOR
 type MatcherHintOptions = JestMatcherUtils.MatcherHintOptions
@@ -70,7 +70,7 @@ local subsetEquality = Utils.subsetEquality
 local typeEquality = Utils.typeEquality
 
 -- ROBLOX deviation: Roblox Instance matchers
-local RobloxShared = require(Packages["roblox-shared"])
+local RobloxShared = require(Packages.RobloxShared)
 local instanceSubsetEquality = RobloxShared.RobloxInstance.instanceSubsetEquality
 local getInstanceSubset = RobloxShared.RobloxInstance.getInstanceSubset
 

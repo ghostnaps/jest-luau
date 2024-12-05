@@ -7,14 +7,14 @@
  ]]
 
 local CurrentModule = script.Parent
-local Packages = CurrentModule.Parent.Parent.roblox_packages
-local LuauPolyfill = require(Packages["luau-polyfill"])
+local Packages = CurrentModule.Parent.Parent
+local LuauPolyfill = require(Packages.LuauPolyfill)
 local Array = LuauPolyfill.Array
 local Boolean = LuauPolyfill.Boolean
 local instanceof = LuauPolyfill.instanceof
 
 -- ROBLOX deviation START: additional dependencies
-local RobloxShared = require(Packages["roblox-shared"])
+local RobloxShared = require(Packages.RobloxShared)
 local escapePatternCharacters = RobloxShared.escapePatternCharacters
 local normalizePromiseError = RobloxShared.normalizePromiseError
 local Error = LuauPolyfill.Error
@@ -26,17 +26,17 @@ type Record<K, T> = { [K]: T }
 local exports = {}
 local AssertionError = LuauPolyfill.AssertionError
 type AssertionError = LuauPolyfill.AssertionError
-local chalk = require(Packages["chalk-lua"])
-local typesModule = require(Packages["jest-types"])
+local chalk = require(Packages.ChalkLua)
+local typesModule = require(Packages.JestTypes)
 type Circus_Event = typesModule.Circus_Event
 type Circus_State = typesModule.Circus_State
 type Circus_TestError = typesModule.Circus_TestError
-local jestMatcherUtilsModule = require(Packages["jest-matcher-utils"])
+local jestMatcherUtilsModule = require(Packages.JestMatcherUtils)
 type DiffOptions = jestMatcherUtilsModule.DiffOptions
 local diff = jestMatcherUtilsModule.diff
 local printExpected = jestMatcherUtilsModule.printExpected
 local printReceived = jestMatcherUtilsModule.printReceived
-local prettyFormat = require(Packages["pretty-format"]).format
+local prettyFormat = require(Packages.PrettyFormat).format
 
 -- ROBLOX deviation START: predefine variables
 local formatNodeAssertErrors

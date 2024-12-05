@@ -6,9 +6,9 @@
 --  * LICENSE file in the root directory of this source tree.
 --  */
 
-local Packages = script.Parent.roblox_packages
+local Packages = script.Parent
 
-local LuauPolyfill = require(Packages["luau-polyfill"])
+local LuauPolyfill = require(Packages.LuauPolyfill)
 local Error = LuauPolyfill.Error
 local instanceof = LuauPolyfill.instanceof
 local RegExp
@@ -54,7 +54,7 @@ local function getType(value: any): string
 			return typeof(value.test) == "function" and typeof(value.exec) == "function"
 		end)
 		if ok and hasRegExpShape then
-			RegExp = require(Packages["regexp"])
+			RegExp = require(Packages.RegExp)
 
 			if instanceof(value, RegExp) then
 				return "regexp"

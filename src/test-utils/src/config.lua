@@ -6,14 +6,14 @@
 --  * LICENSE file in the root directory of this source tree.
 --  */
 local CurrentModule = script.Parent
-local Packages = CurrentModule.Parent.roblox_packages
+local Packages = CurrentModule.Parent
 
-local jestTypesModule = require(Packages["jest-types"])
+local jestTypesModule = require(Packages.JestTypes)
 
 type Config_GlobalConfig = jestTypesModule.Config_GlobalConfig
 type Config_ProjectConfig = jestTypesModule.Config_ProjectConfig
 
-local LuauPolyfill = require(Packages["luau-polyfill"])
+local LuauPolyfill = require(Packages.LuauPolyfill)
 local Array = LuauPolyfill.Array
 local Object = LuauPolyfill.Object
 local inspect = LuauPolyfill.util.inspect
@@ -128,7 +128,7 @@ local DEFAULT_PROJECT_CONFIG: Config_ProjectConfig = {
 	snapshotFormat = {},
 	snapshotResolver = Object.None,
 	snapshotSerializers = {},
-	testEnvironment = Packages["jest-environment-luau"],
+	testEnvironment = Packages.JestEnvironmentLuau,
 	testEnvironmentOptions = {},
 	testLocationInResults = false,
 	testMatch = {},

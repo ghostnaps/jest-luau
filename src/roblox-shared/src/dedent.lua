@@ -6,9 +6,9 @@
 ]]
 local srcWorkspace = script.Parent
 local rootWorkspace = srcWorkspace.Parent
-local Packages = rootWorkspace.roblox_packages
+local Packages = rootWorkspace
 
-local LuauPolyfill = require(Packages["luau-polyfill"])
+local LuauPolyfill = require(Packages.LuauPolyfill)
 local Array = LuauPolyfill.Array
 local String = LuauPolyfill.String
 type Array<T> = LuauPolyfill.Array<T>

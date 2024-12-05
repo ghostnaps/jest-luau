@@ -9,20 +9,20 @@
 local exports = {}
 
 local CurrentModule = script.Parent
-local Packages = CurrentModule.Parent.roblox_packages
+local Packages = CurrentModule.Parent
 
-local LuauPolyfill = require(Packages["luau-polyfill"])
+local LuauPolyfill = require(Packages.LuauPolyfill)
 local Array = LuauPolyfill.Array
 local String = LuauPolyfill.String
 type Error = LuauPolyfill.Error
 type Array<T> = LuauPolyfill.Array<T>
 
-local chalk = require(Packages["chalk-lua"])
+local chalk = require(Packages.ChalkLua)
 
-local jestTypesModule = require(Packages["jest-types"])
+local jestTypesModule = require(Packages.JestTypes)
 type GlobalConfig = jestTypesModule.Config_GlobalConfig
 
-local messageUtilsModule = require(Packages["jest-message-util"])
+local messageUtilsModule = require(Packages.JestMessageUtil)
 local formatStackTrace = messageUtilsModule.formatStackTrace
 type StackTraceConfig = messageUtilsModule.StackTraceConfig
 type StackTraceOptions = messageUtilsModule.StackTraceOptions

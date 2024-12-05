@@ -15,8 +15,8 @@
 ]]
 -- ROBLOX NOTE: no upstream
 
-local Packages = script:FindFirstAncestor("JestBenchmark").Parent.roblox_packages
-local LuauPolyfill = require(Packages["luau-polyfill"])
+local Packages = script:FindFirstAncestor("JestBenchmark").Parent
+local LuauPolyfill = require(Packages.LuauPolyfill)
 local Object = LuauPolyfill.Object
 local test = require(script.Parent.testModule)
 
@@ -40,7 +40,7 @@ local exports = {}
 
 type ReporterMap = { [string]: Reporter }
 
-local typesModule = require(Packages["jest-types"])
+local typesModule = require(Packages.JestTypes)
 type Circus_TestName = typesModule.Circus_TestName
 type BenchFn = (profiler: Profiler, reporters: ReporterMap) -> ()
 

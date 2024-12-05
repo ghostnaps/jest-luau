@@ -7,29 +7,29 @@
  *
  ]]
 
-local Packages = script.Parent.Parent.roblox_packages
-local LuauPolyfill = require(Packages["luau-polyfill"])
+local Packages = script.Parent.Parent
+local LuauPolyfill = require(Packages.LuauPolyfill)
 local console = LuauPolyfill.console
 local setTimeout = LuauPolyfill.setTimeout
 type Map<T, U> = LuauPolyfill.Map<T, U>
 local setImmediate = setTimeout
-local Promise = require(Packages["promise"])
+local Promise = require(Packages.Promise)
 type Promise<T> = LuauPolyfill.Promise<T>
 
 -- ROBLOX deviation START: additional function to construct file path from ModuleScript
-local getRelativePath = require(Packages["roblox-shared"]).getRelativePath
-local getDataModelService = require(Packages["roblox-shared"]).getDataModelService
+local getRelativePath = require(Packages.RobloxShared).getRelativePath
+local getDataModelService = require(Packages.RobloxShared).getDataModelService
 local CoreScriptSyncService = getDataModelService("CoreScriptSyncService")
 -- ROBLOX deviation END
 
 local exports = {}
 
-local chalk = require(Packages["chalk-lua"])
+local chalk = require(Packages.ChalkLua)
 -- ROBLOX deviation START: unnecessary variables
 -- local fs = require(Packages["graceful-fs"])
 -- local sourcemapSupport = require(Packages["source-map-support"])
 -- ROBLOX deviation END
-local consoleModule = require(Packages["jest-console"])
+local consoleModule = require(Packages.JestConsole)
 local BufferedConsole = consoleModule.BufferedConsole
 type BufferedConsole = consoleModule.BufferedConsole
 local CustomConsole = consoleModule.CustomConsole
@@ -39,14 +39,14 @@ type LogType = consoleModule.LogType
 local NullConsole = consoleModule.NullConsole
 type NullConsole = consoleModule.NullConsole
 local getConsoleOutput = consoleModule.getConsoleOutput
-local environmentModule = require(Packages["jest-environment"])
+local environmentModule = require(Packages.JestEnvironment)
 type JestEnvironment = environmentModule.JestEnvironment
-local test_resultModule = require(Packages["jest-test-result"])
+local test_resultModule = require(Packages.JestTestResult)
 type TestFileEvent = test_resultModule.TestFileEvent
 type TestResult = test_resultModule.TestResult
 -- ROBLOX deviation: unnecessary variable
 -- local createScriptTransformer = require(Packages.JestTransform).createScriptTransformer
-local jestTypesModule = require(Packages["jest-types"])
+local jestTypesModule = require(Packages.JestTypes)
 type Config_GlobalConfig = jestTypesModule.Config_GlobalConfig
 -- ROBLOX deviation: running test based on ModuleScript rather than file
 type Config_Path = ModuleScript --jestTypesModule.Config_Path
@@ -54,16 +54,16 @@ type Config_ProjectConfig = jestTypesModule.Config_ProjectConfig
 -- local docblock = require(Packages["jest-docblock"])
 -- local LeakDetector = require(Packages["jest-leak-detector"]).default
 -- ROBLOX TODO START: implement
--- local formatExecError = require(Packages["jest-message-util"]).formatExecError
+-- local formatExecError = require(Packages.JestMessageUtil).formatExecError
 -- local jest_resolveModule = require(Packages["jest-resolve"])
 -- local Resolver = jest_resolveModule.default
 type Resolver = any
 -- local resolveTestEnvironment = jest_resolveModule.resolveTestEnvironment
--- local jest_runtimeModule = require(Packages["jest-runtime"])
+-- local jest_runtimeModule = require(Packages.JestRuntime)
 -- type RuntimeClass = jest_runtimeModule.default
-type RuntimeClass = typeof(require(Packages["jest-runtime"]))
+type RuntimeClass = typeof(require(Packages.JestRuntime))
 -- ROBLOX TODO END
-local jest_utilModule = require(Packages["jest-util"])
+local jest_utilModule = require(Packages.JestUtil)
 local ErrorWithStack = jest_utilModule.ErrorWithStack
 -- ROBLOX deviation: unnecessary variable
 -- local interopRequireDefault = jest_utilModule.interopRequireDefault
@@ -72,7 +72,7 @@ local typesModule = require(script.Parent.types)
 type TestFramework = typesModule.TestFramework
 type TestRunnerContext = typesModule.TestRunnerContext
 
-local Writeable = require(Packages["roblox-shared"]).Writeable
+local Writeable = require(Packages.RobloxShared).Writeable
 type LeakDetector = nil
 type RunTestInternalResult = {
 	leakDetector: LeakDetector | nil,
@@ -151,7 +151,7 @@ local function runTestInternal(
 			(require :: any)(testEnvironment)
 		-- transformer:requireAndTranspileModule(testEnvironment):expect()
 		-- ROBLOX deviation START: use only JestCircus runner
-		local testFramework: TestFramework = require(Packages["jest-circus"]).runner
+		local testFramework: TestFramework = require(Packages.JestCircus).runner
 		-- local testFramework: TestFramework = transformer
 		-- 	:requireAndTranspileModule(
 		-- 		if process.env.JEST_JASMINE == "1" then require_:resolve("jest-jasmine2") else config.testRunner
@@ -159,7 +159,7 @@ local function runTestInternal(
 		-- 	:expect()
 		-- ROBLOX deviation END
 		-- ROBLOX deviation START: use only JestRuntime
-		local Runtime: RuntimeClass = require(Packages["jest-runtime"])
+		local Runtime: RuntimeClass = require(Packages.JestRuntime)
 		-- interopRequireDefault(
 		-- 	if Boolean.toJSBoolean(config.moduleLoader) then require_(config.moduleLoader) else require_("jest-runtime")
 		-- ).default

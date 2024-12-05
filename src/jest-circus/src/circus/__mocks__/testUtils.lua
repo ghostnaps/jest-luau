@@ -17,7 +17,7 @@ local function runTest(source: string)
 			local Module = require(script_.Parent.Module)
 			Module.resetModules()
 			local require = Module.requireOverride
-			local LuauPolyfill = require(script_.Parent.Parent.Parent.Parent.roblox_packages["luau-polyfill"])
+			local LuauPolyfill = require(script_.Parent.Parent.Parent.Parent.LuauPolyfill)
 			local Array = LuauPolyfill.Array
 			local Error = LuauPolyfill.Error
 			local console = LuauPolyfill.console

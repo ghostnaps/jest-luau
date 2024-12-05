@@ -14,9 +14,9 @@
 -- efforts.
 
 local CurrentModule = script
-local Packages = CurrentModule.Parent.roblox_packages
+local Packages = CurrentModule.Parent
 
-local LuauPolyfill = require(Packages["luau-polyfill"])
+local LuauPolyfill = require(Packages.LuauPolyfill)
 local Array = LuauPolyfill.Array
 local Boolean = LuauPolyfill.Boolean
 local Error = LuauPolyfill.Error
@@ -24,14 +24,14 @@ local Set = LuauPolyfill.Set
 local Symbol = LuauPolyfill.Symbol
 
 -- ROBLOX deviation START: mocking globals
-local JestMockGenv = require(Packages["jest-mock-genv"])
+local JestMockGenv = require(Packages.JestMockGenv)
 type GlobalMocker = JestMockGenv.GlobalMocker
 type GlobalAutomocks = JestMockGenv.GlobalAutomocks
 local GlobalMocker = JestMockGenv.GlobalMocker
 -- ROBLOX deviation END
 
 -- ROBLOX deviation START: inject alike types
-local JestTypes = require(Packages["jest-types"])
+local JestTypes = require(Packages.JestTypes)
 type Config_ProjectConfig = JestTypes.Config_ProjectConfig
 -- ROBLOX deviation END
 

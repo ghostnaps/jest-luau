@@ -6,9 +6,9 @@
  * LICENSE file in the root directory of this source tree.
  *
  ]]
-local Packages = script.Parent.Parent.roblox_packages
+local Packages = script.Parent.Parent
 
-local LuauPolyfill = require(Packages["luau-polyfill"])
+local LuauPolyfill = require(Packages.LuauPolyfill)
 local Array = LuauPolyfill.Array
 local Error = LuauPolyfill.Error
 local String = LuauPolyfill.String
@@ -16,11 +16,11 @@ type Array<T> = LuauPolyfill.Array<T>
 
 local exports = {}
 
-local chalk = require(Packages["chalk-lua"])
+local chalk = require(Packages.ChalkLua)
 
-local typesModule = require(Packages["jest-types"])
+local typesModule = require(Packages.JestTypes)
 type Global_TemplateData = typesModule.Global_TemplateData
-local pretty = require(Packages["pretty-format"]).format
+local pretty = require(Packages.PrettyFormat).format
 
 -- ROBLOX deviation: predefine variables
 local isTaggedTemplateLiteral, isEmptyString, isEmptyTable, pluralize

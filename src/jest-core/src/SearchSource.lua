@@ -6,8 +6,8 @@
  * LICENSE file in the root directory of this source tree.
  ]]
 
-local Packages = script.Parent.Parent.roblox_packages
-local LuauPolyfill = require(Packages["luau-polyfill"])
+local Packages = script.Parent.Parent
+local LuauPolyfill = require(Packages.LuauPolyfill)
 local Array = LuauPolyfill.Array
 local Boolean = LuauPolyfill.Boolean
 -- ROBLOX deviation START: not needed
@@ -18,8 +18,8 @@ local Boolean = LuauPolyfill.Boolean
 type Array<T> = LuauPolyfill.Array<T>
 type Promise<T> = LuauPolyfill.Promise<T>
 type Set<T> = LuauPolyfill.Set<T>
-local Promise = require(Packages["promise"])
-local RegExp = require(Packages["regexp"])
+local Promise = require(Packages.Promise)
+local RegExp = require(Packages.RegExp)
 
 local exports = {}
 
@@ -28,9 +28,9 @@ local exports = {}
 -- local path = require(Packages.path)
 -- local micromatch = require(Packages.micromatch)
 -- ROBLOX deviation END
-local test_resultModule = require(Packages["jest-test-result"])
+local test_resultModule = require(Packages.JestTestResult)
 type Test = test_resultModule.Test
-local jestTypesModule = require(Packages["jest-types"])
+local jestTypesModule = require(Packages.JestTypes)
 type Config_GlobalConfig = jestTypesModule.Config_GlobalConfig
 type Config_ProjectConfig = jestTypesModule.Config_ProjectConfig
 -- ROBLOX deviation START: not needed
@@ -41,12 +41,12 @@ type ChangedFiles = nil
 -- local escapePathForRegex = require(Packages["jest-regex-util"]).escapePathForRegex
 -- local DependencyResolver = require(Packages["jest-resolve-dependencies"]).DependencyResolver
 -- ROBLOX deviation END
-local jest_runtimeModule = require(Packages["jest-runtime"])
+local jest_runtimeModule = require(Packages.JestRuntime)
 type Context = jest_runtimeModule.Context
 -- ROBLOX deviation START: not needed
--- local buildSnapshotResolver = require(Packages["jest-snapshot"]).buildSnapshotResolver
+-- local buildSnapshotResolver = require(Packages.JestSnapshot).buildSnapshotResolver
 -- ROBLOX deviation END
-local jest_utilModule = require(Packages["jest-util"])
+local jest_utilModule = require(Packages.JestUtil)
 local globsToMatcher = jest_utilModule.globsToMatcher
 local testPathPatternToRegExp = jest_utilModule.testPathPatternToRegExp
 local typesModule = require(script.Parent.types)
@@ -54,13 +54,13 @@ type Filter = typesModule.Filter
 type Stats = typesModule.Stats
 type TestPathCases = typesModule.TestPathCases
 
-local globalTypesModule = require(Packages["jest-types"])
+local globalTypesModule = require(Packages.JestTypes)
 type Config_Path = globalTypesModule.Config_Path
 
 -- ROBLOX deviation START: custom implementation for getting all files
 type FileInfo = { path: Config_Path, script: ModuleScript }
 
-local getRelativePath = require(Packages["roblox-shared"]).getRelativePath
+local getRelativePath = require(Packages.RobloxShared).getRelativePath
 
 local function getAllFiles(context: Context): Array<FileInfo>
 	local descendants = context.config.rootDir:GetDescendants()
@@ -321,7 +321,7 @@ function SearchSource:_filterTestPathsWithStats(allPaths: Array<Test>, testPathP
 			local isMatch, stat = ref.isMatch, ref.stat
 			if isMatch(test.path) then
 				-- ROBLOX deviation START: make sure data.stats[stat] is not `nil` before adding 1
-				data.stats[stat] = data.stats[stat] or 0;
+				data.stats[stat] = data.stats[stat] or 0
 				-- ROBLOX deviation END
 				-- ROBLOX FIXME Luau: stat is typed as a union of Stat type keys so this should be infered as number?
 				(data.stats :: { [string]: number })[stat] += 1

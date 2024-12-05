@@ -9,11 +9,11 @@
 --  */
 
 local CurrentModule = script.Parent
-local Packages = CurrentModule.Parent.roblox_packages
+local Packages = CurrentModule.Parent
 
-local getType = require(Packages["jest-get-type"]).getType
+local getType = require(Packages.JestGetType).getType
 
-local LuauPolyfill = require(Packages["luau-polyfill"])
+local LuauPolyfill = require(Packages.LuauPolyfill)
 local toJSBoolean = LuauPolyfill.Boolean.toJSBoolean
 local Array = LuauPolyfill.Array
 local Object = LuauPolyfill.Object

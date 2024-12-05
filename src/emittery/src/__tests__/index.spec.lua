@@ -6,17 +6,17 @@
 	Copyright (c) Sindre Sorhus <sindresorhus@gmail.com> (https://sindresorhus.com)
 ]]
 
-local Packages = script.Parent.Parent.Parent.roblox_packages
-local LuauPolyfill = require(Packages["luau-polyfill"])
+local Packages = script.Parent.Parent.Parent
+local LuauPolyfill = require(Packages.LuauPolyfill)
 local Error = LuauPolyfill.Error
 local setTimeout = LuauPolyfill.setTimeout
 local Symbol = LuauPolyfill.Symbol
-local Promise = require(Packages["promise"])
+local Promise = require(Packages.Promise)
 local setImmediate = setTimeout
 local TypeError = Error
 type Object = LuauPolyfill.Object
 
-local JestGlobals = require(Packages["jest-globals"])
+local JestGlobals = require(Packages.Dev.JestGlobals)
 local expect = JestGlobals.expect
 local it = JestGlobals.it
 local itFIXME = function(description: string, ...: any)

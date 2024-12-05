@@ -17,17 +17,17 @@
 -- https://developer.roblox.com/en-us/api-reference/class/Instance
 
 local CurrentModule = script.Parent.Parent
-local Packages = CurrentModule.Parent.roblox_packages
+local Packages = CurrentModule.Parent
 
-local JestGetType = require(Packages["jest-get-type"])
+local JestGetType = require(Packages.JestGetType)
 local getType = JestGetType.getType
 
-local LuauPolyfill = require(Packages["luau-polyfill"])
+local LuauPolyfill = require(Packages.LuauPolyfill)
 local Object = LuauPolyfill.Object
 local Array = LuauPolyfill.Array
 local instanceof = LuauPolyfill.instanceof
 
-local RobloxInstance = require(Packages["roblox-shared"]).RobloxInstance
+local RobloxInstance = require(Packages.RobloxShared).RobloxInstance
 local InstanceSubset = RobloxInstance.InstanceSubset
 
 local printTableEntries = require(CurrentModule.Collections).printTableEntries

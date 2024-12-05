@@ -7,13 +7,13 @@
 --  */
 
 local CurrentModule = script.Parent
-local Packages = CurrentModule.Parent.roblox_packages
+local Packages = CurrentModule.Parent
 
 local jestMockSerializer = require(CurrentModule.mockSerializer)
 
-local prettyFormat = require(Packages["pretty-format"])
+local prettyFormat = require(Packages.PrettyFormat)
 type PrettyFormatPlugins = prettyFormat.Plugins
-local plugins = require(Packages["pretty-format"]).plugins
+local plugins = require(Packages.PrettyFormat).plugins
 -- ROBLOX deviation: omitting DOMCollection, DOMElement, Immutable, ReactElement, ReactTestComponent
 
 -- ROBLOX TODO: ADO-1182 Add more plugins here as we translate them

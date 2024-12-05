@@ -6,8 +6,8 @@
  * LICENSE file in the root directory of this source tree.
  ]]
 
-local Packages = script.Parent.Parent.roblox_packages
-local LuauPolyfill = require(Packages["luau-polyfill"])
+local Packages = script.Parent.Parent
+local LuauPolyfill = require(Packages.LuauPolyfill)
 local Array = LuauPolyfill.Array
 local Set = LuauPolyfill.Set
 local String = LuauPolyfill.String
@@ -24,11 +24,11 @@ local exports = {}
 -- local promisify = require(Packages.util).promisify
 -- ROBLOX deviation END
 local stripAnsi = require(script.Parent.jsHelpers.stripAnsi)
-local typesModule = require(Packages["jest-types"])
+local typesModule = require(Packages.JestTypes)
 type Config_ProjectConfig = typesModule.Config_ProjectConfig
-local formatExecError = require(Packages["jest-message-util"]).formatExecError
+local formatExecError = require(Packages.JestMessageUtil).formatExecError
 -- ROBLOX deviation START: collectHandles not ported
--- local ErrorWithStack = require(Packages["jest-util"]).ErrorWithStack
+-- local ErrorWithStack = require(Packages.JestUtil).ErrorWithStack
 -- export type HandleCollectionResult = () -> Promise<Array<Error>>
 -- local function stackIsFromUser(stack: string)
 -- 	-- Either the test file, or something required by it

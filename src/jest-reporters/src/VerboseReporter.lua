@@ -7,28 +7,28 @@
  ]]
 
 local CurrentModule = script.Parent
-local Packages = CurrentModule.Parent.roblox_packages
+local Packages = CurrentModule.Parent
 
-local LuauPolyfill = require(Packages["luau-polyfill"])
+local LuauPolyfill = require(Packages.LuauPolyfill)
 local Array = LuauPolyfill.Array
 local Boolean = LuauPolyfill.Boolean
 type Array<T> = LuauPolyfill.Array<T>
 
 local exports = {}
 
-local chalk = require(Packages["chalk-lua"])
-local testResultModule = require(Packages["jest-test-result"])
+local chalk = require(Packages.ChalkLua)
+local testResultModule = require(Packages.JestTestResult)
 type AggregatedResult = testResultModule.AggregatedResult
 type AssertionResult = testResultModule.AssertionResult
 type Suite = testResultModule.Suite
 type TestResult = testResultModule.TestResult
 
-local jestTypesModule = require(Packages["jest-types"])
+local jestTypesModule = require(Packages.JestTypes)
 type Config_GlobalConfig = jestTypesModule.Config_GlobalConfig
 type Config_ProjectConfig = jestTypesModule.Config_ProjectConfig
 type Config_Path = jestTypesModule.Config_Path
 
-local jestUtilModule = require(Packages["jest-util"])
+local jestUtilModule = require(Packages.JestUtil)
 local formatTime = jestUtilModule.formatTime
 local ICONS = jestUtilModule.ICONS
 
@@ -38,7 +38,7 @@ type DefaultReporter = DefaultReporterModule.DefaultReporter
 local typesModule = require(CurrentModule.types)
 type Test = typesModule.Test
 
-local RobloxShared = require(Packages["roblox-shared"])
+local RobloxShared = require(Packages.RobloxShared)
 type Writeable = RobloxShared.Writeable
 
 export type VerboseReporter = DefaultReporter & {

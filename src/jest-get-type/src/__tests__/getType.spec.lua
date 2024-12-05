@@ -8,20 +8,20 @@
 --  */
 
 local CurrentModule = script.Parent.Parent
-local Packages = CurrentModule.Parent.roblox_packages
+local Packages = CurrentModule.Parent
 
-local JestGlobals = require(Packages["jest-globals"])
+local JestGlobals = require(Packages.Dev.JestGlobals)
 local expect = JestGlobals.expect
 local describe = JestGlobals.describe
 local it = JestGlobals.it
 
-local LuauPolyfill = require(Packages["luau-polyfill"])
-local Error = require(Packages["luau-polyfill"]).Error
+local LuauPolyfill = require(Packages.LuauPolyfill)
+local Error = require(Packages.LuauPolyfill).Error
 local Map = LuauPolyfill.Map
 local Set = LuauPolyfill.Set
 local Symbol = LuauPolyfill.Symbol
 
-local RegExp = require(Packages["regexp"])
+local RegExp = require(Packages.RegExp)
 
 local getType = require(CurrentModule).getType
 

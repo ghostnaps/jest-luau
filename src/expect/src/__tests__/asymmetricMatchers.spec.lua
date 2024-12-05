@@ -8,16 +8,16 @@
  *
  ]]
 local CurrentModule = script.Parent.Parent
-local Packages = CurrentModule.Parent.roblox_packages
-local LuauPolyfill = require(Packages["luau-polyfill"])
+local Packages = CurrentModule.Parent
+local LuauPolyfill = require(Packages.LuauPolyfill)
 local Array = LuauPolyfill.Array
 local Boolean = LuauPolyfill.Boolean
 -- ROBLOX deviation START: not used
 -- local Object = LuauPolyfill.Object
 -- local Symbol = LuauPolyfill.Symbol
--- local Promise = require(Packages["promise"])
+-- local Promise = require(Packages.Promise)
 -- ROBLOX deviation END
-local JestGlobals = require(Packages["jest-globals"])
+local JestGlobals = require(Packages.Dev.JestGlobals)
 local describe = JestGlobals.describe
 local expect = JestGlobals.expect
 -- ROBLOX deviation START: not used
@@ -26,7 +26,7 @@ local expect = JestGlobals.expect
 local test = JestGlobals.test
 
 -- ROBLOX deviation START: add RegExp
-local RegExp = require(Packages["regexp"])
+local RegExp = require(Packages.RegExp)
 -- ROBLOX deviation END
 -- ROBLOX deviation START: jestExpect
 -- local jestExpect = require(script.Parent.Parent).default
@@ -48,7 +48,7 @@ local stringMatching = asymmetricMatchersModule.stringMatching
 local stringNotMatching = asymmetricMatchersModule.stringNotMatching
 
 -- ROBLOX deviation START: additional dependencies
-local RobloxShared = require(Packages["roblox-shared"])
+local RobloxShared = require(Packages.RobloxShared)
 local JSON = RobloxShared.nodeUtils.JSON
 -- ROBLOX deviation END
 test("Any.asymmetricMatch()", function()

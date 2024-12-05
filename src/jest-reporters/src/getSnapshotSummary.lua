@@ -7,25 +7,25 @@
  ]]
 
 local CurrentModule = script.Parent
-local Packages = CurrentModule.Parent.roblox_packages
+local Packages = CurrentModule.Parent
 
 local exports = {}
 
-local LuauPolyfill = require(Packages["luau-polyfill"])
+local LuauPolyfill = require(Packages.LuauPolyfill)
 local Array = LuauPolyfill.Array
 local Boolean = LuauPolyfill.Boolean
 
-local chalk = require(Packages["chalk-lua"])
+local chalk = require(Packages.ChalkLua)
 
-local testResultModule = require(Packages["jest-test-result"])
+local testResultModule = require(Packages.JestTestResult)
 type SnapshotSummary = testResultModule.SnapshotSummary
 
-local typesModule = require(Packages["jest-types"])
+local typesModule = require(Packages.JestTypes)
 type Config_GlobalConfig = typesModule.Config_GlobalConfig
 type Config_ProjectConfig = typesModule.Config_ProjectConfig
 type Config_Path = typesModule.Config_Path
 
-local pluralize = require(Packages["jest-util"]).pluralize
+local pluralize = require(Packages.JestUtil).pluralize
 local formatTestPath = require(CurrentModule.utils).formatTestPath
 
 local ARROW = " \u{203A} "

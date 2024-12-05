@@ -7,8 +7,8 @@
  * LICENSE file in the root directory of this source tree.
  ]]
 
-local Packages = script.Parent.roblox_packages
-local LuauPolyfill = require(Packages["luau-polyfill"])
+local Packages = script.Parent
+local LuauPolyfill = require(Packages.LuauPolyfill)
 local Array = LuauPolyfill.Array
 local Boolean = LuauPolyfill.Boolean
 local Error = LuauPolyfill.Error
@@ -16,25 +16,25 @@ local Map = LuauPolyfill.Map
 local Object = LuauPolyfill.Object
 type Array<T> = LuauPolyfill.Array<T>
 type Promise<T> = LuauPolyfill.Promise<T>
-local Promise = require(Packages["promise"])
+local Promise = require(Packages.Promise)
 
 local exports = {}
 
 -- ROBLOX deviation START: not needed
 -- local path = require(Packages.path)
 -- ROBLOX deviation END
-local chalk = require(Packages["chalk-lua"])
+local chalk = require(Packages.ChalkLua)
 -- ROBLOX deviation START: not needed
 -- local fs = require(Packages["graceful-fs"])
 -- ROBLOX deviation END
-local typesModule = require(Packages["jest-types"])
+local typesModule = require(Packages.JestTypes)
 type Config_Argv = typesModule.Config_Argv
 type Config_GlobalConfig = typesModule.Config_GlobalConfig
 type Config_InitialOptions = typesModule.Config_InitialOptions
 type Config_Path = typesModule.Config_Path
 type Config_ProjectConfig = typesModule.Config_ProjectConfig
 -- ROBLOX deviation START: not needed
--- local tryRealpath = require(Packages["jest-util"]).tryRealpath
+-- local tryRealpath = require(Packages.JestUtil).tryRealpath
 -- ROBLOX deviation END
 local constants = require(script.constants)
 local normalize = require(script.normalize).default
@@ -61,7 +61,7 @@ exports.defaults = require(script.Defaults).default
 exports.constants = constants
 
 -- ROBLOX deviation START: added missing variables to limit nr deviations
-local RobloxShared = require(Packages["roblox-shared"])
+local RobloxShared = require(Packages.RobloxShared)
 local nodeUtils = RobloxShared.nodeUtils
 type NodeJS_WriteStream = RobloxShared.NodeJS_WriteStream
 local JSON = nodeUtils.JSON
