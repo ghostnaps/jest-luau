@@ -22,7 +22,7 @@ local LuauPolyfill = require(Packages.LuauPolyfill)
 type Object = LuauPolyfill.Object
 
 local exports = require(CurrentModule)
-local JestGlobals = require(Packages.Dev.JestGlobals)
+local JestGlobals = require(Packages.JestGlobals)
 local jest = JestGlobals.jest
 local expect = JestGlobals.expect
 local it = JestGlobals.it

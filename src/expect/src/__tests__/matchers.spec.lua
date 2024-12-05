@@ -10,7 +10,7 @@
 local CurrentModule = script.Parent.Parent
 local Packages = CurrentModule.Parent
 
-local JestGlobals = require(Packages.Dev.JestGlobals)
+local JestGlobals = require(Packages.JestGlobals)
 local describe = JestGlobals.describe
 local it = JestGlobals.it
 local beforeAll = JestGlobals.beforeAll
@@ -25,7 +25,7 @@ local Symbol = LuauPolyfill.Symbol
 
 local RegExp = require(Packages.RegExp)
 
-local alignedAnsiStyleSerializer = require(Packages.Dev.TestUtils).alignedAnsiStyleSerializer
+local alignedAnsiStyleSerializer = require(Packages.TestUtils).alignedAnsiStyleSerializer
 local stringify = require(Packages.JestMatcherUtils).stringify
 
 -- ROBLOX deviation: omitted Immutable, chalk imports

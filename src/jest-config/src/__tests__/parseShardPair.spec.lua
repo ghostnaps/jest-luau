@@ -6,7 +6,7 @@
  * LICENSE file in the root directory of this source tree.
  ]]
 local Packages = script.Parent.Parent.Parent
-local JestGlobals = require(Packages.Dev.JestGlobals)
+local JestGlobals = require(Packages.JestGlobals)
 local expect = JestGlobals.expect
 local it = JestGlobals.it
 local parseShardPair = require(script.Parent.Parent.parseShardPair).parseShardPair

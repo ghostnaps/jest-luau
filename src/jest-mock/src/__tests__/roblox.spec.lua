@@ -23,14 +23,14 @@ type Object = LuauPolyfill.Object
 
 local exports = require(CurrentModule)
 local ModuleMocker = exports.ModuleMocker
-local JestGlobals = require(Packages.Dev.JestGlobals)
+local JestGlobals = require(Packages.JestGlobals)
 local jest = JestGlobals.jest
 local expect = JestGlobals.expect
 local it = JestGlobals.it
 local describe = JestGlobals.describe
 local beforeEach = JestGlobals.beforeEach
 
-local JestConfig = require(Packages.Dev.JestConfig)
+local JestConfig = require(Packages.JestConfig)
 
 local moduleMocker
 beforeEach(function()

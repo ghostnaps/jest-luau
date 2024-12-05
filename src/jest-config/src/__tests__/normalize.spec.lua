@@ -25,7 +25,7 @@ local Promise = require(Packages.Promise)
 local RegExp = require(Packages.RegExp)
 type RegExp = RegExp.RegExp
 -- ROBLOX deviation END
-local JestGlobals = require(Packages.Dev.JestGlobals)
+local JestGlobals = require(Packages.JestGlobals)
 -- ROBLOX deviation START: not used
 -- local afterAll = JestGlobals.afterAll
 -- ROBLOX deviation END
@@ -393,16 +393,19 @@ local function testPathArray(key: string)
 	-- ROBLOX deviation END
 	it("does not change absolute paths", function()
 		return Promise.resolve():andThen(function()
-			local options = normalize({
-				-- ROBLOX deviation START: uses pathToInstance helper function
-				-- [tostring(key)] = { "/an/abs/path", "/another/abs/path" },
-				-- rootDir = "/root/path/foo",
-				[key] = { pathToInstance("/an/abs/path"), pathToInstance("/another/abs/path") },
-				rootDir = pathToInstance("/root/path/foo"),
-				-- ROBLOX deviation END
-				-- ROBLOX deviation START: cast to type any to suppress type error
-				-- }, {} :: Config_Argv):expect().options
-			} :: any, {} :: Config_Argv):expect().options
+			local options = normalize(
+				{
+					-- ROBLOX deviation START: uses pathToInstance helper function
+					-- [tostring(key)] = { "/an/abs/path", "/another/abs/path" },
+					-- rootDir = "/root/path/foo",
+					[key] = { pathToInstance("/an/abs/path"), pathToInstance("/another/abs/path") },
+					rootDir = pathToInstance("/root/path/foo"),
+					-- ROBLOX deviation END
+					-- ROBLOX deviation START: cast to type any to suppress type error
+					-- }, {} :: Config_Argv):expect().options
+				} :: any,
+				{} :: Config_Argv
+			):expect().options
 			-- ROBLOX deviation END
 			-- ROBLOX deviation START
 			-- expect(options[tostring(key)]).toEqual({ expectedPathAbs, expectedPathAbsAnother })

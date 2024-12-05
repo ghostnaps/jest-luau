@@ -9,14 +9,14 @@
 local CurrentModule = script.Parent.Parent
 local Packages = CurrentModule.Parent
 
-local JestGlobals = require(Packages.Dev.JestGlobals)
+local JestGlobals = require(Packages.JestGlobals)
 local jest = JestGlobals.jest
 local expect = JestGlobals.expect
 local it = JestGlobals.it
 local beforeEach = JestGlobals.beforeEach
 
 -- ROBLOX deviation: pass config to module mocker
-local JestConfig = require(Packages.Dev.JestConfig)
+local JestConfig = require(Packages.JestConfig)
 local ModuleMocker = require(Packages.JestMock).ModuleMocker
 -- ROBLOX deviation: pass config to module mocker
 local moduleMocker = ModuleMocker.new(JestConfig.projectDefaults)

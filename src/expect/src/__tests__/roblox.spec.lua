@@ -25,7 +25,7 @@ local Promise = require(Packages.Promise)
 local RobloxShared = require(Packages.RobloxShared)
 local pruneDeps = RobloxShared.pruneDeps
 
-local JestGlobals = require(Packages.Dev.JestGlobals)
+local JestGlobals = require(Packages.JestGlobals)
 local describe = JestGlobals.describe
 local expect = JestGlobals.expect
 local it = JestGlobals.it

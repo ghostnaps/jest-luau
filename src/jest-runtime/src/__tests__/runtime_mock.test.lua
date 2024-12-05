@@ -2,9 +2,9 @@
 local CurrentModule = script.Parent.Parent
 local Packages = CurrentModule.Parent
 local Promise = require(Packages.Promise)
-local JestGlobals = require(Packages.Dev.JestGlobals)
+local JestGlobals = require(Packages.JestGlobals)
 -- ROBLOX deviation: pass config to runtime new
-local JestConfig = require(Packages.Dev.JestConfig)
+local JestConfig = require(Packages.JestConfig)
 local beforeEach = JestGlobals.beforeEach
 local describe = JestGlobals.describe
 local expect = JestGlobals.expect

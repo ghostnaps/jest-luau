@@ -17,7 +17,7 @@ local Boolean = LuauPolyfill.Boolean
 -- local Symbol = LuauPolyfill.Symbol
 -- local Promise = require(Packages.Promise)
 -- ROBLOX deviation END
-local JestGlobals = require(Packages.Dev.JestGlobals)
+local JestGlobals = require(Packages.JestGlobals)
 local describe = JestGlobals.describe
 local expect = JestGlobals.expect
 -- ROBLOX deviation START: not used

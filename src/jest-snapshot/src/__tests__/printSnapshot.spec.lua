@@ -19,7 +19,7 @@ local ansiRegex = require(Packages.PrettyFormat).plugins.ConvertAnsi.ansiRegex
 local chalk = (require(Packages.ChalkLua) :: any) :: Chalk
 local format = require(Packages.PrettyFormat).default
 
-local JestGlobals = require(Packages.Dev.JestGlobals)
+local JestGlobals = require(Packages.JestGlobals)
 local expect = JestGlobals.expect
 local describe = JestGlobals.describe
 local it = JestGlobals.it

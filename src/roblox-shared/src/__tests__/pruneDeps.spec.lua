@@ -19,7 +19,7 @@ local Packages = CurrentModule.Parent.Parent
 
 local pruneDeps = require(CurrentModule.Parent.pruneDeps)
 
-local JestGlobals = require(Packages.Dev.JestGlobals)
+local JestGlobals = require(Packages.JestGlobals)
 local expect = JestGlobals.expect
 local it = JestGlobals.it
 

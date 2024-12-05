@@ -1,10 +1,10 @@
 -- ROBLOX NOTE: no upstream
 
 local Packages = script.Parent.Parent.Parent
-local test_utilsModule = require(Packages.Dev.TestUtils)
+local test_utilsModule = require(Packages.TestUtils)
 local makeProjectConfig = test_utilsModule.makeProjectConfig
 
-local JestGlobals = require(Packages.Dev.JestGlobals)
+local JestGlobals = require(Packages.JestGlobals)
 local describe = JestGlobals.describe
 local it = JestGlobals.it
 local expect = JestGlobals.expect

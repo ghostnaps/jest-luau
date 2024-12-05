@@ -9,7 +9,7 @@
 local CurrentModule = script.Parent.Parent
 local Packages = CurrentModule.Parent.Parent
 
-local JestGlobals = require(Packages.Dev.JestGlobals)
+local JestGlobals = require(Packages.JestGlobals)
 local expect = JestGlobals.expect
 local describe = JestGlobals.describe
 local it = JestGlobals.it
@@ -17,7 +17,7 @@ local it = JestGlobals.it
 local SpyStrategy = require(CurrentModule.SpyStrategy)
 local createSpy = require(CurrentModule.createSpy)
 
-local Promise = require(Packages.Dev.Promise)
+local Promise = require(Packages.Promise)
 
 describe("SpyStrategy", function()
 	it("defaults its name to unknown", function()

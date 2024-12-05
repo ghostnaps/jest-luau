@@ -19,7 +19,7 @@ local typesModule = require(script.Parent.Parent.Types)
 type OptionsReceived = typesModule.OptionsReceived
 type Plugins = typesModule.Plugins
 
-local JestGlobals = require(Packages.Dev.JestGlobals)
+local JestGlobals = require(Packages.JestGlobals)
 local jestExpect = JestGlobals.expect
 
 --[[ ROBLOX TODO: Unhandled node for type: TSModuleDeclaration ]]

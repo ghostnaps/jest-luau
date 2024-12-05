@@ -18,7 +18,7 @@ local plugins = PrettyFormat.plugins
 
 local AsymmetricMatcher = plugins.AsymmetricMatcher
 
-local JestGlobals = require(Packages.Dev.JestGlobals)
+local JestGlobals = require(Packages.JestGlobals)
 local expect = JestGlobals.expect
 local test = JestGlobals.test
 local describe = JestGlobals.describe
