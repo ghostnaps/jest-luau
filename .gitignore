@@ -1,5 +1,8 @@
 # Pesde files
+.pesde/scripts
 roblox_packages
+lune_packages
+luau_packages
 pesde.lock
 
 # Rojo
