@@ -9,7 +9,7 @@
 local CurrentModule = script.Parent.Parent
 local Packages = CurrentModule.Parent.Parent
 
-local JestGlobals = require(Packages.Dev.JestGlobals)
+local JestGlobals = require(Packages.JestGlobals)
 local expect = JestGlobals.expect
 local describe = JestGlobals.describe
 local it = JestGlobals.it

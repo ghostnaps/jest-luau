@@ -4,11 +4,11 @@ local Packages = CurrentModule.Parent
 local LuauPolyfill = require(Packages.LuauPolyfill)
 local Map = LuauPolyfill.Map
 
-local JestGlobals = require(Packages.Dev.JestGlobals)
+local JestGlobals = require(Packages.JestGlobals)
 local expect = JestGlobals.expect
 local it = JestGlobals.it
 
-local JestConfig = require(Packages.Dev.JestConfig)
+local JestConfig = require(Packages.JestConfig)
 
 local Runtime = require(CurrentModule)
 

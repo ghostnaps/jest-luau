@@ -9,7 +9,7 @@
 local CurrentModule = script.Parent
 local Packages = CurrentModule.Parent.Parent
 
-local JestGlobals = require(Packages.Dev.JestGlobals)
+local JestGlobals = require(Packages.JestGlobals)
 local expect = JestGlobals.expect
 local describe = JestGlobals.describe
 local it = JestGlobals.it
@@ -82,7 +82,7 @@ end)
 -- local getConsoleOutput = require(CurrentModule.Parent.getConsoleOutput)
 
 -- local ModuleMocker = require(Packages.JestMock).ModuleMocker
--- local expect = require(Packages.Dev.JestGlobals).expect
+-- local expect = require(Packages.JestGlobals).expect
 
 -- local typesModule = require(CurrentModule.Parent.types)
 -- type LogType = typesModule.LogType

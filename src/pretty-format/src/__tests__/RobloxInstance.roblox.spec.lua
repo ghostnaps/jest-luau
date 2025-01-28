@@ -23,7 +23,7 @@ local RobloxInstance = PrettyFormat.plugins.RobloxInstance
 
 local InstanceSubset = require(Packages.RobloxShared).RobloxInstance.InstanceSubset
 
-local JestGlobals = require(Packages.Dev.JestGlobals)
+local JestGlobals = require(Packages.JestGlobals)
 local beforeEach = JestGlobals.beforeEach
 local afterEach = JestGlobals.afterEach
 local expect = JestGlobals.expect

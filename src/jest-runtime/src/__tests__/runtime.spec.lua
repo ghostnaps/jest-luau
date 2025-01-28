@@ -17,14 +17,14 @@
 local CurrentModule = script.Parent.Parent
 local Packages = CurrentModule.Parent
 
-local JestGlobals = require(Packages.Dev.JestGlobals)
+local JestGlobals = require(Packages.JestGlobals)
 local expect = JestGlobals.expect
 local describe = JestGlobals.describe
 local it = JestGlobals.it
 local beforeAll = JestGlobals.beforeAll
 local afterAll = JestGlobals.afterAll
 
-local JestConfig = require(Packages.Dev.JestConfig)
+local JestConfig = require(Packages.JestConfig)
 
 local JestRuntime = require(CurrentModule)
 -- ROBLOX TODO: using RuntimePrivate type until better approach is found

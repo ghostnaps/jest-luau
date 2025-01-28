@@ -17,7 +17,7 @@
 local CurrentPackage = script.Parent.Parent
 local Packages = CurrentPackage.Parent
 
-local JestGlobals = require(Packages.Dev.JestGlobals)
+local JestGlobals = require(Packages.JestGlobals)
 local expect = JestGlobals.expect
 local describe = JestGlobals.describe
 local test = JestGlobals.test

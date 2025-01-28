@@ -7,11 +7,11 @@
  *
  ]]
 local Packages = script.Parent.Parent.Parent
-local JestGlobals = require(Packages.Dev.JestGlobals)
+local JestGlobals = require(Packages.JestGlobals)
 local describe = JestGlobals.describe
 local expect = JestGlobals.expect
 local it = JestGlobals.it
-local alignedAnsiStyleSerializer = require(Packages.Dev.TestUtils).alignedAnsiStyleSerializer
+local alignedAnsiStyleSerializer = require(Packages.TestUtils).alignedAnsiStyleSerializer
 local jestExpect = require(script.Parent.Parent)
 
 expect.addSnapshotSerializer(alignedAnsiStyleSerializer)

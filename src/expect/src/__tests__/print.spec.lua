@@ -17,7 +17,7 @@
 local CurrentModule = script.Parent.Parent
 local Packages = CurrentModule.Parent
 
-local JestGlobals = require(Packages.Dev.JestGlobals)
+local JestGlobals = require(Packages.JestGlobals)
 local describe = JestGlobals.describe
 local it = JestGlobals.it
 local beforeEach = JestGlobals.beforeEach

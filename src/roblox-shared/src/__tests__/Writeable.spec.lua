@@ -19,10 +19,10 @@ local Packages = CurrentModule.Parent.Parent
 
 local Writeable = require(CurrentModule.Parent.Writeable).Writeable
 
-local JestConfig = require(Packages.Dev.JestConfig)
+local JestConfig = require(Packages.JestConfig)
 
 local ModuleMocker = require(Packages.JestMock).ModuleMocker
-local JestGlobals = require(Packages.Dev.JestGlobals)
+local JestGlobals = require(Packages.JestGlobals)
 local expect = JestGlobals.expect
 local describe = JestGlobals.describe
 local it = JestGlobals.it

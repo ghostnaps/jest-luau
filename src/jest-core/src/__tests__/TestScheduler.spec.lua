@@ -8,7 +8,7 @@
  ]]
 local Packages = script.Parent.Parent.Parent
 local Promise = require(Packages.Promise)
-local JestGlobals = require(Packages.Dev.JestGlobals)
+local JestGlobals = require(Packages.JestGlobals)
 -- ROBLOX deviation START: not used
 -- local beforeEach = JestGlobals.beforeEach
 -- ROBLOX deviation END
@@ -32,7 +32,7 @@ local SummaryReporter = jestReportersModule.SummaryReporter
 -- ROBLOX deviation START: resolve import name
 -- local jestTestUtilsModule = require(Packages["@jest"]["test-utils"])
 -- local makeGlobalConfig = jestTestUtilsModule.makeGlobalConfig
-local jestTestUtilsModule = require(Packages.Dev.TestUtils)
+local jestTestUtilsModule = require(Packages.TestUtils)
 local makeGlobalConfig = jestTestUtilsModule.makeGlobalConfig
 -- ROBLOX deviation END
 -- ROBLOX deviation START: not used
@@ -74,12 +74,11 @@ test("config for reporters supports `default`", function()
 		-- expect(emptyReportersScheduler._dispatcher._reporters.length).toBe(0)
 		local undefinedReportersScheduler = createTestScheduler({ reporters = nil } :: any, {} :: any):expect()
 		local numberOfReporters = #(undefinedReportersScheduler :: any)._dispatcher._reporters
-		local stringDefaultReportersScheduler = createTestScheduler({ reporters = { "default" } } :: any, {} :: any):expect()
+		local stringDefaultReportersScheduler =
+			createTestScheduler({ reporters = { "default" } } :: any, {} :: any):expect()
 		expect(#(stringDefaultReportersScheduler :: any)._dispatcher._reporters).toBe(numberOfReporters)
-		local defaultReportersScheduler = createTestScheduler(
-			{ reporters = { { "default" :: any, {} } } } :: any,
-			{} :: any
-		):expect()
+		local defaultReportersScheduler =
+			createTestScheduler({ reporters = { { "default" :: any, {} } } } :: any, {} :: any):expect()
 		expect(#(defaultReportersScheduler :: any)._dispatcher._reporters).toBe(numberOfReporters)
 		-- ROBLOX deviation END
 	end)

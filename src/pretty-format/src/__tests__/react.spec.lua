@@ -14,7 +14,7 @@ local Array = LuauPolyfill.Array
 local Object = LuauPolyfill.Object
 local Symbol = LuauPolyfill.Symbol
 
-local JestGlobals = require(Packages.Dev.JestGlobals)
+local JestGlobals = require(Packages.JestGlobals)
 local expect = JestGlobals.expect
 local describe = JestGlobals.describe
 local it = JestGlobals.it
@@ -22,9 +22,9 @@ local itFIXME = function(description: string, ...: any)
 	JestGlobals.it.todo(description)
 end
 
-local React = require(Packages.Dev.React)
+local React = require(Packages.React)
 type ReactElement = React.ReactElement
-local renderer = require(Packages.Dev.ReactTestRenderer)
+local renderer = require(Packages.ReactTestRenderer)
 local ParentModule = require(script.Parent.Parent)
 local prettyFormat = ParentModule.default
 local plugins = ParentModule.plugins

@@ -17,7 +17,7 @@ local Array = LuauPolyfill.Array
 local Error = LuauPolyfill.Error
 type Array<T> = LuauPolyfill.Array<T>
 
-local JestGlobals = require(Packages.Dev.JestGlobals)
+local JestGlobals = require(Packages.JestGlobals)
 local expect = JestGlobals.expect
 local describe = JestGlobals.describe
 local it = JestGlobals.it

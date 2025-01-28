@@ -32,7 +32,7 @@ local setTimeout = LuauPolyfill.setTimeout
 local Promise = require(Packages.Promise)
 type Promise<T> = LuauPolyfill.Promise<T>
 
-local JestGlobals = require(Packages.Dev.JestGlobals)
+local JestGlobals = require(Packages.JestGlobals)
 local expect = JestGlobals.expect
 local describe = JestGlobals.describe
 local it = JestGlobals.it

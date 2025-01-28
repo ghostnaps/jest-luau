@@ -17,9 +17,9 @@
 local CurrentModule = script.Parent.Parent
 local Packages = CurrentModule.Parent
 
-local chalk = require(Packages.Dev.ChalkLua)
+local chalk = require(Packages.ChalkLua)
 
-local JestGlobals = require(Packages.Dev.JestGlobals)
+local JestGlobals = require(Packages.JestGlobals)
 local expect = JestGlobals.expect
 local describe = JestGlobals.describe
 local it = JestGlobals.it

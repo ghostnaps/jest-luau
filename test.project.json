@@ -1,0 +1,11 @@
+{
+  "name": "JestRoblox",
+  "tree": {
+    "$className": "DataModel",
+    "ReplicatedStorage": {
+      "TestRunner": {
+        "$path": "test-runner"
+      }
+    }
+  }
+}

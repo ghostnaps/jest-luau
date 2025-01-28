@@ -17,7 +17,7 @@
 local CurrentModule = script.Parent.Parent
 local Packages = CurrentModule.Parent
 
-local JestGlobals = require(Packages.Dev.JestGlobals)
+local JestGlobals = require(Packages.JestGlobals)
 -- ROBLOX deviation START: importing expectExtended to avoid analyze errors for additional matchers
 local expect = JestGlobals.expectExtended
 -- ROBLOX deviation END

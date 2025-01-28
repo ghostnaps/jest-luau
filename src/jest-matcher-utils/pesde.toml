@@ -1,0 +1,27 @@
+name = "ghostnaps/jest_matcher_utils"
+version = "0.1.0"
+
+[target]
+environment = "roblox"
+lib = "src/init.lua"
+build_files = ["src"]
+
+[scripts]
+roblox_sync_config_generator = ".pesde/roblox_sync_config_generator.luau"
+sourcemap_generator = ".pesde/sourcemap_generator.luau"
+
+[wally_indices]
+default = "https://github.com/UpliftGames/wally-index"
+
+[dependencies]
+JestDiff = { workspace = "ghostnaps/jest_diff", version = "^" }
+JestGetType = { workspace = "ghostnaps/jest_get_type", version = "^" }
+PrettyFormat = { workspace = "ghostnaps/pretty_format", version = "^" }
+ChalkLua = { wally = "wally#jsdotlua/chalk", version = "^0.2.1" }
+LuauPolyfill = { wally = "wally#jsdotlua/luau-polyfill", version = "^1.2.7" }
+RepExp = { wally = "wally#jsdotlua/luau-regexp", version = "^0.2.1" }
+
+[dev_dependencies]
+JestGlobals = { workspace = "ghostnaps/jest_globals", version = "^" }
+RobloxShared = { workspace = "ghostnaps/roblox_shared", version = "^" }
+TestUtils = { workspace = "ghostnaps/test_utils", version = "^" }

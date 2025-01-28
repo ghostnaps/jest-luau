@@ -14,11 +14,11 @@
 ]]
 local Packages = script.Parent.Parent.Parent
 
-local JestGlobals = require(Packages.Dev.JestGlobals)
+local JestGlobals = require(Packages.JestGlobals)
 local expect = JestGlobals.expect
 local it = JestGlobals.it
 
-local Promise = require(Packages.Dev.Promise)
+local Promise = require(Packages.Promise)
 local Error = require(Packages.LuauPolyfill).Error
 
 local RobloxShared = require(Packages.RobloxShared)

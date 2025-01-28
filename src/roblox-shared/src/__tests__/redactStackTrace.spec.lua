@@ -19,7 +19,7 @@ local Packages = CurrentModule.Parent.Parent
 
 local redactStackTrace = require(CurrentModule.Parent.redactStackTrace)
 
-local JestGlobals = require(Packages.Dev.JestGlobals)
+local JestGlobals = require(Packages.JestGlobals)
 local expect = JestGlobals.expect
 local it = JestGlobals.it
 

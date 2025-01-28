@@ -11,7 +11,7 @@ local LuauPolyfill = require(Packages.LuauPolyfill)
 local Object = LuauPolyfill.Object
 local getNoTestsFoundMessage = require(script.Parent.Parent.getNoTestsFoundMessage).default
 
-local JestGlobals = require(Packages.Dev.JestGlobals)
+local JestGlobals = require(Packages.JestGlobals)
 local describe = JestGlobals.describe
 local it = JestGlobals.it
 local expect = JestGlobals.expect

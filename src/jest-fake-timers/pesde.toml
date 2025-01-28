@@ -1,0 +1,22 @@
+name = "ghostnaps/jest_fake_timers"
+version = "0.1.0"
+
+[target]
+environment = "roblox"
+lib = "src/init.lua"
+build_files = ["src"]
+
+[scripts]
+roblox_sync_config_generator = ".pesde/roblox_sync_config_generator.luau"
+sourcemap_generator = ".pesde/sourcemap_generator.luau"
+
+[wally_indices]
+default = "https://github.com/UpliftGames/wally-index"
+
+[dependencies]
+LuauPolyfill = { wally = "wally#jsdotlua/luau-polyfill", version = "^1.2.7" }
+JestGetType = { workspace = "ghostnaps/jest_get_type", version = "^" }
+JestMock = { workspace = "ghostnaps/jest_mock", version = "^" }
+
+[dev_dependencies]
+JestGlobals = { workspace = "ghostnaps/jest_globals", version = "^" }

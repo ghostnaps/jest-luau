@@ -12,7 +12,7 @@
 local CurrentModule = script.Parent.Parent
 local Packages = CurrentModule.Parent
 
-local JestGlobals = require(Packages.Dev.JestGlobals)
+local JestGlobals = require(Packages.JestGlobals)
 local it = JestGlobals.it
 local beforeAll = JestGlobals.beforeAll
 local expect = JestGlobals.expect
@@ -21,7 +21,7 @@ local LuauPolyfill = require(Packages.LuauPolyfill)
 local Object = LuauPolyfill.Object
 local Symbol = LuauPolyfill.Symbol
 
-local alignedAnsiStyleSerializer = require(Packages.Dev.TestUtils).alignedAnsiStyleSerializer
+local alignedAnsiStyleSerializer = require(Packages.TestUtils).alignedAnsiStyleSerializer
 
 local matcherUtils = require(Packages.JestMatcherUtils)
 

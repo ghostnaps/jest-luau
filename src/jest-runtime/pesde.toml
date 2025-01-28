@@ -1,0 +1,29 @@
+name = "ghostnaps/jest_runtime"
+version = "0.1.0"
+
+[target]
+environment = "roblox"
+lib = "src/init.lua"
+build_files = ["src"]
+
+[scripts]
+roblox_sync_config_generator = ".pesde/roblox_sync_config_generator.luau"
+sourcemap_generator = ".pesde/sourcemap_generator.luau"
+
+[wally_indices]
+default = "https://github.com/UpliftGames/wally-index"
+
+[dependencies]
+LuauPolyfill = { wally = "wally#jsdotlua/luau-polyfill", version = "^1.2.7" }
+Promise = { wally = "wally#jsdotlua/promise", version = "^3.5.2" }
+expect = { workspace = "ghostnaps/expect", version = "^" }
+JestFakeTimers = { workspace = "ghostnaps/jest_fake_timers", version = "^" }
+JestMock = { workspace = "ghostnaps/jest_mock", version = "^" }
+JestMockGenv = { workspace = "ghostnaps/jest_mock_genv", version = "^" }
+JestSnapshot = { workspace = "ghostnaps/jest_snapshot", version = "^" }
+JestTypes = { workspace = "ghostnaps/jest_types", version = "^" }
+
+[dev_dependencies]
+JestConfig = { workspace = "ghostnaps/jest_config", version = "^" }
+JestEnvironmentLuau = { workspace = "ghostnaps/jest_environment_luau", version = "^" }
+JestGlobals = { workspace = "ghostnaps/jest_globals", version = "^" }

@@ -18,13 +18,13 @@ local Symbol = LuauPolyfill.Symbol
 
 local RegExp = require(Packages.RegExp)
 
-local equals = require(Packages.Dev.RobloxShared).expect.equals
+local equals = require(Packages.RobloxShared).expect.equals
 
 local chalk = require(Packages.ChalkLua)
 
 local prettyFormat = require(Packages.PrettyFormat).format
 
-local JestGlobals = require(Packages.Dev.JestGlobals)
+local JestGlobals = require(Packages.JestGlobals)
 local expect = JestGlobals.expect
 local describe = JestGlobals.describe
 local it = JestGlobals.it
@@ -32,7 +32,7 @@ local jest = JestGlobals.jest
 local test = JestGlobals.test
 local beforeAll = JestGlobals.beforeAll
 
-local alignedAnsiStyleSerializer = require(Packages.Dev.TestUtils).alignedAnsiStyleSerializer
+local alignedAnsiStyleSerializer = require(Packages.TestUtils).alignedAnsiStyleSerializer
 
 local JestMatcherUtils = require(CurrentModule)
 -- ROBLOX deviation: omitted MatcherHintOptions import

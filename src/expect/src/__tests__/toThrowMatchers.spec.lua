@@ -10,7 +10,7 @@
 local CurrentModule = script.Parent.Parent
 local Packages = CurrentModule.Parent
 
-local JestGlobals = require(Packages.Dev.JestGlobals)
+local JestGlobals = require(Packages.JestGlobals)
 local describe = JestGlobals.describe
 local expect = JestGlobals.expect
 local it = JestGlobals.it
@@ -25,7 +25,7 @@ local extends = LuauPolyfill.extends
 local Promise = require(Packages.Promise)
 local RegExp = require(Packages.RegExp)
 
-local alignedAnsiStyleSerializer = require(Packages.Dev.TestUtils).alignedAnsiStyleSerializer
+local alignedAnsiStyleSerializer = require(Packages.TestUtils).alignedAnsiStyleSerializer
 
 beforeAll(function()
 	expect.addSnapshotSerializer(alignedAnsiStyleSerializer)

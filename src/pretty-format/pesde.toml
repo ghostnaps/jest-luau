@@ -1,0 +1,27 @@
+name = "ghostnaps/pretty_format"
+version = "0.1.0"
+
+[target]
+environment = "roblox"
+lib = "src/init.lua"
+build_files = ["src"]
+
+[scripts]
+roblox_sync_config_generator = ".pesde/roblox_sync_config_generator.luau"
+sourcemap_generator = ".pesde/sourcemap_generator.luau"
+
+[wally_indices]
+default = "https://github.com/UpliftGames/wally-index"
+
+[dependencies]
+ChalkLua = { wally = "wally#jsdotlua/chalk", version = "^0.2.1" }
+LuauPolyfill = { wally = "wally#jsdotlua/luau-polyfill", version = "^1.2.7" }
+ReactIs = { wally = "wally#jsdotlua/react-is", version = "^17.2.0" }
+RepExp = { wally = "wally#jsdotlua/luau-regexp", version = "^0.2.1" }
+JestGetType = { workspace = "ghostnaps/jest_get_type", version = "^" }
+RobloxShared = { workspace = "ghostnaps/roblox_shared", version = "^" }
+
+[dev_dependencies]
+React = { wally = "wally#jsdotlua/react", version = "^17.2.0" }
+ReactTestRenderer = { wally = "wally#jsdotlua/react-test-renderer", version = "^17.2.0" }
+JestGlobals = { workspace = "ghostnaps/jest_globals", version = "^" }

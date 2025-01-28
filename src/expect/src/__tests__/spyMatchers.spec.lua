@@ -10,7 +10,7 @@
 local CurrentModule = script.Parent.Parent
 local Packages = CurrentModule.Parent
 
-local JestGlobals = require(Packages.Dev.JestGlobals)
+local JestGlobals = require(Packages.JestGlobals)
 local describe = JestGlobals.describe
 local beforeAll = JestGlobals.beforeAll
 local expect = JestGlobals.expect
@@ -21,10 +21,10 @@ local Array = LuauPolyfill.Array
 local Error = LuauPolyfill.Error
 local Set = LuauPolyfill.Set
 
-local alignedAnsiStyleSerializer = require(Packages.Dev.TestUtils).alignedAnsiStyleSerializer
+local alignedAnsiStyleSerializer = require(Packages.TestUtils).alignedAnsiStyleSerializer
 local jestExpect = require(CurrentModule)
 
-local jestMock = require(Packages.Dev.JestMock).ModuleMocker
+local jestMock = require(Packages.JestMock).ModuleMocker
 
 expect.extend({
 	optionalFn = function(_, fn)

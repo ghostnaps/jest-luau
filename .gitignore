@@ -1,3 +1,13 @@
+# Pesde files
+.pesde/scripts
+roblox_packages
+lune_packages
+luau_packages
+pesde.lock
+
+# Rojo
+sourcemap*.json
+
 # Rotriever files
 rotriever.lock
 Packages/*
@@ -33,7 +43,6 @@ roblox.toml
 # Editor files
 .vscode/launch.json
 .idea
-.vscode
 
 jest_runner_tmp
 lcov.info

@@ -17,7 +17,7 @@ local Set = LuauPolyfill.Set
 
 local RegExp = require(Packages.RegExp)
 
-local JestGlobals = require(Packages.Dev.JestGlobals)
+local JestGlobals = require(Packages.JestGlobals)
 local jest = JestGlobals.jest
 local expect = JestGlobals.expect
 local describe = JestGlobals.describe
